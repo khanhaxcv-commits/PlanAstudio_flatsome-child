@@ -317,3 +317,14 @@ function nk_enqueue_inspaire_local_scripts()
         true
     );
 }
+
+/**
+ * Gọi footer custom từ child theme.
+ * File: template-parts/footer/custom-footer.php
+ */
+add_action('flatsome_after_footer', 'plana_render_custom_footer');
+
+function plana_render_custom_footer()
+{
+    get_template_part('template-parts/footer/custom-footer');
+}
