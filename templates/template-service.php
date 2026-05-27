@@ -4,12 +4,8 @@
  * Template Name: Service Page
  */
 get_header();
-?>
-
-<?php
 $theme_uri = get_stylesheet_directory_uri();
 ?>
-
 
 <!-- Preloader Start -->
 <div class="preloader">

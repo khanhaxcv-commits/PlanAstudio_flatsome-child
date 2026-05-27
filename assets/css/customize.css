@@ -1,22 +1,305 @@
 /* ghi đè class mặc định Flatsome */
-.header,
-.header-wrapper {
-    z-index: unset;
+
+@media (max-width: 1024px) {
+    header .nav {
+        flex-flow: nowrap;
+        justify-content: space-between;
+    }
 }
 
-.nav>li>a.btn-default {
-    position: relative;
-    display: inline-block;
-    background: var(--accent-color);
-    color: var(--white-color);
-    font-size: 16px;
+.absolute-footer {
+    display: none;
+}
+
+#post-13062>td.rank_math_seo_details.column-rank_math_seo_details>span:nth-child(3)>span {
+    display: none !important;
+}
+
+.rank_math_seo_details.column-rank_math_seo_details,
+.rank_math_seo_details.column-rank_math_seo_details span {
+    text-wrap: nowrap !important;
+}
+
+.post ul {
+    margin-bottom: 20px;
+    padding-left: 16px;
+    list-style: disc;
+}
+
+.post ul li:last-child {
+    margin-bottom: 0px;
+}
+
+
+.post figure {
+    margin: 0;
+    margin-bottom: 16px;
+    width: 100% !important;
+}
+
+.post figure img,
+.post img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6,
+.post p,
+.post figure .post img {
+    font-family: Manrope !important;
+    color: #000 !important;
+    margin-bottom: 12px;
+
+}
+
+.post h2 {
+    font-size: 24px !important;
+    line-height: 32px !important;
+
+}
+
+.post h3 {
+    font-size: 20px !important;
+    line-height: 28px !important;
+}
+
+
+a.lead,
+p.lead {
+    font-size: unset;
+}
+
+.ez-toc-title-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ez-toc-container {
+    & .ez-toc-title-container {
+        .ez-toc-title {
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+#ez-toc-container {
+    & .ez-toc-title-container {
+        & .ez-toc-title {
+            &::before {
+                content: '';
+                background-image: url(https://nhatnamhome.vn/wp-content/themes/puramu/images/details-menu-icon.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-top: 5px;
+                margin-right: 6px;
+                display: inline-flex;
+                align-items: center;
+                aspect-ratio: 49 / 37;
+                height: 20px;
+            }
+        }
+    }
+}
+
+
+.ez-toc-title-container .ez-toc-title {
+    color: #000 !important;
+    vertical-align: -moz-middle-with-baseline !important;
+    font-family: Manrope !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 33px !important;
+}
+
+#ez-toc-container {
+    border: none
+}
+
+#ez-toc-container ul li a {
+    color: #000 !important;
+    font-family: Manrope !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 30px !important;
+}
+
+#ez-toc-container nav ul .ez-toc-page-1:first-child {
+    margin-top: 16px !important;
+}
+
+#ez-toc-container {
+    background: #f9f9f9 !important;
+    border: none !important;
+    padding-inline: 10px;
+    padding-block: 16px;
+    border-radius: 15px;
+    padding: 16px 24px !important;
+}
+
+#ez-toc-container {
+    @media (min-width: 1024px) {
+        padding-inline: 24px;
+        padding-block: 16px;
+    }
+}
+
+#ez-toc-container {
+    & .ez-toc-title-container {
+        & .ez-toc-title-toggle {
+            & a {
+                & .ez-toc-js-icon-con {
+                    & span {
+                        & .ez-toc-icon-toggle-span {
+                            &::before {
+                                content: '';
+                                border-width: 8px 8px 0px 8px;
+                                border-style: solid;
+                                border-color: #333333 transparent transparent transparent;
+                                border-radius: 2px;
+                                position: absolute;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#ez-toc-container {
+    & .ez-toc-title-container {
+        & .ez-toc-title-toggle {
+            & a {
+                & .ez-toc-js-icon-con {
+                    & span {
+                        .ez-toc-icon-toggle-span {
+                            width: 0px;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#ez-toc-container {
+    & .ez-toc-title-container {
+        & .ez-toc-title-toggle {
+            & a {
+                .ez-toc-js-icon-con {
+                    border: none;
+                    width: 0px;
+                    position: static;
+                }
+            }
+        }
+    }
+}
+
+.sidebar-consult-form {
+    width: 100%;
+    padding: 28px 20px 24px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #e8bd62 0%, #fff0cf 100%);
+    text-align: center;
+}
+
+.select-resize-ghost,
+.select2-container .select2-choice,
+.select2-container .select2-selection,
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+    height: 42px;
+    margin: 0;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 999px;
+    background: #fff;
+    color: #111;
+    font-size: 15px;
+    box-shadow: none;
+}
+
+.select-resize-ghost::placeholder,
+.select2-container .select2-choice::placeholder,
+.select2-container .select2-selection::placeholder,
+input[type="date"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+input[type="password"]::placeholder,
+input[type="search"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="text"]::placeholder,
+input[type="url"]::placeholder,
+select::placeholder,
+textarea ::placeholder {
+    color: #c7c7c7;
+}
+
+.sidebar-consult-submit {
+    margin-top: 12px;
+    text-align: center;
+}
+
+input[type=submit].sidebar-form-submit {
+    min-width: 185px;
+    height: 54px;
+    padding: 0 28px;
+    border: 0;
+    border-radius: 999px;
+    background-color: #00584f !important;
+    color: #f5d28b;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 1em;
-    text-transform: capitalize;
-    border: none;
-    padding: 17px 46px 17px 20px;
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-    z-index: 0;
-    letter-spacing: normal
+    line-height: 54px;
+    text-transform: uppercase;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+input[type=submit].sidebar-form-submit:hover {
+    background-color: #00463f !important;
+    color: #fff;
+}
+
+.sidebar-consult-form br {
+    display: none;
+}
+
+.sidebar-consult-submit .wpcf7-spinner {
+    display: none !important;
+    margin: 10px auto 0;
+}
+
+.wpcf7 .wpcf7-not-valid-tip {
+    margin-top: 4px !important;
+}
+
+.page-pagination .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

@@ -2882,7 +2882,9 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .page-pagination ul li a,
-.page-pagination ul li span {
+.page-pagination ul li span,
+.page-pagination .nav-links a,
+.page-pagination .nav-links span {
     display: flex;
     text-decoration: none;
     justify-content: center;
@@ -2898,7 +2900,9 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .page-pagination ul li.active a,
-.page-pagination ul li a:hover {
+.page-pagination ul li a:hover,
+.page-pagination .nav-links a:hover,
+.page-pagination .nav-links span.current {
     background: var(--primary-color);
     color: var(--white-color);
 }
@@ -3014,6 +3018,7 @@ header.main-header .header-sticky.active .navbar {
     padding: 0;
     margin: 20px 0 20px;
     padding-left: 20px;
+    list-style: disc;
 }
 
 .post-entry ul li {

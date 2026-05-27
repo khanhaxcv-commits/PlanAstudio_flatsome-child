@@ -10,9 +10,9 @@ if (! defined('ABSPATH')) {
 }
 
 get_header();
+$theme_uri = get_stylesheet_directory_uri();
 ?>
 <?php
-$theme_uri = get_stylesheet_directory_uri();
 ?>
 
 <!-- Preloader Start -->
@@ -33,7 +33,7 @@ $theme_uri = get_stylesheet_directory_uri();
             <div class="navbar navbar-expand-lg">
                 <!-- Logo Start -->
                 <a class="navbar-brand" href="./">
-                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/logo.svg'); ?>" alt="Logo">
+                    <img src="<?php echo esc_url($theme_uri . '/assets/images/logo.svg'); ?>" alt="Logo">
                 </a>
                 <!-- Logo End -->
 
@@ -119,7 +119,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <!-- About Image 1 Start -->
                     <div class="about-img-1">
                         <figure class="image-anime reveal">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-img-1.jpg'); ?>" alt="">
+                            <img src="<?php echo esc_url($theme_uri . '/assets/images/about-img-1.jpg'); ?>" alt="">
                         </figure>
                     </div>
                     <!-- About Image 1 End -->
@@ -127,7 +127,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <!-- About Image 2 Start -->
                     <div class="about-img-2">
                         <figure class="image-anime reveal">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-img-2.jpg'); ?>" alt="">
+                            <img src="<?php echo esc_url($theme_uri . '/assets/images/about-img-2.jpg'); ?>" alt="">
                         </figure>
 
                         <!-- Feedback Counter Start -->
@@ -199,7 +199,7 @@ $theme_uri = get_stylesheet_directory_uri();
                             <div class="about-contact-item wow fadeInUp" data-wow-delay="0.6s">
                                 <div class="icon-box">
                                     <figure class="image-anime">
-                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/author-1.jpg'); ?>" alt="Leslie Alexander">
+                                        <img src="<?php echo esc_url($theme_uri . '/assets/images/author-1.jpg'); ?>" alt="Leslie Alexander">
                                     </figure>
                                 </div>
                                 <div class="about-contact-content">
@@ -241,7 +241,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
                             <!-- Icon Box Start -->
                             <div class="icon-box">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-why-choose-1.svg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/icon-why-choose-1.svg'); ?>" alt="">
                             </div>
                             <!-- Icon Box End -->
 
@@ -258,7 +258,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <div class="why-choose-item wow fadeInUp" data-wow-delay="0.6s">
                             <!-- Icon Box Start -->
                             <div class="icon-box">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-why-choose-2.svg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/icon-why-choose-2.svg'); ?>" alt="">
                             </div>
                             <!-- Icon Box End -->
 
@@ -275,7 +275,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <div class="why-choose-item wow fadeInUp" data-wow-delay="0.8s">
                             <!-- Icon Box Start -->
                             <div class="icon-box">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-why-choose-3.svg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/icon-why-choose-3.svg'); ?>" alt="">
                             </div>
                             <!-- Icon Box End -->
 
@@ -301,7 +301,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <!-- Why Choose img 1 Start -->
                         <div class="why-choose-img-1">
                             <figure class="image-anime reveal">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/why-choose-img-1.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/why-choose-img-1.jpg'); ?>" alt="">
                             </figure>
                         </div>
                         <!-- Why Choose img 1 End -->
@@ -309,7 +309,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <!-- Why Choose img 2 Start -->
                         <div class="why-choose-img-2">
                             <figure class="image-anime reveal">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/why-choose-img-2.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/why-choose-img-2.jpg'); ?>" alt="">
                             </figure>
                         </div>
                         <!-- Why Choose img 2 End -->
@@ -321,7 +321,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <!-- Why Choose img 3 Start -->
                         <div class="why-choose-img-3">
                             <figure class="image-anime reveal">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/why-choose-img-3.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/why-choose-img-3.jpg'); ?>" alt="">
                             </figure>
                         </div>
                         <!-- Why Choose img 3 End -->
@@ -329,7 +329,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <!-- Why Choose img 4 Start -->
                         <div class="why-choose-img-4">
                             <figure class="image-anime reveal">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/why-choose-img-4.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/why-choose-img-4.jpg'); ?>" alt="">
                             </figure>
                         </div>
                         <!-- Why Choose img 4 End -->
@@ -373,7 +373,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <div class="service-image">
                         <a href="service-single.html" data-cursor-text="View">
                             <figure class="image-anime">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/service-1.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/service-1.jpg'); ?>" alt="">
                             </figure>
                         </a>
                     </div>
@@ -381,7 +381,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
@@ -402,7 +402,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <div class="service-image">
                         <a href="service-single.html" data-cursor-text="View">
                             <figure class="image-anime">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/service-2.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/service-2.jpg'); ?>" alt="">
                             </figure>
                         </a>
                     </div>
@@ -410,7 +410,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
@@ -431,7 +431,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <div class="service-image">
                         <a href="service-single.html" data-cursor-text="View">
                             <figure class="image-anime">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/service-3.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/service-3.jpg'); ?>" alt="">
                             </figure>
                         </a>
                     </div>
@@ -439,7 +439,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
@@ -476,7 +476,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <div class="intro-video-image">
                         <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
                             <figure class="image-anime">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/intro-video-bg.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/intro-video-bg.jpg'); ?>" alt="">
                             </figure>
                         </a>
                     </div>
@@ -542,12 +542,12 @@ $theme_uri = get_stylesheet_directory_uri();
                             <div class="project-image">
                                 <div class="project-featured-image">
                                     <figure class="image-anime">
-                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/project-1.jpg'); ?>" alt="">
+                                        <img src="<?php echo esc_url($theme_uri . '/assets/images/project-1.jpg'); ?>" alt="">
                                     </figure>
                                 </div>
 
                                 <div class="project-btn">
-                                    <a href="project-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                    <a href="project-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                                 </div>
                             </div>
 
@@ -565,12 +565,12 @@ $theme_uri = get_stylesheet_directory_uri();
                             <div class="project-image">
                                 <div class="project-featured-image">
                                     <figure class="image-anime">
-                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/project-2.jpg'); ?>" alt="">
+                                        <img src="<?php echo esc_url($theme_uri . '/assets/images/project-2.jpg'); ?>" alt="">
                                     </figure>
                                 </div>
 
                                 <div class="project-btn">
-                                    <a href="project-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                    <a href="project-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                                 </div>
                             </div>
 
@@ -588,12 +588,12 @@ $theme_uri = get_stylesheet_directory_uri();
                             <div class="project-image">
                                 <div class="project-featured-image">
                                     <figure class="image-anime">
-                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/project-3.jpg'); ?>" alt="">
+                                        <img src="<?php echo esc_url($theme_uri . '/assets/images/project-3.jpg'); ?>" alt="">
                                     </figure>
                                 </div>
 
                                 <div class="project-btn">
-                                    <a href="project-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                    <a href="project-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                                 </div>
                             </div>
 
@@ -611,12 +611,12 @@ $theme_uri = get_stylesheet_directory_uri();
                             <div class="project-image">
                                 <div class="project-featured-image">
                                     <figure class="image-anime">
-                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/project-4.jpg'); ?>" alt="">
+                                        <img src="<?php echo esc_url($theme_uri . '/assets/images/project-4.jpg'); ?>" alt="">
                                     </figure>
                                 </div>
 
                                 <div class="project-btn">
-                                    <a href="project-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                    <a href="project-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                                 </div>
                             </div>
 
@@ -664,7 +664,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <!-- How We Item Start -->
                     <div class="how-we-work-item wow fadeInUp">
                         <div class="icon-box">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-how-we-work-1.svg'); ?>" alt="">
+                            <img src="<?php echo esc_url($theme_uri . '/assets/images/icon-how-we-work-1.svg'); ?>" alt="">
                         </div>
                         <div class="how-we-work-content">
                             <h3>01. initial consultation</h3>
@@ -676,7 +676,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <!-- How We Item Start -->
                     <div class="how-we-work-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="icon-box">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-how-we-work-2.svg'); ?>" alt="">
+                            <img src="<?php echo esc_url($theme_uri . '/assets/images/icon-how-we-work-2.svg'); ?>" alt="">
                         </div>
                         <div class="how-we-work-content">
                             <h3>02. design planning</h3>
@@ -688,7 +688,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <!-- How We Item Start -->
                     <div class="how-we-work-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="icon-box">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-how-we-work-3.svg'); ?>" alt="">
+                            <img src="<?php echo esc_url($theme_uri . '/assets/images/icon-how-we-work-3.svg'); ?>" alt="">
                         </div>
                         <div class="how-we-work-content">
                             <h3>03. project execution</h3>
@@ -700,7 +700,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <!-- How We Item Start -->
                     <div class="how-we-work-item wow fadeInUp" data-wow-delay="0.6s">
                         <div class="icon-box">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-how-we-work-4.svg'); ?>" alt="">
+                            <img src="<?php echo esc_url($theme_uri . '/assets/images/icon-how-we-work-4.svg'); ?>" alt="">
                         </div>
                         <div class="how-we-work-content">
                             <h3>04. final review</h3>
@@ -718,7 +718,7 @@ $theme_uri = get_stylesheet_directory_uri();
                             <!-- Company Support Logo Start -->
                             <div class="swiper-slide">
                                 <div class="company-logo">
-                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-1.svg'); ?>" alt="">
+                                    <img src="<?php echo esc_url($theme_uri . '/assets/images/company-logo-1.svg'); ?>" alt="">
                                 </div>
                             </div>
                             <!-- Company Support Logo End -->
@@ -726,7 +726,7 @@ $theme_uri = get_stylesheet_directory_uri();
                             <!-- Company Support Logo Start -->
                             <div class="swiper-slide">
                                 <div class="company-logo">
-                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-2.svg'); ?>" alt="">
+                                    <img src="<?php echo esc_url($theme_uri . '/assets/images/company-logo-2.svg'); ?>" alt="">
                                 </div>
                             </div>
                             <!-- Company Support Logo End -->
@@ -734,7 +734,7 @@ $theme_uri = get_stylesheet_directory_uri();
                             <!-- Company Support Logo Start -->
                             <div class="swiper-slide">
                                 <div class="company-logo">
-                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-3.svg'); ?>" alt="">
+                                    <img src="<?php echo esc_url($theme_uri . '/assets/images/company-logo-3.svg'); ?>" alt="">
                                 </div>
                             </div>
                             <!-- Company Support Logo End -->
@@ -742,7 +742,7 @@ $theme_uri = get_stylesheet_directory_uri();
                             <!-- Company Support Logo Start -->
                             <div class="swiper-slide">
                                 <div class="company-logo">
-                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-4.svg'); ?>" alt="">
+                                    <img src="<?php echo esc_url($theme_uri . '/assets/images/company-logo-4.svg'); ?>" alt="">
                                 </div>
                             </div>
                             <!-- Company Support Logo End -->
@@ -750,7 +750,7 @@ $theme_uri = get_stylesheet_directory_uri();
                             <!-- Company Support Logo Start -->
                             <div class="swiper-slide">
                                 <div class="company-logo">
-                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-5.svg'); ?>" alt="">
+                                    <img src="<?php echo esc_url($theme_uri . '/assets/images/company-logo-5.svg'); ?>" alt="">
                                 </div>
                             </div>
                             <!-- Company Support Logo End -->
@@ -758,7 +758,7 @@ $theme_uri = get_stylesheet_directory_uri();
                             <!-- Company Support Logo Start -->
                             <div class="swiper-slide">
                                 <div class="company-logo">
-                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-1.svg'); ?>" alt="">
+                                    <img src="<?php echo esc_url($theme_uri . '/assets/images/company-logo-1.svg'); ?>" alt="">
                                 </div>
                             </div>
                             <!-- Company Support Logo End -->
@@ -847,19 +847,19 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="our-skill-image">
                     <div class="our-skill-img-1">
                         <figure class="image-anime reveal">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-skill-img-1.jpg'); ?>" alt="">
+                            <img src="<?php echo esc_url($theme_uri . '/assets/images/our-skill-img-1.jpg'); ?>" alt="">
                         </figure>
                     </div>
 
                     <div class="our-skill-img-2">
                         <figure class="image-anime reveal">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-skill-img-2.jpg'); ?> " alt="">
+                            <img src="<?php echo esc_url($theme_uri . '/assets/images/our-skill-img-2.jpg'); ?> " alt="">
                         </figure>
                     </div>
 
                     <div class="our-skill-img-3">
                         <figure class="image-anime reveal">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-skill-img-3.jpg'); ?> " alt="">
+                            <img src="<?php echo esc_url($theme_uri . '/assets/images/our-skill-img-3.jpg'); ?> " alt="">
                         </figure>
                     </div>
                 </div>
@@ -878,7 +878,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <!-- Our Testimonial Image Start -->
                 <div class="our-testimonials-image">
                     <figure class="image-anime">
-                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/testimonial-img.jpg'); ?>" alt="">
+                        <img src="<?php echo esc_url($theme_uri . '/assets/images/testimonial-img.jpg'); ?>" alt="">
                     </figure>
                 </div>
                 <!-- Our Testimonial Image End -->
@@ -916,7 +916,7 @@ $theme_uri = get_stylesheet_directory_uri();
                                         <div class="testimonial-body">
                                             <div class="author-image">
                                                 <figure class="image-anime">
-                                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/author-1.jpg'); ?>" alt="">
+                                                    <img src="<?php echo esc_url($theme_uri . '/assets/images/author-1.jpg'); ?>" alt="">
                                                 </figure>
                                             </div>
                                             <div class="author-content">
@@ -944,7 +944,7 @@ $theme_uri = get_stylesheet_directory_uri();
                                         <div class="testimonial-body">
                                             <div class="author-image">
                                                 <figure class="image-anime">
-                                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/author-1.jpg'); ?>" alt="">
+                                                    <img src="<?php echo esc_url($theme_uri . '/assets/images/author-1.jpg'); ?>" alt="">
                                                 </figure>
                                             </div>
                                             <div class="author-content">
@@ -1015,7 +1015,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <div class="post-featured-image">
                         <figure>
                             <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/post-1.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/post-1.jpg'); ?>" alt="">
                             </a>
                         </figure>
                     </div>
@@ -1047,7 +1047,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <div class="post-featured-image">
                         <figure>
                             <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/post-2.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/post-2.jpg'); ?>" alt="">
                             </a>
                         </figure>
                     </div>
@@ -1079,7 +1079,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <div class="post-featured-image">
                         <figure>
                             <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/post-3.jpg'); ?>" alt="">
+                                <img src="<?php echo esc_url($theme_uri . '/assets/images/post-3.jpg'); ?>" alt="">
                             </a>
                         </figure>
                     </div>

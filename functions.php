@@ -9,6 +9,9 @@ add_action('init', function () {
 });
 
 
+/**
+ * Load Google Fonts with Preconnect
+ */
 add_action('wp_enqueue_scripts', 'plana_enqueue_google_fonts');
 
 function plana_enqueue_google_fonts()
