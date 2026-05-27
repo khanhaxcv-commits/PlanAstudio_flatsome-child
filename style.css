@@ -1,0 +1,95 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+/* → khai báo child theme + biến màu + body + layout chung */
+
+
+:root {
+    --primary: #7e279b;
+    --secondary: #44236d;
+    --background-light: #f7f6f8;
+    --background-dark: #1c131f;
+    --slate-900: #0f172a;
+    --slate-800: #1e293b;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-400: #94a3b8;
+    --slate-200: #e2e8f0;
+    --primary-transparent-20: rgba(126, 39, 155, 0.2);
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --transition-img: 700ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-ui: 300ms ease;
+    --font-display: "Hanken Grotesk", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-display);
+    background: var(--background-light);
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    body {
+        overflow: hidden;
+    }
+}
+
+/* <--- Bố cục chính */
+.section {
+    padding: 20px 0px !important;
+}
+
+.section .col-inner {
+    height: 100%;
+}
+
+.section .row {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .section {
+        padding: 40px 0px !important;
+    }
+
+    .section .row {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding: 80px 0px !important;
+    }
+
+    .section .row {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.row-grid {
+    display: grid !important;
+}
+
+.row-grid>div {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-bottom: 0 !important;
+}
+
+.row ul li {
+    margin: 0 !important;
+}

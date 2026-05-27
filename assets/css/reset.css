@@ -1,0 +1,60 @@
+.col,
+.columns,
+.gallery-item {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.select-resize-ghost,
+.select2-container .select2-choice,
+.select2-container .select2-selection,
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: auto;
+    font-size: unset;
+}
+
+
+.clear:after,
+.clearfix:after,
+.container:after,
+.row:after {
+    content: none;
+}
+
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.post {
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    margin: 0;
+    padding: 0;
+}
