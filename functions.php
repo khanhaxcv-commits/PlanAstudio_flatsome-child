@@ -115,7 +115,7 @@ function flatsome_child_enqueue_styles()
     }
 
     // 4) CSS Inspaire chỉ load ở trang chủ hoặc page cần dùng animation template
-    if (is_front_page() || is_page('trang-chu-1')) {
+    if (true) {
 
         $inspaire_css_files = array(
             'inspaire-bootstrap-css'      => 'bootstrap.min.css',

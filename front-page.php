@@ -20,7 +20,7 @@ $theme_uri = get_stylesheet_directory_uri();
     <div class="loading-container">
         <div class="loading"></div>
         <div id="loading-icon">
-            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/loader.svg'); ?>" alt="">
+            <img src="<?php echo esc_url($theme_uri . '/assets/images/loader.svg'); ?>" alt="">
         </div>
     </div>
 </div>
