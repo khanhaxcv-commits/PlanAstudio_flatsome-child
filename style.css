@@ -11,20 +11,14 @@ Version: 3.0
 
 
 :root {
-    --primary: #7e279b;
-    --secondary: #44236d;
-    --background-light: #f7f6f8;
-    --background-dark: #1c131f;
-    --slate-900: #0f172a;
-    --slate-800: #1e293b;
-    --slate-600: #475569;
-    --slate-500: #64748b;
-    --slate-400: #94a3b8;
-    --slate-200: #e2e8f0;
-    --primary-transparent-20: rgba(126, 39, 155, 0.2);
-    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --transition-img: 700ms cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-ui: 300ms ease;
+    --primary-color: #192324;
+    --secondery-color: #F8F8F8;
+    --text-color: #283132;
+    --accent-color: #7C877F;
+    --white-color: #FFFFFF;
+    --divider-color: #EAF0EC;
+    --dark-divider-color: #FFFFFF1A;
+    --error-color: rgb(230, 87, 87);
     --font-display: "Hanken Grotesk", sans-serif;
 }
 

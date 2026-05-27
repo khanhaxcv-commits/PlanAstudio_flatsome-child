@@ -11,218 +11,1114 @@ if (! defined('ABSPATH')) {
 
 get_header();
 ?>
+<?php
+$theme_uri = get_stylesheet_directory_uri();
+?>
 
-<main id="main" class="plana-home bg-[#f7f4ef] text-[#2B2B2B]">
-
-    <!-- Hero Section -->
-    <section class="relative min-h-[780px] overflow-hidden bg-[#2B2B2B]">
-        <div class="absolute inset-0">
-            <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-                alt="Modern interior design"
-                class="h-full w-full object-cover opacity-55">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#2B2B2B]/90 via-[#2B2B2B]/65 to-[#2B2B2B]/20"></div>
+<!-- Preloader Start -->
+<div class="preloader">
+    <div class="loading-container">
+        <div class="loading"></div>
+        <div id="loading-icon">
+            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/loader.svg'); ?>" alt="">
         </div>
+    </div>
+</div>
+<!-- Preloader End -->
 
-        <div class="relative z-10 mx-auto flex min-h-[780px] w-full max-w-[1400px] items-center px-5">
-            <div class="max-w-[760px]">
-                <span class="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-medium uppercase tracking-[0.25em] text-[#D7B46A] backdrop-blur">
-                    inspired interiors
-                    Designing your dream spaces, one room at a time
-                </span>
+<!-- Header Start -->
+<header class="main-header" style="display: none;">
+    <div class="header-sticky">
+        <nav class="container">
+            <div class="navbar navbar-expand-lg">
+                <!-- Logo Start -->
+                <a class="navbar-brand" href="./">
+                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/logo.svg'); ?>" alt="Logo">
+                </a>
+                <!-- Logo End -->
 
-                <h1 class="mb-7 text-[44px] font-semibold leading-[1.05] tracking-[-0.04em] text-white md:text-[72px] lg:text-[88px]">
-                    Thiết kế nội thất hiện đại cho không gian sống tinh tế
-                </h1>
-
-                <p class="mb-9 max-w-[580px] text-lg leading-8 text-white/80">
-                    inspired interiors
-                    Designing your dream spaces, one room at a time
-                </p>
-
-                <div class="flex flex-wrap gap-4">
-                    <a href="#services" class="inline-flex h-14 items-center justify-center rounded-full bg-[#D7B46A] px-8 text-base font-semibold text-[#2B2B2B] transition hover:bg-white">
-                        Xem dịch vụ
-                    </a>
-
-                    <a href="#contact" class="inline-flex h-14 items-center justify-center rounded-full border border-white/35 px-8 text-base font-semibold text-white transition hover:bg-white hover:text-[#2B2B2B]">
-                        Nhận tư vấn
-                    </a>
+                <!-- Main Menu Start -->
+                <div class="collapse navbar-collapse main-menu">
+                    <div class="nav-menu-wrapper">
+                        <ul class="navbar-nav mr-auto" id="menu">
+                            <li class="nav-item submenu"><a class="nav-link" href="./">Home</a>
+                                <ul>
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home - Image</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="index-video.html">Home - Video</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="index-slider.html">Home - Slider</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
+                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                            <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
+                                <ul>
+                                    <li class="nav-item"><a class="nav-link" href="service-single.html">Service Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="project-single.html">Project Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="image-gallery.html">Image Gallery</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Header Btn Start -->
+                    <div class="header-btn d-inline-flex">
+                        <a href="contact.html" class="btn-default">get in touch</a>
+                    </div>
+                    <!-- Header Btn End -->
                 </div>
+                <!-- Main Menu End -->
+                <div class="navbar-toggle"></div>
             </div>
-        </div>
-    </section>
+        </nav>
+        <div class="responsive-menu"></div>
+    </div>
+</header>
+<!-- Header End -->
 
-    <!-- Intro Section -->
-    <section class="bg-[#f7f4ef] py-24">
-        <div class="mx-auto grid w-full max-w-[1400px] gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-            <div>
-                <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-[0.22em] text-[#B89555]">
-                    Về chúng tôi
-                </span>
-
-                <h2 class="text-[36px] font-semibold leading-tight tracking-[-0.03em] text-[#2B2B2B] md:text-[56px]">
-                    Không gian đẹp bắt đầu từ sự thấu hiểu nhu cầu sống
-                </h2>
-            </div>
-
-            <div class="max-w-[660px] lg:ml-auto">
-                <p class="text-lg leading-8 text-[#5f5b55]">
-                    Mỗi dự án được phát triển dựa trên thói quen sinh hoạt, gu thẩm mỹ, ngân sách và mục tiêu sử dụng thực tế. Chúng tôi không chỉ tạo ra một bản thiết kế đẹp mà còn xây dựng một không gian sống có chiều sâu, dễ dùng và bền vững theo thời gian.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="bg-white py-24">
-        <div class="mx-auto w-full max-w-[1400px] px-5">
-            <div class="mb-14 max-w-[760px]">
-                <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-[0.22em] text-[#B89555]">
-                    Dịch vụ
-                </span>
-
-                <h2 class="mb-5 text-[36px] font-semibold leading-tight tracking-[-0.03em] text-[#2B2B2B] md:text-[56px]">
-                    Giải pháp thiết kế nội thất theo từng loại không gian
-                </h2>
-
-                <p class="text-lg leading-8 text-[#666]">
-                    Từ căn hộ, nhà phố đến biệt thự, mỗi không gian đều được định hướng theo công năng, vật liệu, ánh sáng và phong cách riêng.
-                </p>
-            </div>
-
-            <div class="grid gap-6 md:grid-cols-3">
-                <article class="group rounded-[32px] bg-[#f7f4ef] p-8 transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="mb-8 h-[260px] overflow-hidden rounded-[24px]">
-                        <img
-                            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6"
-                            alt="Thiết kế căn hộ"
-                            class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+<!-- Hero Section Start -->
+<div class="hero parallaxie">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <!-- Hero Content Start -->
+                <div class="hero-content">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">inspired interiors</h3>
+                        <h1 class="text-anime-style-2" data-cursor="-opaque">Designing your dream spaces, one room at a time</h1>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">We specialize in creating personalized, functional, and stylish interiors that reflect your unique vision.</p>
                     </div>
+                    <!-- Section Title End -->
 
-                    <h3 class="mb-4 text-2xl font-semibold text-[#2B2B2B]">
-                        Thiết kế căn hộ
-                    </h3>
-
-                    <p class="leading-7 text-[#666]">
-                        Tối ưu diện tích, ánh sáng và công năng để căn hộ trở nên thoáng, tiện nghi và có gu hơn.
-                    </p>
-                </article>
-
-                <article class="group rounded-[32px] bg-[#f7f4ef] p-8 transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="mb-8 h-[260px] overflow-hidden rounded-[24px]">
-                        <img
-                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
-                            alt="Thiết kế nhà phố"
-                            class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                    <!-- Hero Button Start -->
+                    <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="about.html" class="btn-default">explore more</a>
+                        <a href="projects.html" class="btn-default btn-highlighted">view projects</a>
                     </div>
-
-                    <h3 class="mb-4 text-2xl font-semibold text-[#2B2B2B]">
-                        Thiết kế nhà phố
-                    </h3>
-
-                    <p class="leading-7 text-[#666]">
-                        Xây dựng bố cục sống hợp lý cho gia đình, cân bằng giữa riêng tư, sinh hoạt chung và thẩm mỹ.
-                    </p>
-                </article>
-
-                <article class="group rounded-[32px] bg-[#f7f4ef] p-8 transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="mb-8 h-[260px] overflow-hidden rounded-[24px]">
-                        <img
-                            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
-                            alt="Thiết kế biệt thự"
-                            class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
-                    </div>
-
-                    <h3 class="mb-4 text-2xl font-semibold text-[#2B2B2B]">
-                        Thiết kế biệt thự
-                    </h3>
-
-                    <p class="leading-7 text-[#666]">
-                        Kết hợp vật liệu cao cấp, bố cục sang trọng và ngôn ngữ thiết kế tinh tế cho không gian lớn.
-                    </p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Highlight -->
-    <section class="bg-[#2B2B2B] py-24 text-white">
-        <div class="mx-auto grid w-full max-w-[1400px] gap-12 px-5 lg:grid-cols-2 lg:items-center">
-            <div class="overflow-hidden rounded-[36px]">
-                <img
-                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
-                    alt="Dự án nội thất nổi bật"
-                    class="h-full min-h-[520px] w-full object-cover">
-            </div>
-
-            <div class="lg:pl-10">
-                <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-[0.22em] text-[#D7B46A]">
-                    Dự án nổi bật
-                </span>
-
-                <h2 class="mb-6 text-[36px] font-semibold leading-tight tracking-[-0.03em] text-white md:text-[56px]">
-                    Modern Luxury Apartment
-                </h2>
-
-                <p class="mb-8 text-lg leading-8 text-white/75">
-                    Không gian căn hộ được xử lý theo tinh thần hiện đại, sang trọng nhưng vẫn ấm áp. Từng chi tiết từ ánh sáng, vật liệu, đồ rời đến đường nét trần tường đều được cân nhắc để tạo nên trải nghiệm sống liền mạch.
-                </p>
-
-                <div class="grid gap-5 sm:grid-cols-3">
-                    <div>
-                        <div class="text-4xl font-semibold text-[#D7B46A]">120m²</div>
-                        <p class="mt-2 text-sm text-white/60">Diện tích</p>
-                    </div>
-
-                    <div>
-                        <div class="text-4xl font-semibold text-[#D7B46A]">3</div>
-                        <p class="mt-2 text-sm text-white/60">Phòng ngủ</p>
-                    </div>
-
-                    <div>
-                        <div class="text-4xl font-semibold text-[#D7B46A]">45</div>
-                        <p class="mt-2 text-sm text-white/60">Ngày hoàn thiện</p>
-                    </div>
+                    <!-- Hero Button End -->
                 </div>
+                <!-- Hero Content End -->
             </div>
         </div>
-    </section>
+    </div>
+</div>
+<!-- Hero Section End -->
 
-    <!-- Contact CTA -->
-    <section id="contact" class="bg-[#f7f4ef] py-24">
-        <div class="mx-auto w-full max-w-[1400px] px-5">
-            <div class="rounded-[40px] bg-white p-8 shadow-xl md:p-14 lg:p-16">
-                <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-                    <div>
-                        <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-[0.22em] text-[#B89555]">
-                            Liên hệ tư vấn
-                        </span>
-
-                        <h2 class="mb-5 text-[34px] font-semibold leading-tight tracking-[-0.03em] text-[#2B2B2B] md:text-[52px]">
-                            Sẵn sàng bắt đầu không gian mới của bạn?
-                        </h2>
-
-                        <p class="text-lg leading-8 text-[#666]">
-                            Hãy chia sẻ nhu cầu, diện tích và phong cách bạn mong muốn. Chúng tôi sẽ tư vấn hướng triển khai phù hợp nhất.
-                        </p>
+<!-- About Us Section Start -->
+<div class="about-us">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <!-- About Us Images Start -->
+                <div class="about-us-images">
+                    <!-- About Image 1 Start -->
+                    <div class="about-img-1">
+                        <figure class="image-anime reveal">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-img-1.jpg'); ?>" alt="">
+                        </figure>
                     </div>
+                    <!-- About Image 1 End -->
 
-                    <div class="flex flex-col gap-4 rounded-[28px] bg-[#2B2B2B] p-7 text-white">
-                        <a href="tel:0900000000" class="rounded-full bg-[#D7B46A] px-7 py-4 text-center font-semibold text-[#2B2B2B] transition hover:bg-white">
-                            Gọi tư vấn ngay
+                    <!-- About Image 2 Start -->
+                    <div class="about-img-2">
+                        <figure class="image-anime reveal">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-img-2.jpg'); ?>" alt="">
+                        </figure>
+
+                        <!-- Feedback Counter Start -->
+                        <div class="experience-counter">
+                            <h3><span class="counter">15</span>+</h3>
+                            <p>Years of experience</p>
+                        </div>
+                        <!-- Feedback Counter End -->
+                    </div>
+                    <!-- About Image 2 End -->
+
+                    <!-- Feedback Counter Start -->
+                    <div class="feedback-counter">
+                        <p><span class="counter">95</span>%</p>
+                        <h3>positive feedback</h3>
+                    </div>
+                    <!-- Feedback Counter End -->
+                </div>
+                <!-- About Us Images End -->
+            </div>
+
+            <div class="col-lg-6">
+                <!-- About Us Content Start -->
+                <div class="about-us-content">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">about us</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Our passion for design, your <span>vision realized</span></h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Our dedicated team of designers works closely with you to understand your vision and bring it to life with thoughtful attention to detail. Whether it's transforming a single room or an entire home.</p>
+                    </div>
+                    <!-- Section Title End -->
+
+                    <!-- About Us Content Body Start -->
+                    <div class="about-us-content-body">
+                        <!-- About Content Info Start -->
+                        <div class="about-us-content-info">
+                            <!-- About Us Content List Start -->
+                            <div class="about-us-content-list wow fadeInUp" data-wow-delay="0.4s">
+                                <ul>
+                                    <li>creative expertise</li>
+                                    <li>client-centered approach</li>
+                                </ul>
+                            </div>
+                            <!-- About Us Content List End -->
+
+                            <!-- About Us Content Button Start -->
+                            <div class="about-us-content-btn wow fadeInUp" data-wow-delay="0.6s">
+                                <a href="about.html" class="btn-default">read more</a>
+                            </div>
+                            <!-- About Us Content Button End -->
+                        </div>
+                        <!-- About Content Info End -->
+
+                        <!-- About Content List Start -->
+                        <div class="about-us-contact-list">
+                            <!-- About Contact Item Start -->
+                            <div class="about-contact-item wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="about-contact-content">
+                                    <p>need any help?</p>
+                                    <h3>+(1) 235 800 999</h3>
+                                </div>
+                            </div>
+                            <!-- About Contact Item End -->
+
+                            <!-- About Contact Item Start -->
+                            <div class="about-contact-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="icon-box">
+                                    <figure class="image-anime">
+                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/author-1.jpg'); ?>" alt="Leslie Alexander">
+                                    </figure>
+                                </div>
+                                <div class="about-contact-content">
+                                    <h3>leslie alexander</h3>
+                                    <p>co founder</p>
+                                </div>
+                            </div>
+                            <!-- About Contact Item End -->
+                        </div>
+                        <!-- About Content Info End -->
+                    </div>
+                    <!-- About Us Content Body End -->
+                </div>
+                <!-- About Us Content End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Us Section End -->
+
+<!-- Why Choose Us Section Start -->
+<div class="why-choose-us">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <!-- Why Choose Content Start -->
+                <div class="why-choose-content">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">why choose us</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">A behind the scenes look at <span>our agency</span></h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">From concept to completion, discover how we bring your vision to life with innovation, collaboration, and expert craftsmanship.</p>
+                    </div>
+                    <!-- Section Title End -->
+
+                    <!-- Why Choose Item List Start -->
+                    <div class="why-choose-item-list">
+                        <!-- Why Choose Item Start -->
+                        <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
+                            <!-- Icon Box Start -->
+                            <div class="icon-box">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-why-choose-1.svg'); ?>" alt="">
+                            </div>
+                            <!-- Icon Box End -->
+
+                            <!-- Why Choose Item Content Start -->
+                            <div class="why-choose-item-content">
+                                <h3>tailored design solutions</h3>
+                                <p>We provide personalized interior design services that reflect your unique vision and lifestyle.</p>
+                            </div>
+                            <!-- Why Choose Item Content End -->
+                        </div>
+                        <!-- Why Choose Item End -->
+
+                        <!-- Why Choose Item Start -->
+                        <div class="why-choose-item wow fadeInUp" data-wow-delay="0.6s">
+                            <!-- Icon Box Start -->
+                            <div class="icon-box">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-why-choose-2.svg'); ?>" alt="">
+                            </div>
+                            <!-- Icon Box End -->
+
+                            <!-- Why Choose Item Content Start -->
+                            <div class="why-choose-item-content">
+                                <h3>Seamless Project Management</h3>
+                                <p>We handle the entire design process, from concept to completion, with flawless execution.</p>
+                            </div>
+                            <!-- Why Choose Item Content End -->
+                        </div>
+                        <!-- Why Choose Item End -->
+
+                        <!-- Why Choose Item Start -->
+                        <div class="why-choose-item wow fadeInUp" data-wow-delay="0.8s">
+                            <!-- Icon Box Start -->
+                            <div class="icon-box">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-why-choose-3.svg'); ?>" alt="">
+                            </div>
+                            <!-- Icon Box End -->
+
+                            <!-- Why Choose Item Content Start -->
+                            <div class="why-choose-item-content">
+                                <h3>Client-Centered Collaboration</h3>
+                                <p>Your input is valued throughout the entire process, ensuring your vision is fully realized.</p>
+                            </div>
+                            <!-- Why Choose Item Content End -->
+                        </div>
+                        <!-- Why Choose Item End -->
+                    </div>
+                    <!-- Why Choose Item List End -->
+                </div>
+                <!-- Why Choose Content End -->
+            </div>
+
+            <div class="col-lg-7">
+                <!-- Why Choose Images Images Start -->
+                <div class="why-choose-images">
+                    <!-- Why Choose Box 1 Start -->
+                    <div class="why-choose-img-box-1">
+                        <!-- Why Choose img 1 Start -->
+                        <div class="why-choose-img-1">
+                            <figure class="image-anime reveal">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/why-choose-img-1.jpg'); ?>" alt="">
+                            </figure>
+                        </div>
+                        <!-- Why Choose img 1 End -->
+
+                        <!-- Why Choose img 2 Start -->
+                        <div class="why-choose-img-2">
+                            <figure class="image-anime reveal">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/why-choose-img-2.jpg'); ?>" alt="">
+                            </figure>
+                        </div>
+                        <!-- Why Choose img 2 End -->
+                    </div>
+                    <!-- Why Choose Box 1 End -->
+
+                    <!-- Why Choose Box 2 Start -->
+                    <div class="why-choose-img-box-2">
+                        <!-- Why Choose img 3 Start -->
+                        <div class="why-choose-img-3">
+                            <figure class="image-anime reveal">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/why-choose-img-3.jpg'); ?>" alt="">
+                            </figure>
+                        </div>
+                        <!-- Why Choose img 3 End -->
+
+                        <!-- Why Choose img 4 Start -->
+                        <div class="why-choose-img-4">
+                            <figure class="image-anime reveal">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/why-choose-img-4.jpg'); ?>" alt="">
+                            </figure>
+                        </div>
+                        <!-- Why Choose img 4 End -->
+                    </div>
+                    <!-- Why Choose Box 2 End -->
+                </div>
+                <!-- Why Choose Images Images End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Why Choose Us Section End -->
+
+<!-- Our Services Section Start -->
+<div class="our-services">
+    <div class="container">
+        <div class="row section-row align-items-center">
+            <div class="col-lg-6">
+                <!-- Section Title Start -->
+                <div class="section-title">
+                    <h3 class="wow fadeInUp">our services</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">Innovative design services for <span>every need</span></h2>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <div class="col-lg-6">
+                <!-- Section Title Content Start -->
+                <div class="section-title-content">
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">We offer a range of bespoke interior design services tailored to your unique needs. From concept development to final installation.</p>
+                </div>
+                <!-- Section Title Content End -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <!-- Service Item Start -->
+                <div class="service-item wow fadeInUp">
+                    <!-- Service Image Start -->
+                    <div class="service-image">
+                        <a href="service-single.html" data-cursor-text="View">
+                            <figure class="image-anime">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/service-1.jpg'); ?>" alt="">
+                            </figure>
                         </a>
+                    </div>
+                    <!-- Service Image End -->
 
-                        <a href="#" class="rounded-full border border-white/25 px-7 py-4 text-center font-semibold text-white transition hover:bg-white hover:text-[#2B2B2B]">
-                            Xem hồ sơ năng lực
+                    <!-- Service Button Start -->
+                    <div class="service-btn">
+                        <a href="service-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                    </div>
+                    <!-- Service Button End -->
+
+                    <!-- Service Content Start -->
+                    <div class="service-content">
+                        <h3><a href="service-single.html">residential interior design</a></h3>
+                        <p>We create personalized living spaces that reflect your style and functional needs.</p>
+                    </div>
+                    <!-- Service Content End -->
+                </div>
+                <!-- Service Item End -->
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <!-- Service Item Start -->
+                <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
+                    <!-- Service Image Start -->
+                    <div class="service-image">
+                        <a href="service-single.html" data-cursor-text="View">
+                            <figure class="image-anime">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/service-2.jpg'); ?>" alt="">
+                            </figure>
                         </a>
                     </div>
+                    <!-- Service Image End -->
+
+                    <!-- Service Button Start -->
+                    <div class="service-btn">
+                        <a href="service-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                    </div>
+                    <!-- Service Button End -->
+
+                    <!-- Service Content Start -->
+                    <div class="service-content">
+                        <h3><a href="service-single.html">commercial interior design</a></h3>
+                        <p>Enhancing business environments with professional, functional, and aesthetically.</p>
+                    </div>
+                    <!-- Service Content End -->
                 </div>
+                <!-- Service Item End -->
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <!-- Service Item Start -->
+                <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
+                    <!-- Service Image Start -->
+                    <div class="service-image">
+                        <a href="service-single.html" data-cursor-text="View">
+                            <figure class="image-anime">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/service-3.jpg'); ?>" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- Service Image End -->
+
+                    <!-- Service Button Start -->
+                    <div class="service-btn">
+                        <a href="service-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                    </div>
+                    <!-- Service Button End -->
+
+                    <!-- Service Content Start -->
+                    <div class="service-content">
+                        <h3><a href="service-single.html">furniture and decor selection</a></h3>
+                        <p>Our experts help you choose the perfect furniture and decor complement your style.</p>
+                    </div>
+                    <!-- Service Content End -->
+                </div>
+                <!-- Service Item End -->
+            </div>
+
+            <div class="col-lg-12">
+                <!-- All Services Button Start -->
+                <div class="all-services-btn wow fadeInUp" data-wow-delay="0.6s">
+                    <a href="services.html" class="btn-default">see all services</a>
+                </div>
+                <!-- All Services Button End -->
             </div>
         </div>
-    </section>
+    </div>
+</div>
+<!-- Our Services Section End -->
 
-</main>
+<!-- Intro Video Section Start -->
+<div class="intro-video">
+    <div class="container-fluid">
+        <div class="row row-collapse row-full-width">
+            <div class="col-lg-12">
+                <!-- Intro Video Image Start -->
+                <div class="intro-video-box">
+                    <!-- Intro Image Start -->
+                    <div class="intro-video-image">
+                        <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
+                            <figure class="image-anime">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/intro-video-bg.jpg'); ?>" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- Intro Image End -->
+
+                    <!-- Video Play Button Start -->
+                    <div class="video-play-button">
+                        <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">play</a>
+                    </div>
+                    <!-- Video Play Button End -->
+                </div>
+                <!-- Intro Video Btn End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Intro Video Section End -->
+
+<!-- Our Project Start -->
+<div class="our-project">
+    <div class="container">
+        <div class="row section-row align-items-center">
+            <div class="col-lg-5">
+                <!-- Section Title Start -->
+                <div class="section-title">
+                    <h3 class="wow fadeInUp">latest project</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">Creative projects that define<span> our style</span></h2>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <div class="col-lg-7">
+                <!-- Section Title Content Start -->
+                <div class="section-title-content">
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">Our portfolio showcases a diverse range of projects, from beautifully crafted residential spaces functional and stylish commercial interiors</p>
+                </div>
+                <!-- Section Title Content End -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Our Project Nav start -->
+                <div class="our-Project-nav wow fadeInUp" data-wow-delay="0.4s">
+                    <ul>
+                        <li><a href="#" class="active-btn" data-filter="*">all</a></li>
+                        <li><a href="#" data-filter=".architecture">architecture</a></li>
+                        <li><a href="#" data-filter=".interior">interior</a></li>
+                        <li><a href="#" data-filter=".bedroom">bedroom</a></li>
+                        <li><a href="#" data-filter=".furniture">furniture</a></li>
+                        <li><a href="#" data-filter=".kitchen">kitchen</a></li>
+                    </ul>
+                </div>
+                <!-- Our Project Nav End -->
+            </div>
+
+            <div class="col-lg-12">
+                <!-- Project Item Boxes start -->
+                <div class="row project-item-boxes align-items-center">
+                    <div class="col-md-6 project-item-box architecture bedroom">
+                        <!-- Project Item Start -->
+                        <div class="project-item wow fadeInUp">
+                            <div class="project-image">
+                                <div class="project-featured-image">
+                                    <figure class="image-anime">
+                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/project-1.jpg'); ?>" alt="">
+                                    </figure>
+                                </div>
+
+                                <div class="project-btn">
+                                    <a href="project-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3>residential spaces</h3>
+                                <h2><a href="project-single.html">urban retreat: modern design meets comfort</a></h2>
+                            </div>
+                        </div>
+                        <!-- Project Item End -->
+                    </div>
+
+                    <div class="col-md-6 project-item-box interior kitchen">
+                        <!-- Project Item Start -->
+                        <div class="project-item wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="project-image">
+                                <div class="project-featured-image">
+                                    <figure class="image-anime">
+                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/project-2.jpg'); ?>" alt="">
+                                    </figure>
+                                </div>
+
+                                <div class="project-btn">
+                                    <a href="project-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3>luxury homes</h3>
+                                <h2><a href="project-single.html">luxurious loft: industrial chic for living</a></h2>
+                            </div>
+                        </div>
+                        <!-- Project Item End -->
+                    </div>
+
+                    <div class="col-md-6 project-item-box furniture architecture">
+                        <!-- Project Item Start -->
+                        <div class="project-item wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="project-image">
+                                <div class="project-featured-image">
+                                    <figure class="image-anime">
+                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/project-3.jpg'); ?>" alt="">
+                                    </figure>
+                                </div>
+
+                                <div class="project-btn">
+                                    <a href="project-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3>outdoor living spaces</h3>
+                                <h2><a href="project-single.html">coastal vibes: serenity by the sea</a></h2>
+                            </div>
+                        </div>
+                        <!-- Project Item End -->
+                    </div>
+
+                    <div class="col-md-6 project-item-box kitchen bedroom">
+                        <!-- Project Item Start -->
+                        <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="project-image">
+                                <div class="project-featured-image">
+                                    <figure class="image-anime">
+                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/project-4.jpg'); ?>" alt="">
+                                    </figure>
+                                </div>
+
+                                <div class="project-btn">
+                                    <a href="project-single.html"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                </div>
+                            </div>
+
+                            <div class="project-content">
+                                <h3>modern designs</h3>
+                                <h2><a href="project-single.html">minimalist haven: simple, clean, inviting spaces</a></h2>
+                            </div>
+                        </div>
+                        <!-- Project Item End -->
+                    </div>
+                </div>
+                <!-- Project Item Boxes End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Project End -->
+
+<!-- How We Work Start -->
+<div class="how-we-work">
+    <div class="container">
+        <div class="row section-row align-items-center">
+            <div class="col-lg-6">
+                <!-- Section Title Start -->
+                <div class="section-title dark-section">
+                    <h3 class="wow fadeInUp">how we work</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">From concept to completion in<span> our work</span></h2>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <div class="col-lg-6">
+                <!-- Section Title Content Start -->
+                <div class="section-title-content dark-section">
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">Our comprehensive approach guides you through each phase of the design process, from initial brainstorming and conceptualization.</p>
+                </div>
+                <!-- Section Title Content End -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- How We Work List Start -->
+                <div class="how-we-work-list">
+                    <!-- How We Item Start -->
+                    <div class="how-we-work-item wow fadeInUp">
+                        <div class="icon-box">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-how-we-work-1.svg'); ?>" alt="">
+                        </div>
+                        <div class="how-we-work-content">
+                            <h3>01. initial consultation</h3>
+                            <p>We start with a one-on meeting to understand your vision preferences and requirement.</p>
+                        </div>
+                    </div>
+                    <!-- How We Item End -->
+
+                    <!-- How We Item Start -->
+                    <div class="how-we-work-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon-box">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-how-we-work-2.svg'); ?>" alt="">
+                        </div>
+                        <div class="how-we-work-content">
+                            <h3>02. design planning</h3>
+                            <p>This involves selecting materials, and layouts, furnishings, as well as creating 3D renderings.</p>
+                        </div>
+                    </div>
+                    <!-- How We Item End -->
+
+                    <!-- How We Item Start -->
+                    <div class="how-we-work-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="icon-box">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-how-we-work-3.svg'); ?>" alt="">
+                        </div>
+                        <div class="how-we-work-content">
+                            <h3>03. project execution</h3>
+                            <p>With the design plans in this place, we manage and coordinate all aspects of the projects.</p>
+                        </div>
+                    </div>
+                    <!-- How We Item End -->
+
+                    <!-- How We Item Start -->
+                    <div class="how-we-work-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="icon-box">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/icon-how-we-work-4.svg'); ?>" alt="">
+                        </div>
+                        <div class="how-we-work-content">
+                            <h3>04. final review</h3>
+                            <p>After completing project we conduct a thorough walkthrough with you to review the space.</p>
+                        </div>
+                    </div>
+                    <!-- How We Item End -->
+                </div>
+                <!-- How We Work List End -->
+
+                <!-- How Work Company Slider Start -->
+                <div class="how-work-company-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Company Support Logo Start -->
+                            <div class="swiper-slide">
+                                <div class="company-logo">
+                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-1.svg'); ?>" alt="">
+                                </div>
+                            </div>
+                            <!-- Company Support Logo End -->
+
+                            <!-- Company Support Logo Start -->
+                            <div class="swiper-slide">
+                                <div class="company-logo">
+                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-2.svg'); ?>" alt="">
+                                </div>
+                            </div>
+                            <!-- Company Support Logo End -->
+
+                            <!-- Company Support Logo Start -->
+                            <div class="swiper-slide">
+                                <div class="company-logo">
+                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-3.svg'); ?>" alt="">
+                                </div>
+                            </div>
+                            <!-- Company Support Logo End -->
+
+                            <!-- Company Support Logo Start -->
+                            <div class="swiper-slide">
+                                <div class="company-logo">
+                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-4.svg'); ?>" alt="">
+                                </div>
+                            </div>
+                            <!-- Company Support Logo End -->
+
+                            <!-- Company Support Logo Start -->
+                            <div class="swiper-slide">
+                                <div class="company-logo">
+                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-5.svg'); ?>" alt="">
+                                </div>
+                            </div>
+                            <!-- Company Support Logo End -->
+
+                            <!-- Company Support Logo Start -->
+                            <div class="swiper-slide">
+                                <div class="company-logo">
+                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/company-logo-1.svg'); ?>" alt="">
+                                </div>
+                            </div>
+                            <!-- Company Support Logo End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- How Work Company Slider End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- How We Work End -->
+
+<!-- Our Skill Start -->
+<div class="our-skill">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <!-- Our Skill Content Start -->
+                <div class="our-skill-content">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">our skills</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Skills that shape your<span> dream home</span></h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Our dedicated team of designers works closely with you to understand your vision and bring it to life with thoughtful attention to detail.</p>
+                    </div>
+                    <!-- Section Title End -->
+
+                    <!-- About SkillBar Start -->
+                    <div class="our-skillbar">
+                        <!-- Skills Progress Bar Start -->
+                        <div class="skills-progress-bar">
+                            <!-- Skill Item Start -->
+                            <div class="skillbar" data-percent="95%">
+                                <div class="skill-data">
+                                    <div class="skill-title">space planning and layout</div>
+                                    <div class="skill-no">95%</div>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="count-bar"></div>
+                                </div>
+                            </div>
+                            <!-- Skill Item End -->
+                        </div>
+                        <!-- Skills Progress Bar End -->
+
+                        <!-- Skills Progress Bar Start -->
+                        <div class="skills-progress-bar">
+                            <!-- Skill Item Start -->
+                            <div class="skillbar" data-percent="85%">
+                                <div class="skill-data">
+                                    <div class="skill-title">project challenges and solutions</div>
+                                    <div class="skill-no">85%</div>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="count-bar"></div>
+                                </div>
+                            </div>
+                            <!-- Skill Item End -->
+                        </div>
+                        <!-- Skills Progress Bar End -->
+
+                        <!-- Skills Progress Bar Start -->
+                        <div class="skills-progress-bar">
+                            <!-- Skill Item Start -->
+                            <div class="skillbar" data-percent="75%">
+                                <div class="skill-data">
+                                    <div class="skill-title">sustainability and eco-friendly features</div>
+                                    <div class="skill-no">75%</div>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="count-bar"></div>
+                                </div>
+                            </div>
+                            <!-- Skill Item End -->
+                        </div>
+                        <!-- Skills Progress Bar End -->
+                    </div>
+                    <!-- About SkillBar End -->
+                </div>
+                <!-- Our Skill Content End -->
+            </div>
+
+            <div class="col-lg-6">
+                <!-- Our Skill Image Start -->
+                <div class="our-skill-image">
+                    <div class="our-skill-img-1">
+                        <figure class="image-anime reveal">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-skill-img-1.jpg'); ?>" alt="">
+                        </figure>
+                    </div>
+
+                    <div class="our-skill-img-2">
+                        <figure class="image-anime reveal">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-skill-img-2.jpg'); ?> " alt="">
+                        </figure>
+                    </div>
+
+                    <div class="our-skill-img-3">
+                        <figure class="image-anime reveal">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-skill-img-3.jpg'); ?> " alt="">
+                        </figure>
+                    </div>
+                </div>
+                <!-- Our Skill Image End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Skill End -->
+
+<!-- Our Testimonial Start -->
+<div class="our-testimonials">
+    <div class="container-fluid">
+        <div class="row no-gutters row-full-width">
+            <div class="col-lg-6">
+                <!-- Our Testimonial Image Start -->
+                <div class="our-testimonials-image">
+                    <figure class="image-anime">
+                        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/testimonial-img.jpg'); ?>" alt="">
+                    </figure>
+                </div>
+                <!-- Our Testimonial Image End -->
+            </div>
+
+            <div class="col-lg-6">
+                <!-- Our Testimonial Content Start -->
+                <div class="our-testimonial-content">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">client testimonials</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Trusted by thousand of <span>people & companies.</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+
+                    <!-- Testimonial Slider Start -->
+                    <div class="testimonial-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper" data-cursor-text="Drag">
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="testimonial-body">
+                                            <div class="testimonial-content">
+                                                <p>I couldn't be happier with the transformation of my home! From our very first consultation, the team at took the time to understand my vision and preferences.</p>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-body">
+                                            <div class="author-image">
+                                                <figure class="image-anime">
+                                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/author-1.jpg'); ?>" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="author-content">
+                                                <h3>arlene mcCoy</h3>
+                                                <p>co. founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <p>I couldn't be happier with the transformation of my home! From our very first consultation, the team at took the time to understand my vision and preferences.</p>
+                                        </div>
+                                        <div class="testimonial-body">
+                                            <div class="author-image">
+                                                <figure class="image-anime">
+                                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/author-1.jpg'); ?>" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="author-content">
+                                                <h3>arlene mcCoy</h3>
+                                                <p>co founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Slider End -->
+
+                    <!-- Testimonial Rating Counter Start -->
+                    <div class="testimonial-rating-counter">
+                        <div class="rating-counter">
+                            <h2><span class="counter">4.82</span></h2>
+                        </div>
+                        <div class="testimonial-rating-content">
+                            <div class="testimonial-client-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>2,488 reviews</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial Rating Counter End -->
+                </div>
+                <!-- Our Testimonial Content End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Testimonial End -->
+
+<!-- Our Blog Section Start -->
+<div class="our-blog">
+    <div class="container">
+        <div class="row section-row align-items-center">
+            <div class="col-lg-6">
+                <!-- Section Title Start -->
+                <div class="section-title">
+                    <h3 class="wow fadeInUp">latest news</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque"><span>Your guide to</span> inspired interiors</h2>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <div class="col-lg-6">
+                <!-- Section Title Content Start -->
+                <div class="section-title-content">
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">Your journey to inspired interiors begins here. Our blog offers a wealth of resources, including design tips, trend analyses.</p>
+                </div>
+                <!-- Section Title Content End -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <!-- Post Item Start -->
+                <div class="post-item wow fadeInUp">
+                    <!-- Post Featured Image Start-->
+                    <div class="post-featured-image">
+                        <figure>
+                            <a href="blog-single.html" class="image-anime" data-cursor-text="View">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/post-1.jpg'); ?>" alt="">
+                            </a>
+                        </figure>
+                    </div>
+                    <!-- Post Featured Image End -->
+
+                    <!-- Post Item Body Start -->
+                    <div class="post-item-body">
+                        <!-- Post Item Content Start -->
+                        <div class="post-item-content">
+                            <h3><a href="blog-single.html">How Does One Go About a Buying Furniture?</a></h3>
+                        </div>
+                        <!-- Post Item Content End -->
+
+                        <!-- Blog Item Button Start -->
+                        <div class="post-item-btn">
+                            <a href="blog-single.html" class="post-btn">read more</a>
+                        </div>
+                        <!-- Blog Item Button End -->
+                    </div>
+                    <!-- Post Item Body End -->
+                </div>
+                <!-- Post Item End -->
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <!-- Post Item Start -->
+                <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
+                    <!-- Post Featured Image Start-->
+                    <div class="post-featured-image">
+                        <figure>
+                            <a href="blog-single.html" class="image-anime" data-cursor-text="View">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/post-2.jpg'); ?>" alt="">
+                            </a>
+                        </figure>
+                    </div>
+                    <!-- Post Featured Image End -->
+
+                    <!-- Post Item Body Start -->
+                    <div class="post-item-body">
+                        <!-- Post Item Content Start -->
+                        <div class="post-item-content">
+                            <h3><a href="blog-single.html">Innovative Décor Ideas Shaping Homes Today</a></h3>
+                        </div>
+                        <!-- Post Item Content End -->
+
+                        <!-- Blog Item Button Start -->
+                        <div class="post-item-btn">
+                            <a href="blog-single.html" class="post-btn">read more</a>
+                        </div>
+                        <!-- Blog Item Button End -->
+                    </div>
+                    <!-- Post Item Body End -->
+                </div>
+                <!-- Post Item End -->
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <!-- Post Item Start -->
+                <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
+                    <!-- Post Featured Image Start-->
+                    <div class="post-featured-image">
+                        <figure>
+                            <a href="blog-single.html" class="image-anime" data-cursor-text="View">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/post-3.jpg'); ?>" alt="">
+                            </a>
+                        </figure>
+                    </div>
+                    <!-- Post Featured Image End -->
+
+                    <!-- Post Item Body Start -->
+                    <div class="post-item-body">
+                        <!-- Post Item Content Start -->
+                        <div class="post-item-content">
+                            <h3><a href="blog-single.html">Design Industry Updates You Should Know About</a></h3>
+                        </div>
+                        <!-- Post Item Content End -->
+
+                        <!-- Blog Item Button Start -->
+                        <div class="post-item-btn">
+                            <a href="blog-single.html" class="post-btn">read more</a>
+                        </div>
+                        <!-- Blog Item Button End -->
+                    </div>
+                    <!-- Post Item Body End -->
+                </div>
+                <!-- Post Item End -->
+            </div>
+
+            <div class="col-lg-12">
+                <!-- Our Blog Footer Start -->
+                <div class="our-blog-footer wow fadeInUp" data-wow-delay="0.6s">
+                    <a href="blog.html" class="btn-default">See All Blogs</a>
+                </div>
+                <!-- Our Blog Footer End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Blog Section End -->
+
+
+
+
 
 <?php
 get_footer();

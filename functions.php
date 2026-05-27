@@ -96,7 +96,8 @@ function flatsome_child_enqueue_styles()
         'customize-css' => 'customize.css',
         'header-css'    => 'header.css',
         'footer-css'    => 'footer.css',
-        'components-css' => 'components.css'
+        'components-css' => 'components.css',
+        // 'inspaire-custom-css' => 'inspaire-custom.css',
     );
 
     foreach ($global_css as $handle => $file) {
@@ -112,6 +113,54 @@ function flatsome_child_enqueue_styles()
             );
         }
     }
+
+    // 4) CSS Inspaire chỉ load ở trang chủ hoặc page cần dùng animation template
+    if (is_front_page() || is_page('trang-chu-1')) {
+
+        $inspaire_css_files = array(
+            'inspaire-bootstrap-css'      => 'bootstrap.min.css',
+            'inspaire-fontawesome-css'    => 'all.min.css',
+            'inspaire-animate-css'        => 'animate.css',
+            'inspaire-swiper-css'         => 'swiper-bundle.min.css',
+            'inspaire-magnific-popup-css' => 'magnific-popup.css',
+            'inspaire-mousecursor-css'    => 'mousecursor.css',
+        );
+
+        foreach ($inspaire_css_files as $handle => $file) {
+            $path = get_stylesheet_directory() . '/assets/css/' . $file;
+            $uri  = get_stylesheet_directory_uri() . '/assets/css/' . $file;
+
+            if (file_exists($path)) {
+                wp_enqueue_style(
+                    $handle,
+                    $uri,
+                    array('reset-css'),
+                    filemtime($path)
+                );
+            }
+        }
+
+        // CSS chính của template Inspaire nên load sau cùng
+        $inspaire_custom_path = get_stylesheet_directory() . '/assets/css/inspaire-custom.css';
+        $inspaire_custom_uri  = get_stylesheet_directory_uri() . '/assets/css/inspaire-custom.css';
+
+        if (file_exists($inspaire_custom_path)) {
+            wp_enqueue_style(
+                'inspaire-custom-css',
+                $inspaire_custom_uri,
+                array(
+                    'inspaire-bootstrap-css',
+                    'inspaire-fontawesome-css',
+                    'inspaire-animate-css',
+                    'inspaire-swiper-css',
+                    'inspaire-magnific-popup-css',
+                    'inspaire-mousecursor-css',
+                ),
+                filemtime($inspaire_custom_path)
+            );
+        }
+    }
+
 
     // 4) Trang HOME → chỉ load trang-chu.css
     // if (is_front_page() || is_page('trang-chu-1')) {
@@ -141,3 +190,127 @@ function flatsome_child_enqueue_styles()
     // }
 }
 add_action('wp_enqueue_scripts', 'flatsome_child_enqueue_styles', 20);
+
+
+add_action('wp_enqueue_scripts', 'nk_enqueue_inspaire_local_scripts');
+
+function nk_enqueue_inspaire_local_scripts()
+{
+    $theme_uri  = get_stylesheet_directory_uri();
+    $theme_path = get_stylesheet_directory();
+
+    // Chỉ load ở trang chủ trước
+    // if (!is_front_page()) {
+    //     return;
+    // }
+
+    wp_enqueue_script(
+        'nk-swiper',
+        $theme_uri . '/assets/js/swiper-bundle.min.js',
+        array(),
+        filemtime($theme_path . '/assets/js/swiper-bundle.min.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'nk-waypoints',
+        $theme_uri . '/assets/js/jquery.waypoints.min.js',
+        array('jquery'),
+        filemtime($theme_path . '/assets/js/jquery.waypoints.min.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'nk-counterup',
+        $theme_uri . '/assets/js/jquery.counterup.min.js',
+        array('jquery', 'nk-waypoints'),
+        filemtime($theme_path . '/assets/js/jquery.counterup.min.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'nk-magnific-popup',
+        $theme_uri . '/assets/js/jquery.magnific-popup.min.js',
+        array('jquery'),
+        filemtime($theme_path . '/assets/js/jquery.magnific-popup.min.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'nk-isotope',
+        $theme_uri . '/assets/js/isotope.min.js',
+        array('jquery'),
+        filemtime($theme_path . '/assets/js/isotope.min.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'nk-parallaxie',
+        $theme_uri . '/assets/js/parallaxie.js',
+        array('jquery'),
+        filemtime($theme_path . '/assets/js/parallaxie.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'nk-gsap',
+        $theme_uri . '/assets/js/gsap.min.js',
+        array(),
+        filemtime($theme_path . '/assets/js/gsap.min.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'nk-scrolltrigger',
+        $theme_uri . '/assets/js/ScrollTrigger.min.js',
+        array('nk-gsap'),
+        filemtime($theme_path . '/assets/js/ScrollTrigger.min.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'nk-splittext',
+        $theme_uri . '/assets/js/SplitText.js',
+        array('nk-gsap'),
+        filemtime($theme_path . '/assets/js/SplitText.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'nk-wow',
+        $theme_uri . '/assets/js/wow.min.js',
+        array(),
+        filemtime($theme_path . '/assets/js/wow.min.js'),
+        true
+    );
+
+    // Magic Cursor cần cả jQuery và GSAP
+    wp_enqueue_script(
+        'nk-magiccursor',
+        $theme_uri . '/assets/js/magiccursor.js',
+        array('jquery', 'nk-gsap'),
+        filemtime($theme_path . '/assets/js/magiccursor.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'nk-function',
+        $theme_uri . '/assets/js/function.js',
+        array(
+            'jquery',
+            'nk-swiper',
+            'nk-waypoints',
+            'nk-counterup',
+            'nk-magnific-popup',
+            'nk-isotope',
+            'nk-parallaxie',
+            'nk-gsap',
+            'nk-scrolltrigger',
+            'nk-splittext',
+            'nk-wow',
+            'nk-magiccursor'
+        ),
+        filemtime($theme_path . '/assets/js/function.js'),
+        true
+    );
+}
