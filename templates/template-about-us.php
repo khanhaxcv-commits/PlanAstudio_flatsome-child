@@ -106,7 +106,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                             <!-- About Us Content Button Start -->
                             <div class="about-us-content-btn wow fadeInUp" data-wow-delay="0.6s">
-                                <a href="contact.html" class="btn-default">contact now</a>
+                                <a href="lien-he" class="btn-default">contact now</a>
                             </div>
                             <!-- About Us Content Button End -->
                         </div>
@@ -121,7 +121,7 @@ $theme_uri = get_stylesheet_directory_uri();
                                 </div>
                                 <div class="about-contact-content">
                                     <p>need any help?</p>
-                                    <h3>+(1) 235 800 999</h3>
+                                    <h3>098 789 7494</h3>
                                 </div>
                             </div>
                             <!-- About Contact Item End -->
@@ -730,13 +730,13 @@ $theme_uri = get_stylesheet_directory_uri();
                     <!-- FAQ Accordion Start -->
                     <div class="faq-accordion" id="accordion">
                         <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp">
+                        <div class="accordion-item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                             <h2 class="accordion-header" id="heading1">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
                                     <span>1.</span> What is the typical process for starting a design project?
                                 </button>
                             </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordion">
+                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordion" style="">
                                 <div class="accordion-body">
                                     <p>Our process starts with a consultation to discuss your vision, followed by planning, design presentation, and implementation to achieve your ideal space.</p>
                                 </div>
@@ -745,7 +745,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <!-- FAQ Item End -->
 
                         <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                             <h2 class="accordion-header" id="heading2">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                     <span>2.</span> How long does a typical interior design project take?
@@ -760,7 +760,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <!-- FAQ Item End -->
 
                         <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
                             <h2 class="accordion-header" id="heading3">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                     <span>3.</span> Can I incorporate my existing furniture into the new design?
@@ -775,7 +775,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <!-- FAQ Item End -->
 
                         <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
                             <h2 class="accordion-header" id="heading4">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                     <span>4.</span> What should I expect during the design consultation?

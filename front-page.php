@@ -48,26 +48,26 @@ $theme_uri = get_stylesheet_directory_uri();
                                     <li class="nav-item"><a class="nav-link" href="index-slider.html">Home - Slider</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
+                            <li class="nav-item"><a class="nav-link" href="ve-chung-toi">About Us</a>
                             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="danh-muc/du-an">Projects</a></li>
                             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                             <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
                                 <ul>
-                                    <li class="nav-item"><a class="nav-link" href="service-single.html">Service Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="project-single.html">Project Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">Service Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">Project Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">Blog Details</a></li>
                                     <li class="nav-item"><a class="nav-link" href="image-gallery.html">Image Gallery</a></li>
                                     <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
                                     <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="lien-he">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- Header Btn Start -->
                     <div class="header-btn d-inline-flex">
-                        <a href="contact.html" class="btn-default">get in touch</a>
+                        <a href="lien-he" class="btn-default">get in touch</a>
                     </div>
                     <!-- Header Btn End -->
                 </div>
@@ -97,8 +97,8 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Hero Button Start -->
                     <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="about.html" class="btn-default">explore more</a>
-                        <a href="projects.html" class="btn-default btn-highlighted">view projects</a>
+                        <a href="ve-chung-toi" class="btn-default">explore more</a>
+                        <a href="danh-muc/du-an" class="btn-default btn-highlighted">view projects</a>
                     </div>
                     <!-- Hero Button End -->
                 </div>
@@ -175,7 +175,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                             <!-- About Us Content Button Start -->
                             <div class="about-us-content-btn wow fadeInUp" data-wow-delay="0.6s">
-                                <a href="about.html" class="btn-default">read more</a>
+                                <a href="ve-chung-toi" class="btn-default">read more</a>
                             </div>
                             <!-- About Us Content Button End -->
                         </div>
@@ -190,7 +190,7 @@ $theme_uri = get_stylesheet_directory_uri();
                                 </div>
                                 <div class="about-contact-content">
                                     <p>need any help?</p>
-                                    <h3>+(1) 235 800 999</h3>
+                                    <h3>098 789 7494</h3>
                                 </div>
                             </div>
                             <!-- About Contact Item End -->
@@ -371,7 +371,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="service-item wow fadeInUp">
                     <!-- Service Image Start -->
                     <div class="service-image">
-                        <a href="service-single.html" data-cursor-text="View">
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/service-1.jpg'); ?>" alt="">
                             </figure>
@@ -381,13 +381,13 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
                     <!-- Service Content Start -->
                     <div class="service-content">
-                        <h3><a href="service-single.html">residential interior design</a></h3>
+                        <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">residential interior design</a></h3>
                         <p>We create personalized living spaces that reflect your style and functional needs.</p>
                     </div>
                     <!-- Service Content End -->
@@ -400,7 +400,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
                     <!-- Service Image Start -->
                     <div class="service-image">
-                        <a href="service-single.html" data-cursor-text="View">
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/service-2.jpg'); ?>" alt="">
                             </figure>
@@ -410,13 +410,13 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
                     <!-- Service Content Start -->
                     <div class="service-content">
-                        <h3><a href="service-single.html">commercial interior design</a></h3>
+                        <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">commercial interior design</a></h3>
                         <p>Enhancing business environments with professional, functional, and aesthetically.</p>
                     </div>
                     <!-- Service Content End -->
@@ -429,7 +429,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
                     <!-- Service Image Start -->
                     <div class="service-image">
-                        <a href="service-single.html" data-cursor-text="View">
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/service-3.jpg'); ?>" alt="">
                             </figure>
@@ -439,13 +439,13 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
                     <!-- Service Content Start -->
                     <div class="service-content">
-                        <h3><a href="service-single.html">furniture and decor selection</a></h3>
+                        <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">furniture and decor selection</a></h3>
                         <p>Our experts help you choose the perfect furniture and decor complement your style.</p>
                     </div>
                     <!-- Service Content End -->
@@ -547,13 +547,13 @@ $theme_uri = get_stylesheet_directory_uri();
                                 </div>
 
                                 <div class="project-btn">
-                                    <a href="project-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                    <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                                 </div>
                             </div>
 
                             <div class="project-content">
                                 <h3>residential spaces</h3>
-                                <h2><a href="project-single.html">urban retreat: modern design meets comfort</a></h2>
+                                <h2><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">urban retreat: modern design meets comfort</a></h2>
                             </div>
                         </div>
                         <!-- Project Item End -->
@@ -570,13 +570,13 @@ $theme_uri = get_stylesheet_directory_uri();
                                 </div>
 
                                 <div class="project-btn">
-                                    <a href="project-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                    <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                                 </div>
                             </div>
 
                             <div class="project-content">
                                 <h3>luxury homes</h3>
-                                <h2><a href="project-single.html">luxurious loft: industrial chic for living</a></h2>
+                                <h2><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">luxurious loft: industrial chic for living</a></h2>
                             </div>
                         </div>
                         <!-- Project Item End -->
@@ -593,13 +593,13 @@ $theme_uri = get_stylesheet_directory_uri();
                                 </div>
 
                                 <div class="project-btn">
-                                    <a href="project-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                    <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                                 </div>
                             </div>
 
                             <div class="project-content">
                                 <h3>outdoor living spaces</h3>
-                                <h2><a href="project-single.html">coastal vibes: serenity by the sea</a></h2>
+                                <h2><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">coastal vibes: serenity by the sea</a></h2>
                             </div>
                         </div>
                         <!-- Project Item End -->
@@ -616,13 +616,13 @@ $theme_uri = get_stylesheet_directory_uri();
                                 </div>
 
                                 <div class="project-btn">
-                                    <a href="project-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                                    <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                                 </div>
                             </div>
 
                             <div class="project-content">
                                 <h3>modern designs</h3>
-                                <h2><a href="project-single.html">minimalist haven: simple, clean, inviting spaces</a></h2>
+                                <h2><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">minimalist haven: simple, clean, inviting spaces</a></h2>
                             </div>
                         </div>
                         <!-- Project Item End -->
@@ -1014,7 +1014,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <!-- Post Featured Image Start-->
                     <div class="post-featured-image">
                         <figure>
-                            <a href="blog-single.html" class="image-anime" data-cursor-text="View">
+                            <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" class="image-anime" data-cursor-text="View">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/post-1.jpg'); ?>" alt="">
                             </a>
                         </figure>
@@ -1025,13 +1025,13 @@ $theme_uri = get_stylesheet_directory_uri();
                     <div class="post-item-body">
                         <!-- Post Item Content Start -->
                         <div class="post-item-content">
-                            <h3><a href="blog-single.html">How Does One Go About a Buying Furniture?</a></h3>
+                            <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">How Does One Go About a Buying Furniture?</a></h3>
                         </div>
                         <!-- Post Item Content End -->
 
                         <!-- Blog Item Button Start -->
                         <div class="post-item-btn">
-                            <a href="blog-single.html" class="post-btn">read more</a>
+                            <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" class="post-btn">read more</a>
                         </div>
                         <!-- Blog Item Button End -->
                     </div>
@@ -1046,7 +1046,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <!-- Post Featured Image Start-->
                     <div class="post-featured-image">
                         <figure>
-                            <a href="blog-single.html" class="image-anime" data-cursor-text="View">
+                            <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" class="image-anime" data-cursor-text="View">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/post-2.jpg'); ?>" alt="">
                             </a>
                         </figure>
@@ -1057,13 +1057,13 @@ $theme_uri = get_stylesheet_directory_uri();
                     <div class="post-item-body">
                         <!-- Post Item Content Start -->
                         <div class="post-item-content">
-                            <h3><a href="blog-single.html">Innovative Décor Ideas Shaping Homes Today</a></h3>
+                            <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">Innovative Décor Ideas Shaping Homes Today</a></h3>
                         </div>
                         <!-- Post Item Content End -->
 
                         <!-- Blog Item Button Start -->
                         <div class="post-item-btn">
-                            <a href="blog-single.html" class="post-btn">read more</a>
+                            <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" class="post-btn">read more</a>
                         </div>
                         <!-- Blog Item Button End -->
                     </div>
@@ -1078,7 +1078,7 @@ $theme_uri = get_stylesheet_directory_uri();
                     <!-- Post Featured Image Start-->
                     <div class="post-featured-image">
                         <figure>
-                            <a href="blog-single.html" class="image-anime" data-cursor-text="View">
+                            <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" class="image-anime" data-cursor-text="View">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/post-3.jpg'); ?>" alt="">
                             </a>
                         </figure>
@@ -1089,13 +1089,13 @@ $theme_uri = get_stylesheet_directory_uri();
                     <div class="post-item-body">
                         <!-- Post Item Content Start -->
                         <div class="post-item-content">
-                            <h3><a href="blog-single.html">Design Industry Updates You Should Know About</a></h3>
+                            <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">Design Industry Updates You Should Know About</a></h3>
                         </div>
                         <!-- Post Item Content End -->
 
                         <!-- Blog Item Button Start -->
                         <div class="post-item-btn">
-                            <a href="blog-single.html" class="post-btn">read more</a>
+                            <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" class="post-btn">read more</a>
                         </div>
                         <!-- Blog Item Button End -->
                     </div>

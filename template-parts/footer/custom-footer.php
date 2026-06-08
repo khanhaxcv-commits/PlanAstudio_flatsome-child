@@ -21,9 +21,9 @@
                                      <h3>follow our socials</h3>
                                  </div>
                                  <ul>
-                                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                     <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                     <li><a href="https://www.facebook.com/Plan.Architect.VN"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                     <!-- <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li> -->
+                                     <li><a href="https://www.instagram.com/planastudio.vn/"><i class="fa-brands fa-instagram"></i></a></li>
                                  </ul>
                              </div>
                              <!-- Footer Social Link End -->
@@ -42,7 +42,7 @@
                          <!-- <li><a href="services.html">view our service</a></li> -->
                          <!-- <li><a href="#">careers at company</a></li> -->
                          <li><a href="danh-muc/du-an">read our blog</a></li>
-                         <!-- <li><a href="projects.html">our latest projects</a></li> -->
+                         <!-- <li><a href="danh-muc/du-an">our latest projects</a></li> -->
                      </ul>
                  </div>
                  <!-- Footer Links End -->
@@ -73,7 +73,7 @@
                              <i class="fa-solid fa-phone"></i>
                          </div>
                          <div class="footer-contact-content">
-                             <p>+1 (213) 465 789</p>
+                             <p>098 789 7494</p>
                          </div>
                      </div>
                      <!-- Footer Contact Item End -->
@@ -84,7 +84,7 @@
                              <i class="fa-solid fa-envelope"></i>
                          </div>
                          <div class="footer-contact-content">
-                             <p>info@domain.com</p>
+                             <p>info@planastudio.vn</p>
                          </div>
                      </div>
                      <!-- Footer Contact Item End -->
@@ -95,7 +95,7 @@
                              <i class="fa-solid fa-location-dot"></i>
                          </div>
                          <div class="footer-contact-content">
-                             <p>Generała Ziętka Jerzego 54, Mysłowice 41-412</p>
+                             <p>B00.01 Sarica Building - Số 6, Đường D9, P. An Lợi Đông, Q.2 - TP. Thủ Đức (Khu đô thị Sala)</p>
                          </div>
                      </div>
                      <!-- Footer Contact Item End -->

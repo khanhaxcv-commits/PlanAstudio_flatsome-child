@@ -122,7 +122,8 @@ $theme_uri = get_stylesheet_directory_uri();
             <div class="col-lg-12">
                 <!-- Google Map IFrame Start -->
                 <div class="google-map-iframe">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96737.10562045308!2d-74.08535042841811!3d40.739265258395164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1703158537552!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96737.10562045308!2d-74.08535042841811!3d40.739265258395164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1703158537552!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d61829.74194286556!2d106.60594097253976!3d10.809245298126438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be09ea054b9%3A0x6a9fd4d6bc18fa85!2zNiDEkMaw4budbmcgRDksIFTDonkgVGjhuqFuaCwgSOG7kyBDaMOtIE1pbmggNzIwMDksIFZp4buHdCBOYW0!5e1!3m2!1svi!2sus!4v1780915516128!5m2!1svi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <!-- Google Map IFrame End -->
             </div>
@@ -143,8 +144,8 @@ $theme_uri = get_stylesheet_directory_uri();
                         <!-- Contact Info Content Start -->
                         <div class="contact-info-content">
                             <h3>phone number</h3>
-                            <p>(+05) 698 - 548 - 6354</p>
-                            <p>(+07) 358 - 879 - 3257</p>
+                            <p>098 789 7494</p>
+                            <!-- <p>(+07) 358 - 879 - 3257</p> -->
                         </div>
                         <!-- Contact Info Content End -->
                     </div>
@@ -161,8 +162,8 @@ $theme_uri = get_stylesheet_directory_uri();
                         <!-- Contact Info Content Start -->
                         <div class="contact-info-content">
                             <h3>e-mail support</h3>
-                            <p>hello@domain12.com</p>
-                            <p>hello@domain12.com</p>
+                            <p>info@planastudio.vn</p>
+                            <!-- <p>hello@domain12.com</p> -->
                         </div>
                         <!-- Contact Info Content End -->
                     </div>
@@ -179,7 +180,7 @@ $theme_uri = get_stylesheet_directory_uri();
                         <!-- Contact Info Content Start -->
                         <div class="contact-info-content">
                             <h3>headquarter</h3>
-                            <p>2972 Westheimer Rd. Santa Ana Illinois 85486</p>
+                            <p>B00.01 Sarica Building - Số 6, Đường D9, P. An Lợi Đông, Q.2 - TP. Thủ Đức (Khu đô thị Sala)</p>
                         </div>
                         <!-- Contact Info Content End -->
                     </div>

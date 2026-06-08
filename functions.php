@@ -1,7 +1,5 @@
 <?php
 
-use UxBuilder\Collections\Components;
-
 add_action('init', function () {
     remove_filter('the_content', 'wpautop');
     remove_filter('the_excerpt', 'wpautop');
@@ -206,7 +204,13 @@ function nk_enqueue_inspaire_local_scripts()
     // if (!is_front_page()) {
     //     return;
     // }
-
+    wp_enqueue_script(
+        'nk-bootstrap',
+        $theme_uri . '/assets/js/bootstrap.min.js',
+        array(),
+        filemtime($theme_path . '/assets/js/bootstrap.min.js'),
+        true
+    );
     wp_enqueue_script(
         'nk-swiper',
         $theme_uri . '/assets/js/swiper-bundle.min.js',
@@ -301,6 +305,7 @@ function nk_enqueue_inspaire_local_scripts()
         $theme_uri . '/assets/js/function.js',
         array(
             'jquery',
+            'nk-bootstrap',
             'nk-swiper',
             'nk-waypoints',
             'nk-counterup',

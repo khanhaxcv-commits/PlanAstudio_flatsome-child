@@ -49,7 +49,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="service-item wow fadeInUp">
                     <!-- Service Image Start -->
                     <div class="service-image">
-                        <a href="service-single.html" data-cursor-text="View">
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/service-1.jpg'); ?>" alt="">
                             </figure>
@@ -59,13 +59,13 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
                     <!-- Service Content Start -->
                     <div class="service-content">
-                        <h3><a href="service-single.html">residential interior design</a></h3>
+                        <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">residential interior design</a></h3>
                         <p>We create personalized living spaces that reflect your style and functional needs.</p>
                     </div>
                     <!-- Service Content End -->
@@ -78,7 +78,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="service-item wow fadeInUp">
                     <!-- Service Image Start -->
                     <div class="service-image">
-                        <a href="service-single.html" data-cursor-text="View">
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/service-2.jpg'); ?>" alt="">
                             </figure>
@@ -88,13 +88,13 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
                     <!-- Service Content Start -->
                     <div class="service-content">
-                        <h3><a href="service-single.html">commercial interior design</a></h3>
+                        <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">commercial interior design</a></h3>
                         <p>Enhancing business environments with professional, functional, and aesthetically.</p>
                     </div>
                     <!-- Service Content End -->
@@ -107,7 +107,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
                     <!-- Service Image Start -->
                     <div class="service-image">
-                        <a href="service-single.html" data-cursor-text="View">
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/service-3.jpg'); ?>" alt="">
                             </figure>
@@ -117,13 +117,13 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
                     <!-- Service Content Start -->
                     <div class="service-content">
-                        <h3><a href="service-single.html">furniture and decor selection</a></h3>
+                        <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">furniture and decor selection</a></h3>
                         <p>Our experts help you choose the perfect furniture and decor complement your style.</p>
                     </div>
                     <!-- Service Content End -->
@@ -136,7 +136,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
                     <!-- Service Image Start -->
                     <div class="service-image">
-                        <a href="service-single.html" data-cursor-text="View">
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/service-4.jpg'); ?>" alt="">
                             </figure>
@@ -146,13 +146,13 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
                     <!-- Service Content Start -->
                     <div class="service-content">
-                        <h3><a href="service-single.html">lighting design</a></h3>
+                        <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">lighting design</a></h3>
                         <p>Enhancing ambiance and functionality with thoughtfully designed lighting solutions.</p>
                     </div>
                     <!-- Service Content End -->
@@ -165,7 +165,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
                     <!-- Service Image Start -->
                     <div class="service-image">
-                        <a href="service-single.html" data-cursor-text="View">
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/service-5.jpg'); ?>" alt="">
                             </figure>
@@ -175,13 +175,13 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
                     <!-- Service Content Start -->
                     <div class="service-content">
-                        <h3><a href="service-single.html">color consultation</a></h3>
+                        <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">color consultation</a></h3>
                         <p>Choosing palettes that evoke warmth, energy, or calm to match your vision.</p>
                     </div>
                     <!-- Service Content End -->
@@ -194,7 +194,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="service-item wow fadeInUp" data-wow-delay="0.8s">
                     <!-- Service Image Start -->
                     <div class="service-image">
-                        <a href="service-single.html" data-cursor-text="View">
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="<?php echo esc_url($theme_uri . '/assets/images/service-6.jpg'); ?>" alt="">
                             </figure>
@@ -204,13 +204,13 @@ $theme_uri = get_stylesheet_directory_uri();
 
                     <!-- Service Button Start -->
                     <div class="service-btn">
-                        <a href="service-single.html"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
+                        <a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama"><img src="<?php echo esc_url($theme_uri . '/assets/images/arrow-white.svg'); ?>" alt=""></a>
                     </div>
                     <!-- Service Button End -->
 
                     <!-- Service Content Start -->
                     <div class="service-content">
-                        <h3><a href="service-single.html">3D visualization</a></h3>
+                        <h3><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">3D visualization</a></h3>
                         <p>Bringing design ideas to life with realistic 3D models before the work begins.</p>
                     </div>
                     <!-- Service Content End -->
@@ -466,9 +466,9 @@ $theme_uri = get_stylesheet_directory_uri();
                                     <h3>follow our socials</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/Plan.Architect.VN"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <!-- <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li> -->
+                                    <li><a href="https://www.instagram.com/planastudio.vn/"><i class="fa-brands fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                             <!-- Footer Social Link End -->
@@ -483,11 +483,11 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="footer-links">
                     <h3>information</h3>
                     <ul>
-                        <li><a href="about.html">about our company</a></li>
+                        <li><a href="ve-chung-toi">about our company</a></li>
                         <li><a href="services.html">view our service</a></li>
                         <li><a href="#">careers at company</a></li>
                         <li><a href="blog.html">read our blog</a></li>
-                        <li><a href="projects.html">our latest projects</a></li>
+                        <li><a href="danh-muc/du-an">our latest projects</a></li>
                     </ul>
                 </div>
                 <!-- Footer Links End -->
@@ -498,11 +498,11 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="footer-links">
                     <h3>portfolio</h3>
                     <ul>
-                        <li><a href="project-single.html">luxury home design</a></li>
-                        <li><a href="project-single.html">residential interior design</a></li>
-                        <li><a href="project-single.html">commercial space design</a></li>
-                        <li><a href="project-single.html">residential interior design</a></li>
-                        <li><a href="project-single.html">renovation and restoration design</a></li>
+                        <li><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">luxury home design</a></li>
+                        <li><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">residential interior design</a></li>
+                        <li><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">commercial space design</a></li>
+                        <li><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">residential interior design</a></li>
+                        <li><a href="trang-tri-phong-khach-phong-cach-modern-classic-panorama">renovation and restoration design</a></li>
                     </ul>
                 </div>
                 <!-- Footer Links End -->
@@ -518,7 +518,7 @@ $theme_uri = get_stylesheet_directory_uri();
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <div class="footer-contact-content">
-                            <p>+1 (213) 465 789</p>
+                            <p>098 789 7494</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -529,7 +529,7 @@ $theme_uri = get_stylesheet_directory_uri();
                             <i class="fa-solid fa-envelope"></i>
                         </div>
                         <div class="footer-contact-content">
-                            <p>info@domain.com</p>
+                            <p>info@planastudio.vn</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -540,7 +540,7 @@ $theme_uri = get_stylesheet_directory_uri();
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div class="footer-contact-content">
-                            <p>Generała Ziętka Jerzego 54, Mysłowice 41-412</p>
+                            <p>B00.01 Sarica Building - Số 6, Đường D9, P. An Lợi Đông, Q.2 - TP. Thủ Đức (Khu đô thị Sala)</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
