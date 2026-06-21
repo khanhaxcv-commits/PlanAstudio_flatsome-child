@@ -9,6 +9,61 @@
     $(".preloader").fadeOut(600);
   });
 
+  /* Add cursor text to custom elements */
+  $(".data-cursor-text-view").attr("data-cursor-text", "View");
+  $(".data-cursor-text-play").attr("data-cursor-text", "Play");
+  $(".data-cursor-opaque").attr("data-cursor", "-opaque");
+
+  /**
+   * Add reveal class to elements that have both image-anime and image-reveal classes.
+   */
+  $(".image-anime.image-reveal").addClass("reveal");
+
+  /**
+   * Dọn dẹp class: Chỉ giữ lại class swiper-wrapper và xóa tất cả các class bổ trợ khác
+   */
+  $(".stack.swiper-wrapper").attr("class", "swiper-wrapper");
+
+  /**
+   * Convert WOW delay utility class to data-wow-delay attribute.
+   *
+   * Example:
+   * data-wow-delay-02 => data-wow-delay="0.2s"
+   * data-wow-delay-03 => data-wow-delay="0.3s"
+   * data-wow-delay-1  => data-wow-delay="1s"
+   * data-wow-delay-2  => data-wow-delay="2s"
+   */
+  $('[class*="data-wow-delay-"]').each(function () {
+    var className = this.className.match(/data-wow-delay-(\d+)/);
+    console.log("className:", className);
+
+    if (!className) return;
+
+    var value = className[1];
+    var delay = value.startsWith("0")
+      ? "0." + value.slice(1) + "s"
+      : value + "s";
+
+    $(this).attr("data-wow-delay", delay);
+  });
+
+  /**
+   * Auto-assign data-filter attribute from Flatsome tab aria-controls
+   *
+   * Usage in HTML:
+   *   <a aria-controls="tab_.architecture">  →  <a data-filter=".architecture">
+   *   <a aria-controls="tab_*">              →  <a data-filter="*">
+   */
+  $('[aria-controls^="tab_"]').each(function () {
+    var match = $(this)
+      .attr("aria-controls")
+      .match(/^tab_(.+)/);
+
+    if (!match) return;
+
+    $(this).attr("data-filter", match[1]);
+  });
+
   /* Sticky Header */
   if ($(".active-sticky-header").length) {
     $window.on("resize", function () {
@@ -35,10 +90,10 @@
   }
 
   /* Slick Menu JS */
-//   $("#menu").slicknav({
-//     label: "",
-//     prependTo: ".responsive-menu",
-//   });
+  //   $("#menu").slicknav({
+  //     label: "",
+  //     prependTo: ".responsive-menu",
+  //   });
 
   if ($("a[href='#top']").length) {
     $(document).on("click", "a[href='#top']", function () {
@@ -88,7 +143,15 @@
 
   /* testimonial Slider JS */
   if ($(".testimonial-slider").length) {
-    const testimonial_slider = new Swiper(".testimonial-slider .swiper", {
+    // Dùng jQuery tìm thẻ .swiper-wrapper bên trong và thêm thuộc tính data-cursor-text
+    $(".testimonial-slider.swiper")
+      .find(".swiper-wrapper")
+      .attr("data-cursor-text", "Drag");
+    $(".testimonial-slider.swiper .icon-box-1781348601568")
+      .find(".icon-inner")
+      .addClass("image-anime");
+
+    const testimonial_slider = new Swiper(".testimonial-slider.swiper", {
       slidesPerView: 1,
       speed: 1000,
       spaceBetween: 60,
@@ -128,26 +191,28 @@
     });
   }
 
-  /* Skill Bar */
-  if ($(".skills-progress-bar").length) {
-    $(".skills-progress-bar").waypoint(
-      function () {
-        $(".skillbar").each(function () {
-          $(this)
-            .find(".count-bar")
-            .animate(
-              {
-                width: $(this).attr("data-percent"),
-              },
-              2000,
-            );
-        });
-      },
+  /**
+   * Skill Bar
+   * Lấy phần trăm từ .skill-no và animate .count-bar.
+   */
+  $(".skillbar").each(function () {
+    var $skillbar = $(this);
+    var percentText = $skillbar.find(".skill-no").first().text().trim();
+    var match = percentText.match(/\d+%/);
+
+    if (!match) return;
+
+    var percent = match[0];
+
+    $skillbar.attr("data-percent", percent);
+
+    $skillbar.find(".count-bar").animate(
       {
-        offset: "50%",
+        width: percent,
       },
+      2000,
     );
-  }
+  });
 
   /* Youtube Background Video JS */
   if ($("#herovideo").length) {
@@ -264,14 +329,23 @@
 
   /* Parallaxie js */
   var $parallaxie = $(".parallaxie");
-  if ($parallaxie.length && $window.width() > 991) {
-    if ($window.width() > 768) {
-      $parallaxie.parallaxie({
-        speed: 0.55,
-        offset: 0,
+  $parallaxie.parallaxie({
+    speed: 0.55,
+    offset: 0,
+  });
+
+  $(".section.parallaxie").each(function () {
+    var $section = $(this);
+    var imgSrc = $section.find(".section-bg img").attr("src");
+
+    if (imgSrc) {
+      $section.css({
+        "background-image": 'url("' + imgSrc + '")',
+        "background-size": "cover",
+        "background-repeat": "no-repeat",
       });
     }
-  }
+  });
 
   /* Zoom Gallery screenshot */
   $(".gallery-items").magnificPopup({
@@ -296,43 +370,43 @@
   });
 
   /* Contact form validation */
-//   var $contactform = $("#contactForm");
-//   $contactform.validator({ focus: false }).on("submit", function (event) {
-//     if (!event.isDefaultPrevented()) {
-//       event.preventDefault();
-//       submitForm();
-//     }
-//   });
+  //   var $contactform = $("#contactForm");
+  //   $contactform.validator({ focus: false }).on("submit", function (event) {
+  //     if (!event.isDefaultPrevented()) {
+  //       event.preventDefault();
+  //       submitForm();
+  //     }
+  //   });
 
-//   function submitForm() {
-//     /* Ajax call to submit form */
-//     $.ajax({
-//       type: "POST",
-//       url: "form-process.php",
-//       data: $contactform.serialize(),
-//       success: function (text) {
-//         if (text === "success") {
-//           formSuccess();
-//         } else {
-//           submitMSG(false, text);
-//         }
-//       },
-//     });
-//   }
+  //   function submitForm() {
+  //     /* Ajax call to submit form */
+  //     $.ajax({
+  //       type: "POST",
+  //       url: "form-process.php",
+  //       data: $contactform.serialize(),
+  //       success: function (text) {
+  //         if (text === "success") {
+  //           formSuccess();
+  //         } else {
+  //           submitMSG(false, text);
+  //         }
+  //       },
+  //     });
+  //   }
 
-//   function formSuccess() {
-//     $contactform[0].reset();
-//     submitMSG(true, "Message Sent Successfully!");
-//   }
+  //   function formSuccess() {
+  //     $contactform[0].reset();
+  //     submitMSG(true, "Message Sent Successfully!");
+  //   }
 
-//   function submitMSG(valid, msg) {
-//     if (valid) {
-//       var msgClasses = "h4 text-success";
-//     } else {
-//       var msgClasses = "h4 text-danger";
-//     }
-//     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-//   }
+  //   function submitMSG(valid, msg) {
+  //     if (valid) {
+  //       var msgClasses = "h4 text-success";
+  //     } else {
+  //       var msgClasses = "h4 text-danger";
+  //     }
+  //     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+  //   }
   /* Contact form validation end */
 
   /* Our Project (filtering) Start */
@@ -347,6 +421,9 @@
           columnWidth: 1,
         },
       });
+
+      /* Set active-btn on first active tab's <a> */
+      $(".our-Project-nav li.active a").addClass("active-btn");
 
       /* Filter items on click */
       var $menudisesnav = $(".our-Project-nav li a");
@@ -369,13 +446,27 @@
   new WOW().init();
 
   /* Popup Video */
-  if ($(".popup-video").length) {
-    $(".popup-video").magnificPopup({
+  // if ($(".popup-video").length) {
+  //   $(".popup-video").magnificPopup({
+  //     type: "iframe",
+  //     mainClass: "mfp-fade",
+  //     removalDelay: 160,
+  //     preloader: false,
+  //     fixedContentPos: true,
+  //   });
+  // }
+  $(".popup-video").each(function () {
+    var $wrap = $(this);
+    var $link = $wrap.find("a[href]").first();
+
+    if (!$link.length || !$.fn.magnificPopup) return;
+
+    $link.magnificPopup({
       type: "iframe",
       mainClass: "mfp-fade",
       removalDelay: 160,
       preloader: false,
       fixedContentPos: true,
     });
-  }
+  });
 })(jQuery);

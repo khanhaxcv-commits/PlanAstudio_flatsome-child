@@ -37,14 +37,14 @@ body {
 }
 
 /* <--- Bố cục chính */
-.section {
+/* .section {
     padding: 20px 0px !important;
 }
 
 .section .col-inner {
     height: 100%;
 }
-
+    
 .section .row {
     margin-left: auto;
     margin-right: auto;
@@ -72,7 +72,8 @@ body {
         padding-left: 15px;
         padding-right: 15px;
     }
-}
+} */
+
 
 .row-grid {
     display: grid !important;
@@ -81,9 +82,5 @@ body {
 .row-grid>div {
     width: 100% !important;
     max-width: 100% !important;
-    padding-bottom: 0 !important;
-}
-
-.row ul li {
-    margin: 0 !important;
+    padding: 0 !important;
 }

@@ -15,20 +15,11 @@ $is_bao_chi  = is_category('bao-chi');
 $category_title = single_cat_title('', false);
 ?>
 
-<!-- Preloader Start -->
-<div class="preloader">
-    <div class="loading-container">
-        <div class="loading"></div>
-        <div id="loading-icon"><img src="<?php echo esc_url($theme_uri . '/assets/images/loader.svg'); ?>" alt=""></div>
-    </div>
-</div>
-<!-- Preloader End -->
-
 <!-- Page Header Start -->
 <div class="page-header parallaxie">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="large-12 col">
 
                 <div class="page-header-box">
                     <h1 class="text-anime-style-2" data-cursor="-opaque">
@@ -36,13 +27,15 @@ $category_title = single_cat_title('', false);
                     </h1>
 
                     <nav class="wow fadeInUp">
-                        <ol class="breadcrumb">
+                        <ol class="breadcrumb" style="display: inline-flex; gap: 5px;">
                             <li class="breadcrumb-item">
                                 <a href="<?php echo esc_url(home_url('/')); ?>">
                                     Trang chủ
                                 </a>
                             </li>
-
+                            <li class="breadcrumb-item">
+                                /
+                            </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 <?php echo esc_html($category_title); ?>
                             </li>
@@ -108,7 +101,7 @@ $category_title = single_cat_title('', false);
                     }
                     ?>
 
-                    <div class="col-lg-4 col-md-6">
+                    <div class="large-4 medium-6 col">
                         <div
                             class="post-item wow fadeInUp"
                             <?php if ($delay > 0) : ?>
@@ -208,7 +201,7 @@ $category_title = single_cat_title('', false);
 
                 <?php endwhile; ?>
 
-                <div class="col-lg-12">
+                <div class="large-12 col">
                     <div class="page-pagination wow fadeInUp" data-wow-delay="0.2s">
                         <?php
                         the_posts_pagination([
@@ -223,7 +216,7 @@ $category_title = single_cat_title('', false);
 
             <?php else : ?>
 
-                <div class="col-lg-12">
+                <div class="large-12 col">
                     <div class="empty-category-message">
                         <p>Chưa có bài viết nào trong danh mục này.</p>
                     </div>

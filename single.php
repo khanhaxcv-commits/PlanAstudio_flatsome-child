@@ -38,39 +38,34 @@ if (have_posts()) :
         }
 ?>
 
-        <!-- Preloader Start -->
-        <div class="preloader">
-            <div class="loading-container">
-                <div class="loading"></div>
-                <div id="loading-icon"><img src="<?php echo esc_url($theme_uri . '/assets/images/loader.svg'); ?>" alt=""></div>
-            </div>
-        </div>
-        <!-- Preloader End -->
-
         <!-- Page Header Start -->
         <div class="page-header parallaxie">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="large-12 col">
                         <div class="page-header-box">
                             <h1 class="text-anime-style-2" data-cursor="-opaque">
                                 <?php echo esc_html($short_title); ?>
                             </h1>
 
                             <nav class="wow fadeInUp">
-                                <ol class="breadcrumb">
+                                <ol class="breadcrumb" style="display: inline-flex; gap: 5px;">
                                     <li class="breadcrumb-item">
                                         <a href="<?php echo esc_url(home_url('/')); ?>">
                                             Trang chủ
                                         </a>
                                     </li>
-
+                                    <li class="breadcrumb-item">
+                                        /
+                                    </li>
                                     <li class="breadcrumb-item">
                                         <a href="<?php echo esc_url($category_link); ?>">
                                             <?php echo esc_html($category_name); ?>
                                         </a>
                                     </li>
-
+                                    <li class="breadcrumb-item">
+                                        /
+                                    </li>
                                     <li class="breadcrumb-item active" aria-current="page">
                                         <?php echo esc_html($short_title); ?>
                                     </li>
@@ -88,7 +83,7 @@ if (have_posts()) :
         <div class="page-single-post">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="large-12 col">
 
                         <!-- Post Featured Image Start -->
                         <?php if (has_post_thumbnail()) : ?>
@@ -167,7 +162,7 @@ if (have_posts()) :
                             <div class="post-tag-links">
                                 <div class="row align-items-center">
 
-                                    <div class="col-lg-8">
+                                    <div class="large-8 col">
                                         <?php
                                         $tags = get_the_tags();
 
@@ -189,7 +184,7 @@ if (have_posts()) :
                                         <?php endif; ?>
                                     </div>
 
-                                    <div class="col-lg-4">
+                                    <div class="large-4 col">
                                         <div class="post-social-sharing wow fadeInUp" data-wow-delay="0.5s">
                                             <ul>
                                                 <li>

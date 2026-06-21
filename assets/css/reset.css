@@ -1,11 +1,51 @@
-.col,
+/* .col,
 .columns,
 .gallery-item {
     margin: 0;
     padding: 0;
     position: relative;
     width: 100%;
+} */
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre,
+form,
+.button,
+button,
+fieldset,
+input,
+select,
+textarea {
+    margin: 0;
 }
+
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    padding: 0;
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 
 .select-resize-ghost,
 .select2-container .select2-choice,
@@ -61,4 +101,23 @@ table {
 
 .collapse {
     visibility: visible !important;
+}
+
+.img-inner {
+    width: 100% !important;
+}
+
+
+.row ul li {
+    margin: 0 !important;
+}
+
+.button span {
+    line-height: inherit;
+}
+
+/*  */
+.section-1781090184069 img {
+    object-fit: contain;
+    object-position: left center;
 }

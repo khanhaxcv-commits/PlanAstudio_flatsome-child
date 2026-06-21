@@ -15,17 +15,6 @@ $theme_uri = get_stylesheet_directory_uri();
 <?php
 ?>
 
-<!-- Preloader Start -->
-<div class="preloader">
-    <div class="loading-container">
-        <div class="loading"></div>
-        <div id="loading-icon">
-            <img src="<?php echo esc_url($theme_uri . '/assets/images/loader.svg'); ?>" alt="">
-        </div>
-    </div>
-</div>
-<!-- Preloader End -->
-
 <!-- Header Start -->
 <header class="main-header" style="display: none;">
     <div class="header-sticky">

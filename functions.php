@@ -1,5 +1,7 @@
 <?php
 
+define('WPCF7_AUTOP_FILTER', false);
+
 add_action('init', function () {
     remove_filter('the_content', 'wpautop');
     remove_filter('the_excerpt', 'wpautop');
@@ -114,12 +116,20 @@ function flatsome_child_enqueue_styles()
             );
         }
     }
-
+    // 3.1) Nếu có file customize.css thì load sau cùng để dễ override
+    // if (is_front_page()) {
+    //     wp_enqueue_style(
+    //         'inspaire-bootstrap-css',
+    //         get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css',
+    //         array('reset-css'),
+    //         filemtime(get_stylesheet_directory() . '/assets/css/bootstrap.min.css')
+    //     );
+    // }
     // 4) CSS Inspaire chỉ load ở trang chủ hoặc page cần dùng animation template
     if (true) {
 
         $inspaire_css_files = array(
-            'inspaire-bootstrap-css'      => 'bootstrap.min.css',
+            // 'inspaire-bootstrap-css'      => 'bootstrap.min.css',
             'inspaire-fontawesome-css'    => 'all.min.css',
             'inspaire-animate-css'        => 'animate.css',
             'inspaire-swiper-css'         => 'swiper-bundle.min.css',
@@ -150,7 +160,7 @@ function flatsome_child_enqueue_styles()
                 'inspaire-custom-css',
                 $inspaire_custom_uri,
                 array(
-                    'inspaire-bootstrap-css',
+                    // 'inspaire-bootstrap-css',
                     'inspaire-fontawesome-css',
                     'inspaire-animate-css',
                     'inspaire-swiper-css',
@@ -324,12 +334,23 @@ function nk_enqueue_inspaire_local_scripts()
 }
 
 /**
- * Gọi footer custom từ child theme.
- * File: template-parts/footer/custom-footer.php
+ * Preloader toàn site
  */
-add_action('flatsome_after_footer', 'plana_render_custom_footer');
+add_action('wp_body_open', 'pcn_add_preloader');
 
-function plana_render_custom_footer()
+function pcn_add_preloader()
 {
-    get_template_part('template-parts/footer/custom-footer');
+    $theme_uri = get_stylesheet_directory_uri();
+?>
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon">
+                <img src="<?php echo esc_url($theme_uri . '/assets/images/loader.svg'); ?>" alt="Loading">
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+<?php
 }
