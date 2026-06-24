@@ -343,7 +343,7 @@ input[type=submit].sidebar-form-submit:hover {
     padding: 8px 0;
     border: none;
     border-radius: 18px;
-    background: #879286;
+    background: #111111;
     box-shadow: none;
 }
 
@@ -370,8 +370,14 @@ input[type=submit].sidebar-form-submit:hover {
 }
 
 /* Hover item */
+.header-nav-main>li>a.nav-top-link:hover {
+    color: var(--pa-text-muted) !important;
+    background-color: transparent;
+}
+
 .header-nav-main .nav-dropdown li a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
+
     background-color: transparent;
     padding-left: 28px !important;
 }

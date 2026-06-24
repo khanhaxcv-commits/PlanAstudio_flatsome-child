@@ -23,6 +23,7 @@
    * Dọn dẹp class: Chỉ giữ lại class swiper-wrapper và xóa tất cả các class bổ trợ khác
    */
   $(".stack.swiper-wrapper").attr("class", "swiper-wrapper");
+  $(".stack.img-box10").attr("class", "img-box10");
 
   /**
    * Convert WOW delay utility class to data-wow-delay attribute.
@@ -34,6 +35,12 @@
    * data-wow-delay-2  => data-wow-delay="2s"
    */
   $('[class*="data-wow-delay-"]').each(function () {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      $(".section-1782062925676").removeClass(function (index, className) {
+        return (className.match(/\bdata-wow-delay\S*/g) || []).join(" ");
+      });
+      return;
+    }
     var className = this.className.match(/data-wow-delay-(\d+)/);
     console.log("className:", className);
 
@@ -328,11 +335,11 @@
   }
 
   /* Parallaxie js */
-  var $parallaxie = $(".parallaxie");
-  $parallaxie.parallaxie({
-    speed: 0.55,
-    offset: 0,
-  });
+  // var $parallaxie = $(".parallaxie");
+  // $parallaxie.parallaxie({
+  //   speed: 0.55,
+  //   offset: 0,
+  // });
 
   $(".section.parallaxie").each(function () {
     var $section = $(this);
@@ -340,9 +347,7 @@
 
     if (imgSrc) {
       $section.css({
-        "background-image": 'url("' + imgSrc + '")',
-        "background-size": "cover",
-        "background-repeat": "no-repeat",
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.75) 20%, rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0) 100%), linear-gradient(to top, rgba(12, 12, 14, 0.95) 0%, rgba(12, 12, 14, 0.4) 17%, rgba(0, 0, 0, 0) 40%), url('${imgSrc}')`,
       });
     }
   });

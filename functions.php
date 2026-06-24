@@ -16,14 +16,32 @@ add_action('wp_enqueue_scripts', 'plana_enqueue_google_fonts');
 
 function plana_enqueue_google_fonts()
 {
+    // Font nội dung chính của website
     wp_enqueue_style(
-        'plana-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap',
+        'plana-font-body',
+        'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100..900;1,100..900&display=swap',
+        array(),
+        null
+    );
+
+    // Font heading sang trọng cho h1, h2, h3, h4
+    wp_enqueue_style(
+        'plana-font-heading',
+        'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap',
+        array(),
+        null
+    );
+
+    // Font chữ ký nếu vẫn dùng
+    wp_enqueue_style(
+        'plana-font-chuky',
+        'https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap',
         array(),
         null
     );
 }
-
+add_action('wp_enqueue_scripts', 'plana_enqueue_google_fonts');
+add_action('wp_enqueue_scripts', 'plana_enqueue_google_fonts');
 add_filter('wp_resource_hints', 'plana_google_fonts_resource_hints', 10, 2);
 
 function plana_google_fonts_resource_hints($urls, $relation_type)
@@ -135,6 +153,7 @@ function flatsome_child_enqueue_styles()
             'inspaire-swiper-css'         => 'swiper-bundle.min.css',
             'inspaire-magnific-popup-css' => 'magnific-popup.css',
             'inspaire-mousecursor-css'    => 'mousecursor.css',
+            'inspaire-custom-v1-css'    => 'inspaire-custom-v1.css',
         );
 
         foreach ($inspaire_css_files as $handle => $file) {

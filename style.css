@@ -10,9 +10,9 @@ Version: 3.0
 /* → khai báo child theme + biến màu + body + layout chung */
 
 
-:root {
-    --primary-color: #192324;
-    --secondery-color: #F8F8F8;
+/* :root {
+    --primary-color: #A88A5A;
+    --secondery-color: #D4C8B0;
     --text-color: #283132;
     --accent-color: #7C877F;
     --white-color: #FFFFFF;
@@ -20,13 +20,13 @@ Version: 3.0
     --dark-divider-color: #FFFFFF1A;
     --error-color: rgb(230, 87, 87);
     --font-display: "Hanken Grotesk", sans-serif;
-}
+} */
 
 body {
     padding: 0;
     margin: 0;
-    font-family: var(--font-display);
-    background: var(--background-light);
+    /* font-family: var(--font-display); */
+    /* background: var(--background-light); */
     line-height: 1.5;
 }
 
