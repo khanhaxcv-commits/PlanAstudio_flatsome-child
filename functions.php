@@ -366,7 +366,9 @@ function pcn_add_preloader()
         <div class="loading-container">
             <div class="loading"></div>
             <div id="loading-icon">
-                <img src="<?php echo esc_url($theme_uri . '/assets/images/loader.svg'); ?>" alt="Loading">
+                <!-- <img src="<?php echo esc_url($theme_uri . '/assets/images/loader.svg'); ?>" alt="Loading"> -->
+                <img src="https://img.lightshot.app/uTtkhNiTTH6W7y2Kpk2mEA.jpg" alt="Loading">
+
             </div>
         </div>
     </div>

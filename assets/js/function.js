@@ -10,7 +10,7 @@
   });
 
   /* Add cursor text to custom elements */
-  $(".data-cursor-text-view").attr("data-cursor-text", "View");
+  // $(".data-cursor-text-view").attr("data-cursor-text", "View");
   $(".data-cursor-text-play").attr("data-cursor-text", "Play");
   $(".data-cursor-opaque").attr("data-cursor", "-opaque");
 

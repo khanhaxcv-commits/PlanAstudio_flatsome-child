@@ -342,8 +342,8 @@ input[type=submit].sidebar-form-submit:hover {
     min-width: 230px;
     padding: 8px 0;
     border: none;
-    border-radius: 18px;
-    background: #111111;
+    border-radius: 12px;
+    background: #ffffff;
     box-shadow: none;
 }
 
@@ -360,7 +360,7 @@ input[type=submit].sidebar-form-submit:hover {
 
 /* Link trong dropdown */
 .header-nav-main .nav-dropdown li a {
-    color: #ffffff;
+    color: #111111;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.4;

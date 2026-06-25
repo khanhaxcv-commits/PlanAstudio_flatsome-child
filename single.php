@@ -99,7 +99,7 @@ if (have_posts()) :
 
 
                         <!-- Post Single Content Start -->
-                        <div class="post-content wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="post-content">
 
                             <?php if ($is_bao_chi) : ?>
                                 <div class="single-press-meta wow fadeInUp">

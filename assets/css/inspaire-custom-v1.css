@@ -44,11 +44,10 @@
     --pa-card-border: rgba(212, 200, 176, 0.14);
 
     /* Background */
-    --pa-dark-bg:
-        radial-gradient(circle at 0% 18%, rgba(168, 138, 90, 0.07), transparent 28%),
-        radial-gradient(circle at 100% 42%, rgba(110, 91, 74, 0.11), transparent 34%),
-        radial-gradient(circle at 36% 78%, rgba(212, 200, 176, 0.018), transparent 42%),
-        linear-gradient(135deg, #111111 0%, #1a1a1a 48%, #101010 100%);
+    --pa-dark-bg: #121212;
+    --pa-dark-bg-1: #1E1E1E;
+    --pa-dark-bg-2: #171717;
+    /* Làm tối màu nền chính */
 }
 
 
@@ -74,27 +73,18 @@ textarea {
     font-family: "Be Vietnam Pro", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: "Playfair Display", serif;
-}
-
 p {
     line-height: 1.5em;
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
+
     margin: 0;
     font-weight: 700;
     line-height: 1.1em;
-    color: var(--primary-color);
+    color: var(--pa-heading) !important;
+    font-family: "Playfair Display", serif !important;
 }
 
 @media only screen and (max-width: 1024PX) {
@@ -110,41 +100,44 @@ h6 {
 }
 
 .section {
-    padding: 50px 0px 0px !important;
+    padding: 80px 0px 20px !important;
 }
 
-.section.section-1782302265266,
-.section.section-1782303388453 {
-    padding: 80px 0px 0px !important;
+.section.section-1782303388453,
+.section.section-1782292941925,
+.section.pa-benefit-section,
+.stack-1782310864077 .section.section-1782292941925 {
+    padding: 80px 0px 50px !important;
 }
 
 .stack-1782310864077 .section.section-1782292941925 {
     background: none;
-    padding: 80px 0px 30px !important;
 
 }
 
-.section.section-1782292941925 {
-    padding: 50px 0px 30px !important;
+
+.section.section-1782289211590 {
+    padding-bottom: 30px !important;
+
 }
 
+.section.section-1782397849077 {
+    padding-bottom: 0 !important;
+}
 
-
-.section.section-1781495919813,
 .section.section-1782062925676 {
     padding: 0px !important;
 
 }
 
-.section.section-1781521487576,
-.section.pa-benefit-section {
+.section.section-1781521487576 {
     padding-bottom: 30px !important;
 
 }
 
 @media (max-width: 767px) {
     .section {
-        padding: 0px 0px 0px !important;
+        padding: 50px 0px 30px !important;
     }
 
     .section.section-1782302265266,
@@ -304,7 +297,7 @@ h6 {
     right: 0;
     bottom: 0;
     z-index: 1000;
-    background-color: var(--accent-color);
+    background-color: #171717;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,9 +305,9 @@ h6 {
 
 .loading-container,
 .loading {
-    height: 100px;
+    height: 135px;
     position: relative;
-    width: 100px;
+    width: 135px;
     border-radius: 100%;
 }
 
@@ -338,8 +331,16 @@ h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 66px;
     transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading-icon img {
+    border-radius: 9999px;
 }
 
 @keyframes rotate-loading {
@@ -704,212 +705,318 @@ header.main-header .header-sticky.active .navbar {
 }
 
 /************************************/
-/***        04-01. Hero Stats css	      ***/
+/***        04-01. Hero Stats css    ***/
 /************************************/
 
-.row-1782062925676 {
+/*
+   Section cha: .section-1782062925676
+   Dữ liệu và icon vẫn sửa trực tiếp bằng UX Builder Icon Box.
+   CSS chỉ làm nổi bật cụm stats trên nền hero tối.
+*/
+
+.section-1782062925676 {
+    position: relative;
+    z-index: 12;
+    overflow: visible !important;
+}
+
+.section-1782062925676 .section-bg,
+.section-1782062925676 .section-bg-overlay {
+    background: transparent !important;
+}
+
+.section-1782062925676 .row-1782062925676 {
     position: absolute !important;
     left: 50%;
     bottom: -100%;
     transform: translateX(-50%);
     z-index: 50;
 
-    width: min(1080px, calc(100% - 160px)) !important;
-    max-width: 1080px !important;
-    min-height: 92px;
-
-    /* background: rgba(22, 18, 15, 0.82);
-    border: 1px solid rgba(199, 154, 85, 0.22);
-    border-radius: 18px;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    box-shadow: 0 24px 65px rgba(0, 0, 0, 0.24); */
-
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    width: min(1120px, calc(100% - 120px)) !important;
+    max-width: 1120px !important;
+    min-height: 118px;
     margin: 0 !important;
-    padding: 10px 20px !important;
+    padding: 0 !important;
+
+    border: 1px solid rgba(168, 138, 90, 0.32);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 0% 0%, rgba(168, 138, 90, 0.18), transparent 34%),
+        linear-gradient(180deg, rgba(247, 242, 233, 0.075), rgba(247, 242, 233, 0.028)),
+        rgba(17, 17, 17, 0.84);
+    box-shadow:
+        0 28px 80px rgba(0, 0, 0, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    overflow: hidden;
 }
 
-/* Xử lý column mặc định của Flatsome */
-.row-1782062925676>.col {
+/* Reset column mặc định của Flatsome */
+.section-1782062925676 .row-1782062925676>.col {
     position: relative;
+    width: 100% !important;
+    max-width: none !important;
+    flex: unset !important;
     padding: 0 !important;
+}
+
+.section-1782062925676 .row-1782062925676>.col:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 58px;
+    transform: translateY(-50%);
+    background: linear-gradient(180deg, transparent, rgba(212, 200, 176, 0.24), transparent);
 }
 
 /* Xóa nền / padding mặc định trong column */
-.row-1782062925676 .col-inner {
-    padding: 0 !important;
+.section-1782062925676 .row-1782062925676 .col-inner {
+    height: 100%;
     margin: 0 !important;
+    padding: 0 !important;
     background: transparent !important;
     box-shadow: none !important;
 }
 
 /* Icon box layout */
-.row-1782062925676 .icon-box {
-    min-height: 92px;
-    display: flex;
+.section-1782062925676 .row-1782062925676 .icon-box {
+    height: 100%;
+    min-height: 118px;
+    display: grid !important;
+    grid-template-columns: 58px 1fr;
+    gap: 18px;
     align-items: center;
-    justify-content: center;
-    gap: 14px;
+    justify-content: flex-start;
+    padding: 26px 34px !important;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.section-1782062925676 .row-1782062925676 .icon-box:hover {
+    background: rgba(247, 242, 233, 0.045);
 }
 
 /* Icon wrapper của Flatsome */
-.row-1782062925676 .icon-box-img {
-    width: 50px !important;
-    min-width: 50px !important;
-    max-width: 50px !important;
+.section-1782062925676 .row-1782062925676 .icon-box-img {
+    width: 58px !important;
+    min-width: 58px !important;
+    max-width: 58px !important;
     margin: 0 !important;
 }
 
 /* Vòng tròn icon */
-.row-1782062925676 .icon {
-    width: 50px !important;
-    height: 50px !important;
+.section-1782062925676 .row-1782062925676 .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px !important;
+    height: 58px !important;
     border-radius: 50%;
-    border: 1px solid rgba(199, 154, 85, 0.48);
-    color: #e0b36d;
+    border: 1px solid rgba(168, 138, 90, 0.62);
+    background:
+        radial-gradient(circle at 32% 20%, rgba(212, 200, 176, 0.18), rgba(168, 138, 90, 0.08) 58%, rgba(17, 17, 17, 0.28) 100%);
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.section-1782062925676 .row-1782062925676 .icon-inner {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Bên trong icon */
-.row-1782062925676 .icon-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Nếu icon là ảnh SVG upload lên WordPress */
-.row-1782062925676 .icon-inner img {
-    width: 25px !important;
-    height: 25px !important;
+/* SVG upload từ WordPress hoặc Iconify */
+.section-1782062925676 .row-1782062925676 .icon-inner img,
+.section-1782062925676 .row-1782062925676 .icon img {
+    width: 35px !important;
+    height: 35px !important;
     object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(72%) sepia(39%) saturate(567%) hue-rotate(357deg) brightness(94%) contrast(88%);
-}
-
-/* Nếu dùng icon SVG inline hoặc Lucide */
-.row-1782062925676 .icon-inner img,
-.row-1782062925676 .icon img {
-    width: 25px !important;
-    height: 25px !important;
+    color: var(--pa-gold);
     stroke-width: 1.8;
-    color: #e0b36d;
+    filter: brightness(0) saturate(100%) invert(62%) sepia(16%) saturate(958%) hue-rotate(358deg) brightness(88%) contrast(84%);
 }
 
 /* Text bên phải icon */
-.row-1782062925676 .icon-box-text {
+.section-1782062925676 .row-1782062925676 .icon-box-text {
     padding: 0 !important;
-    text-align: left !important;
     margin: 0;
-    flex: 0 1 auto;
+    text-align: left !important;
 }
 
-/* Số: 8+, 100+, 5 năm */
-.row-1782062925676 .icon-box-text h3 {
+/* Số: 8+, 100+, bảo hành... */
+.section-1782062925676 .row-1782062925676 .icon-box-text h3 {
     margin: 0 0 6px !important;
-    font-size: 25px !important;
-    line-height: 1 !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
+    color: var(--pa-heading) !important;
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.02em;
     text-transform: none !important;
+    font-family: "Be Vietnam Pro", sans-serif !important;
 }
 
-/* Label: Năm kinh nghiệm, Dự án... */
-.row-1782062925676 .icon-box-text p {
+/* Label */
+.section-1782062925676 .row-1782062925676 .icon-box-text p {
     margin: 0 !important;
-    font-size: 11px !important;
-    line-height: 1.25 !important;
+    color: var(--pa-text-muted) !important;
+    font-size: 12px !important;
     font-weight: 700 !important;
+    line-height: 1.35 !important;
     text-transform: uppercase;
-    letter-spacing: 0.15px;
-    color: rgba(255, 255, 255, 0.72) !important;
+    letter-spacing: 0.04em;
 }
 
-/* Reset line cũ nếu trước đó đã dùng ::after */
-.row-1782062925676>.col::after {
-    content: none !important;
-}
-
-/* Đường kẻ tổng quát:
-   Kẻ bên trái mỗi column, trừ column đầu tiên.
-   Thêm bao nhiêu cột cũng tự đúng. */
-.row-1782062925676>.col+.col::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 1px;
-    height: 44px;
-    transform: translateY(-50%);
-    background: rgba(199, 154, 85, 0.28);
-}
-
-@media (max-width: 1024px) {
-    .row-1782062925676 {
+@media (max-width: 1199px) {
+    .section-1782062925676 .row-1782062925676 {
         width: calc(100% - 60px) !important;
+        min-height: 108px;
     }
 
-    .row-1782062925676 .icon-box-text h3 {
-        font-size: 23px !important;
+    .section-1782062925676 .row-1782062925676 .icon-box {
+        min-height: 108px;
+        grid-template-columns: 52px 1fr;
+        gap: 15px;
+        padding: 24px 24px !important;
     }
 
-    .row-1782062925676 .icon-box-text p {
+    .section-1782062925676 .row-1782062925676 .icon-box-img,
+    .section-1782062925676 .row-1782062925676 .icon {
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px !important;
+        max-width: 52px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-inner img,
+    .section-1782062925676 .row-1782062925676 .icon img {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box-text h3 {
+        font-size: 24px !important;
+    }
+}
+
+@media (max-width: 849px) {
+    .section-1782062925676 .row-1782062925676 {
+        width: calc(100% - 32px) !important;
+        min-height: 96px;
+        border-radius: 18px;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box {
+        min-height: 96px;
+        grid-template-columns: 46px 1fr;
+        gap: 12px;
+        padding: 20px 16px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box-img,
+    .section-1782062925676 .row-1782062925676 .icon {
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px !important;
+        max-width: 46px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-inner img,
+    .section-1782062925676 .row-1782062925676 .icon img {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box-text h3 {
+        font-size: 21px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box-text p {
         font-size: 10.5px !important;
+        letter-spacing: 0.02em;
     }
 }
 
 @media (max-width: 767px) {
     .section-1782062925676 {
-        margin: 16px auto 0 !important;
-
+        margin: 0 auto !important;
+        padding: 24px 0 0 !important;
     }
 
-    .row-1782062925676 {
+    .section-1782062925676 .row-1782062925676 {
         position: relative !important;
         left: auto;
         bottom: auto;
         transform: none;
+        grid-template-columns: 1fr;
         width: 100% !important;
-        max-width: none !important;
-        min-height: auto;
-        padding: 0px 16px !important;
-        border-radius: 18px;
+        border: 0px !important;
+        box-shadow: none !important;
+        background: unset !important;
     }
 
-    .row-1782062925676>.col {
-        max-width: 100% !important;
-        flex-basis: 100% !important;
-        padding: 0 !important;
-    }
-
-    .row-1782062925676 .icon-box {
-        justify-content: flex-start;
-        min-height: 76px;
-        gap: 14px;
-    }
-
-    .row-1782062925676 .icon-box-img {
-        width: 50px !important;
-        min-width: 50px !important;
-    }
-
-    .row-1782062925676 .icon-box-text h3 {
-        font-size: 24px !important;
-    }
-
-    .row-1782062925676 .icon-box-text p {
-        font-size: 11px !important;
-
-    }
-
-    /* Mobile: đổi line dọc thành line ngang giữa các item */
-    .row-1782062925676>.col+.col::before {
-        left: 0;
-        top: 0;
-        width: 100%;
+    .section-1782062925676 .row-1782062925676>.col:not(:last-child)::after {
+        top: auto;
+        right: auto;
+        left: 18px;
+        bottom: 0;
+        width: calc(100% - 36px);
         height: 1px;
         transform: none;
-        background: rgba(199, 154, 85, 0.22);
+        background: linear-gradient(90deg, transparent, rgba(212, 200, 176, 0.22), transparent);
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box {
+        min-height: 88px;
+        grid-template-columns: 50px 1fr;
+        gap: 14px;
+        padding: 20px 22px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box-img,
+    .section-1782062925676 .row-1782062925676 .icon {
+        width: 50px !important;
+        height: 50px !important;
+        min-width: 50px !important;
+        max-width: 50px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box-text h3 {
+        font-size: 23px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box-text p {
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .section-1782062925676 .row-1782062925676 {
+        width: calc(100% - 24px) !important;
+        border-radius: 16px;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box {
+        grid-template-columns: 46px 1fr;
+        gap: 12px;
+        padding: 18px 18px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box-img,
+    .section-1782062925676 .row-1782062925676 .icon {
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px !important;
+        max-width: 46px !important;
+    }
+
+    .section-1782062925676 .row-1782062925676 .icon-box-text h3 {
+        font-size: 21px !important;
     }
 }
 
@@ -1493,15 +1600,6 @@ sup {
 /************************************/
 /***       why choose we 	  ***/
 /************************************/
-.section_choose {
-    padding: 80px 0 30px !important;
-}
-
-@media (max-width:767px) {
-    .section_choose {
-        padding: 30px 0 0 !important;
-    }
-}
 
 .section_choose .why-feature-list {
     display: grid !important;
@@ -1601,7 +1699,7 @@ sup {
 ================================ */
 /* Fix Flickity height */
 .blog-post-87854 .flickity-viewport {
-    min-height: 430px;
+    /* min-height: 430px; */
     overflow: hidden;
 }
 
@@ -1678,6 +1776,7 @@ sup {
     border: none;
     background: transparent;
     z-index: 5;
+    display: none;
 }
 
 .blog-post-87854 .post-date .badge-inner {
@@ -1900,12 +1999,7 @@ sup {
 
 @media (max-width: 849px) {
     .blog-post-87854 .flickity-viewport {
-        min-height: 350px;
-    }
-
-    .blog-post-87854 .post-item {
-        padding-left: 10px;
-        padding-right: 10px;
+        /* min-height: 350px; */
     }
 
     .blog-post-87854 .image-cover {
@@ -1987,15 +2081,16 @@ sup {
 .section-1782292941925 {
     position: relative;
     overflow: hidden;
-    background: radial-gradient(circle at 0% 96%, rgba(168, 138, 90, 0.28), transparent 31%),
+    /* background: radial-gradient(circle at 0% 96%, rgba(168, 138, 90, 0.28), transparent 31%),
         radial-gradient(circle at 100% 8%, rgba(110, 91, 74, 0.34), transparent 34%),
         radial-gradient(circle at 47% 50%, rgba(212, 200, 176, 0.05), transparent 45%),
-        linear-gradient(135deg, #0f0f0f 0%, #171717 48%, #101010 100%);
+        linear-gradient(135deg, #0f0f0f 0%, #171717 48%, #101010 100%); */
 }
 
 .section-1782292941925::before,
 .section-1782292941925::after {
-    content: "";
+    /* content: ""; */
+    content: none;
     position: absolute;
     pointer-events: none;
     border: 1px solid rgba(168, 138, 90, 0.22);
@@ -2044,7 +2139,7 @@ sup {
    ========================================================= */
 
 .section-1782292941925 .contact-info .col-inner {
-    min-height: 430px;
+    /* min-height: 430px; */
     padding: 30px 28px !important;
     border: 1px solid rgba(168, 138, 90, 0.48);
     border-radius: 16px;
@@ -2107,8 +2202,8 @@ sup {
     border-bottom: 1px solid rgba(212, 200, 176, 0.16);
 }
 
-.section-1782292941925 .contact-info .info-item:last-child {
-    border-bottom: 0;
+.section-1782292941925 .contact-info .info-item:has(+ .contact-social) {
+    border-bottom: 0 !important;
 }
 
 .section-1782292941925 .contact-info .info-item .icon-box-img {
@@ -2171,6 +2266,7 @@ sup {
    ========================================================= */
 
 .section-1782292941925 .contact-social {
+    display: none;
     margin-top: 22px !important;
 }
 
@@ -2732,6 +2828,13 @@ sup {
 /************************************/
 /***     06. Why Choose Us css    ***/
 /************************************/
+.why-choose-img-1,
+.why-choose-img-2,
+.why-choose-img-3,
+.why-choose-img-4 {
+    border-radius: 16px;
+    overflow: hidden;
+}
 
 .why-choose-img-1 img {
     width: 100%;
@@ -3008,8 +3111,8 @@ sup {
     transform: scaleX(0);
     transform-origin: right center;
     transition:
-        transform 0.4s ease-in-out,
-        opacity 0.25s ease-in-out;
+        transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
     pointer-events: none;
     z-index: 2;
 }
@@ -6851,6 +6954,10 @@ sup {
     display: block;
 }
 
+.pa-footer .footer-logo img {
+    object-position: -6px center;
+}
+
 .pa-footer h3 {
     position: relative;
     margin: 0 0 21px !important;
@@ -7002,7 +7109,7 @@ sup {
     .pa-footer .row {
         grid-template-columns: 1fr;
         gap: 32px;
-        padding: 0 20px !important;
+        padding: 0 15px !important;
     }
 
     .pa-footer-brand p {
@@ -7036,12 +7143,25 @@ body {
 }
 
 #main {
-    background: var(--pa-dark-bg) !important;
+    background-color: var(--pa-dark-bg) !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     color: var(--pa-text-main) !important;
 }
 
+#main .section:nth-child(3n+1) {
+    background-color: var(--pa-dark-bg) !important;
+}
+
+/* Section 2, 5, 8... (Chia 3 dư 2) */
+#main .section:nth-child(3n+2) {
+    background-color: var(--pa-dark-bg-1) !important;
+}
+
+/* Section 3, 6, 9... (Chia hết cho 3) */
+#main .section:nth-child(3n) {
+    background-color: var(--pa-dark-bg-2) !important;
+}
 
 /* Giữ nguyên Hero */
 .section-1781417461296 {
@@ -7054,15 +7174,6 @@ body {
 }
 
 /* Typography chung trên nền tối */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--pa-heading) !important;
-}
-
 p,
 li,
 .text,
@@ -7426,12 +7537,6 @@ hr,
 
 /* Responsive */
 @media (max-width: 767px) {
-    :root {
-        --pa-dark-bg:
-            radial-gradient(circle at 0% 12%, rgba(168, 138, 90, 0.07), transparent 30%),
-            radial-gradient(circle at 100% 54%, rgba(110, 91, 74, 0.08), transparent 34%),
-            linear-gradient(135deg, #111111 0%, #1a1a1a 48%, #101010 100%);
-    }
 
     .section_choose .why-feature-list .why-feature-list-details h3 {
         line-height: 1.35 !important;
@@ -7445,7 +7550,7 @@ hr,
 /*** Vision Mission Dark Elegant ****/
 /************************************/
 
-.section-1781495919813 .vision-mission-item .col-inner {
+.section-1781495246874 .vision-mission-item .col-inner {
     position: relative;
     min-height: 360px;
     padding: 42px 44px !important;
@@ -7457,7 +7562,7 @@ hr,
     transition: 0.35s ease;
 }
 
-.section-1781495919813 .vision-mission-item .col-inner::before {
+.section-1781495246874 .vision-mission-item .col-inner::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -7465,13 +7570,13 @@ hr,
     pointer-events: none;
 }
 
-.section-1781495919813 .vision-mission-item .col-inner:hover {
+.section-1781495246874 .vision-mission-item .col-inner:hover {
     border-color: #A88452;
     transform: translateY(-4px);
 }
 
 /* Icon */
-.section-1781495919813 .vision-mission-item .icon-box {
+.section-1781495246874 .vision-mission-item .icon-box {
     position: relative;
     z-index: 1;
     width: 72px !important;
@@ -7485,13 +7590,13 @@ hr,
     justify-content: center;
 }
 
-.section-1781495919813 .vision-mission-item .img-inner {
+.section-1781495246874 .vision-mission-item .img-inner {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.section-1781495919813 .vision-mission-item .img-inner img {
+.section-1781495246874 .vision-mission-item .img-inner img {
     width: 34px !important;
     height: 34px !important;
     object-fit: contain;
@@ -7499,19 +7604,19 @@ hr,
 }
 
 /* Content */
-.section-1781495919813 .vision-mission-content {
+.section-1781495246874 .vision-mission-content {
     position: relative;
     z-index: 1;
 }
 
-.section-1781495919813 .vision-mission-content h3 {
+.section-1781495246874 .vision-mission-content h3 {
     margin: 0 0 18px !important;
     color: #D4C8B0 !important;
     font-size: 28px;
     line-height: 1.25;
 }
 
-.section-1781495919813 .vision-mission-content h3::after {
+.section-1781495246874 .vision-mission-content h3::after {
     content: "";
     display: block;
     width: 66px;
@@ -7520,7 +7625,7 @@ hr,
     background: linear-gradient(90deg, var(--pa-gold), rgba(168, 138, 90, 0));
 }
 
-.section-1781495919813 .vision-mission-content p {
+.section-1781495246874 .vision-mission-content p {
     margin: 0 !important;
     color: rgba(255, 255, 255, 0.72) !important;
     font-size: 16px;
@@ -7529,32 +7634,32 @@ hr,
 
 /* Mobile */
 @media (max-width: 849px) {
-    .section-1781495919813 {
+    .section-1781495246874 {
         padding-bottom: 0 !important;
     }
 
-    .section-1781495919813 .vision-mission-item .col-inner {
+    .section-1781495246874 .vision-mission-item .col-inner {
         min-height: auto;
         padding: 32px 26px !important;
         border-radius: 20px;
     }
 
-    .section-1781495919813 .vision-mission-item .icon-box {
+    .section-1781495246874 .vision-mission-item .icon-box {
         width: 64px !important;
         height: 64px;
         margin-bottom: 24px !important;
     }
 
-    .section-1781495919813 .vision-mission-item .img-inner img {
+    .section-1781495246874 .vision-mission-item .img-inner img {
         width: 30px !important;
         height: 30px !important;
     }
 
-    .section-1781495919813 .vision-mission-content h3 {
+    .section-1781495246874 .vision-mission-content h3 {
         font-size: 24px;
     }
 
-    .section-1781495919813 .vision-mission-content p {
+    .section-1781495246874 .vision-mission-content p {
         font-size: 15px;
     }
 }
@@ -7718,4 +7823,18 @@ hr,
     .pa-benefit-item .icon-box-text p {
         font-size: 13.5px;
     }
+}
+
+.section-1782396553711 .img-1782396553711 {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+#main .section.section-1782303388453 {
+    background:
+        linear-gradient(to bottom,
+            #0c0c0e 0%,
+            #0f0f10 30%,
+            #131313 65%,
+            #171717 100%) !important;
 }
