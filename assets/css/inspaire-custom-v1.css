@@ -7058,6 +7058,7 @@ sup {
 .pa-footer::before,
 .pa-footer::after {
     content: "";
+    content: none;
     position: absolute;
     pointer-events: none;
 }
