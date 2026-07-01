@@ -6467,7 +6467,6 @@ sup {
 
 
 
-@media only screen and (max-width: 991px) {}
 
 .section-1781416208085 .col-1781416721605 .col-inner,
 .section-1781416208085 .col-1781416721605 .col-inner .img {
@@ -7411,7 +7410,9 @@ input[type="submit"] {
 .section-1782302265266 .img-box10 .img1,
 .section-1782302265266 .img-box10 .img2,
 .section-1782302265266 .img-box10 .img3 {
-    border-color: var(--pa-line) !important;
+    border-color: var(--pa-) !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
 }
 
 .section-1782302265266 .img-box10 .img2,
@@ -7719,7 +7720,7 @@ hr,
     position: relative;
     min-height: 360px;
     padding: 42px 44px !important;
-    border-radius: 24px;
+    border-radius: 6px;
     overflow: hidden;
     background: linear-gradient(145deg, rgba(42, 42, 42, 0.96), rgba(17, 17, 17, 0.98)) !important;
     border: 1px solid rgba(168, 132, 82, 0.35);
@@ -7747,7 +7748,7 @@ hr,
     width: 72px !important;
     height: 72px;
     margin-bottom: 30px !important;
-    border-radius: 50%;
+    border-radius: 50% !important;
     background: rgba(168, 132, 82, 0.14);
     border: 1px solid rgba(168, 132, 82, 0.55);
     display: flex;
