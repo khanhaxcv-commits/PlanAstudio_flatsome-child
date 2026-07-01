@@ -36,6 +36,11 @@ body {
     }
 }
 
+#main,
+#wrapper {
+    background-color: #0D0D0A !important;
+}
+
 /* <--- Bố cục chính */
 /* .section {
     padding: 20px 0px !important;
