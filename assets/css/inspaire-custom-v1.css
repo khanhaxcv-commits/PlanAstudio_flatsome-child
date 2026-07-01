@@ -42,7 +42,7 @@
     --pa-card-bg: rgba(247, 242, 233, 0.045);
     --pa-card-bg-hover: rgba(247, 242, 233, 0.075);
     --pa-card-border: rgba(212, 200, 176, 0.14);
-
+    --pa-card-border-hover: rgba(168, 138, 90, 0.36);
     /* Background */
     --pa-dark-bg: #121212;
     --pa-dark-bg-1: #1E1E1E;
@@ -80,8 +80,7 @@
 
     --font-display: var(--default-font);
 
-    --pa-card-border: rgba(212, 200, 176, 0.16);
-    --pa-card-border-hover: rgba(168, 138, 90, 0.36);
+
 }
 
 
