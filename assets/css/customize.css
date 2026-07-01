@@ -43,6 +43,10 @@
     height: auto !important;
 }
 
+.post img{
+    border-radius: 5px;
+}
+
 .post h1,
 .post h2,
 .post h3,
@@ -52,9 +56,15 @@
 .post p,
 .post figure .post img {
     font-family: Manrope !important;
-    color: #000 !important;
+    color: white !important;
     margin-bottom: 12px;
 
+}
+
+.post h1{
+    margin-top:30px;
+    font-size: 50px !important;
+    line-height: 40px !important;
 }
 
 .post h2 {

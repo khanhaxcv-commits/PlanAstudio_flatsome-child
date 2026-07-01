@@ -1,1 +1,455 @@
-/* button, card, title, badge, CTA dùng lại nhiều trang */
+/* Shared components */
+
+.plana-header-breadcrumb-bar {
+    background: #f4f6fa;
+    border-top: 3px solid #f28c18;
+    padding: 9px 0;
+}
+
+.cvn-single-breadcrumbs {
+    color: #0054a6;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 7px;
+    line-height: 1.35;
+    margin: 0;
+    text-align: center;
+}
+
+.cvn-single-breadcrumbs a {
+    color: #0054a6;
+    text-decoration: none;
+}
+
+.cvn-single-breadcrumbs a:hover {
+    color: #003f7d;
+}
+
+.cvn-single-breadcrumbs span {
+    color: #0054a6;
+}
+
+.cvn-single-breadcrumbs__divider {
+    color: #0054a6;
+    font-weight: 700;
+}
+
+.plana-single-breadcrumb-bar {
+    background: #0f0f0d;
+    border-top: 1px solid rgba(185, 145, 80, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 26px 0;
+}
+
+.plana-single-breadcrumb-bar .cvn-single-breadcrumbs {
+    color: #b99150;
+    font-size: 16px;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.plana-single-breadcrumb-bar .cvn-single-breadcrumbs a,
+.plana-single-breadcrumb-bar .cvn-single-breadcrumbs span,
+.plana-single-breadcrumb-bar .cvn-single-breadcrumbs__divider {
+    color: #b99150;
+}
+
+.plana-single-breadcrumb-bar .cvn-single-breadcrumbs a:hover {
+    color: #f0c77f;
+}
+
+.plana-single-post-meta-row {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.plana-single-post-meta {
+    align-items: center;
+    color: #c9c1b4;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 12px;
+    justify-content: flex-start;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: none;
+}
+
+.plana-single-post-meta__item {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.plana-single-post-meta__item:not(:last-child)::after {
+    color: #8c7a5b;
+    content: "•";
+    margin-left: 4px;
+}
+
+.plana-single-post-meta__item i {
+    align-items: center;
+    border: 1px solid rgba(185, 145, 80, 0.72);
+    border-radius: 999px;
+    color: #b99150;
+    display: inline-flex;
+    font-size: 12px;
+    height: 22px;
+    justify-content: center;
+    line-height: 1;
+    width: 22px;
+}
+
+.plana-single-post-share {
+    flex: 0 0 auto;
+}
+
+.plana-single-post-share .social-icons.share-icons {
+    align-items: center;
+    display: flex;
+    gap: 2px;
+    margin: 0;
+}
+
+.plana-single-post-share .social-icons.share-icons a {
+    align-items: center;
+    background: #d8cbb1;
+    border: 0;
+    border-radius: 0;
+    color: #050505;
+    display: inline-flex;
+    font-size: 17px;
+    height: 38px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    min-height: 38px;
+    min-width: 38px;
+    opacity: 1;
+    padding: 0;
+    width: 38px;
+}
+
+.plana-single-post-share .social-icons.share-icons a:hover {
+    background: #b99150;
+    color: #fff !important;
+    transform: none;
+}
+
+.plana-single-post-share .social-icons.share-icons a i,
+.plana-single-post-share .social-icons.share-icons a svg {
+    color: #050505 !important;
+    fill: #050505 !important;
+}
+
+.plana-single-post-share .social-icons.share-icons a i::before {
+    color: currentColor !important;
+}
+
+.plana-single-post-share .social-icons.share-icons a:hover i,
+.plana-single-post-share .social-icons.share-icons a:hover i::before,
+.plana-single-post-share .social-icons.share-icons a:hover svg,
+.plana-single-post-share .social-icons.share-icons a:hover svg path {
+    color: #fff !important;
+    fill: #fff !important;
+}
+
+.plana-related-posts {
+    background: rgba(18, 18, 16, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    color: #f5efe4;
+    padding: 30px 28px;
+}
+
+.plana-related-posts__title {
+    color: #fff7ea;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0 0 24px;
+}
+
+.plana-related-posts__list {
+    display: grid;
+    gap: 0;
+}
+
+.plana-related-posts__item {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 82px 1fr;
+    padding: 20px 0;
+}
+
+.plana-related-posts__item:first-child {
+    padding-top: 0;
+}
+
+.plana-related-posts__item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.plana-related-posts__thumb {
+    aspect-ratio: 1 / 1;
+    background: #242321;
+    border-radius: 7px;
+    display: block;
+    overflow: hidden;
+}
+
+.plana-related-posts__thumb img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 200ms ease;
+    width: 100%;
+}
+
+.plana-related-posts__item:hover .plana-related-posts__thumb img {
+    transform: scale(1.04);
+}
+
+.plana-related-posts__body {
+    min-width: 0;
+}
+
+.plana-related-posts__post-title {
+    color: #d8b66e;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 0 0 10px;
+    overflow: hidden;
+}
+
+.plana-related-posts__post-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.plana-related-posts__post-title a:hover {
+    color: #f0c77f;
+}
+
+.plana-related-posts__meta {
+    align-items: center;
+    color: #8f887c;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    gap: 8px 14px;
+}
+
+.plana-related-posts__meta span {
+    align-items: center;
+    display: inline-flex;
+    gap: 5px;
+}
+
+.plana-related-posts__meta i {
+    color: #9d8251;
+    font-size: 11px;
+}
+
+.blog-wrapper .post-sidebar {
+    color: #b8afa3;
+}
+
+.blog-wrapper .post-sidebar #secondary {
+    background: rgba(18, 18, 16, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+    padding: 28px 24px;
+}
+
+.blog-wrapper .post-sidebar .widget {
+    margin-bottom: 34px;
+}
+
+.blog-wrapper .post-sidebar .widget:last-child {
+    margin-bottom: 0;
+}
+
+.blog-wrapper .post-sidebar .widget-title,
+.blog-wrapper .post-sidebar .widget-title span {
+    color: #fff7ea;
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.25;
+    margin: 0;
+    text-transform: none;
+}
+
+.blog-wrapper .post-sidebar .is-divider {
+    display: none;
+}
+
+.blog-wrapper .post-sidebar .searchform {
+    margin: 0;
+}
+
+.blog-wrapper .post-sidebar .searchform .flex-row {
+    align-items: center;
+    background: #090908;
+    border: 1px solid rgba(185, 145, 80, 0.44);
+    border-radius: 6px;
+    box-shadow: none;
+    height: 44px;
+    overflow: hidden;
+}
+
+.blog-wrapper .post-sidebar .searchform input[type="search"],
+.blog-wrapper .post-sidebar .searchform .search-field {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: #f5efe4;
+    font-size: 13px;
+    height: 42px;
+    margin: 0;
+    padding: 0 12px;
+}
+
+.blog-wrapper .post-sidebar .searchform input[type="search"]::placeholder,
+.blog-wrapper .post-sidebar .searchform .search-field::placeholder {
+    color: #6f6b63;
+    opacity: 1;
+}
+
+.blog-wrapper .post-sidebar .searchform .submit-button,
+.blog-wrapper .post-sidebar .searchform .button.icon {
+    align-items: center;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: #b99150 !important;
+    display: inline-flex;
+    height: 42px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    min-height: 42px;
+    min-width: 42px;
+    padding: 0;
+    width: 42px;
+}
+
+.blog-wrapper .post-sidebar .searchform .submit-button:hover,
+.blog-wrapper .post-sidebar .searchform .button.icon:hover {
+    color: #f0c77f !important;
+}
+
+.blog-wrapper .post-sidebar .searchform .submit-button svg,
+.blog-wrapper .post-sidebar .searchform .button.icon svg,
+.blog-wrapper .post-sidebar .searchform .submit-button i,
+.blog-wrapper .post-sidebar .searchform .button.icon i {
+    color: currentColor !important;
+    fill: currentColor !important;
+}
+
+.blog-wrapper .post-sidebar .widget_categories ul {
+    list-style: none;
+    margin: 18px 0 0;
+    padding: 0;
+}
+
+.blog-wrapper .post-sidebar .widget_categories li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-wrapper .post-sidebar .widget_categories li:last-child {
+    border-bottom: 0;
+}
+
+.blog-wrapper .post-sidebar .widget_categories li a {
+    align-items: center;
+    color: #c7a86a;
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    justify-content: space-between;
+    line-height: 1.35;
+    padding: 14px 0;
+    text-decoration: none;
+}
+
+.blog-wrapper .post-sidebar .widget_categories li a::after {
+    color: #6f5d3c;
+    content: ">";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    margin-left: 14px;
+    opacity: 0.55;
+    transition: color 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.blog-wrapper .post-sidebar .widget_categories li a:hover {
+    color: #f0c77f;
+}
+
+.blog-wrapper .post-sidebar .widget_categories li a:hover::after {
+    color: #f0c77f;
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+@media (max-width: 549px) {
+    .plana-header-breadcrumb-bar {
+        padding: 8px 0;
+    }
+
+    .cvn-single-breadcrumbs {
+        font-size: 12px;
+        gap: 5px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .plana-single-breadcrumb-bar {
+        padding: 18px 0;
+    }
+
+    .plana-single-post-meta {
+        font-size: 13px;
+        gap: 9px;
+        justify-content: flex-start;
+    }
+
+    .plana-single-post-meta-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .plana-single-post-meta__item {
+        white-space: normal;
+    }
+
+    .plana-related-posts {
+        padding: 24px 20px;
+    }
+
+    .plana-related-posts__item {
+        grid-template-columns: 74px 1fr;
+    }
+
+    .blog-wrapper .post-sidebar #secondary {
+        padding: 24px 20px;
+    }
+}
