@@ -377,8 +377,8 @@ input[type=submit].sidebar-form-submit:hover {
 .header-nav-main>li.current_page_item>a.nav-top-link,
 .header-nav-main>li.current-menu-ancestor>a.nav-top-link,
 .header-nav-main>li.active>a.nav-top-link {
-    color: var(--pa-text-muted) !important;
-    background: transparent;
+    color: #A88A5A !important;
+    /* background: transparent; */
 }
 
 /* Remove Flatsome underline effects if any */

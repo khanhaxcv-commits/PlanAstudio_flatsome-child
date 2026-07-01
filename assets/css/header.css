@@ -1,16 +1,23 @@
 .header,
 .header-wrapper {
-    z-index: unset;
+    /* z-index: unset; */
+}
+
+#header .header-bg-color {
+    background: rgba(17, 17, 17, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 200, 176, 0.12);
 }
 
 .nav>li>a.btn-default {
     position: relative;
     display: inline-block;
-    background: #111111;
+    background: #A88A5A;
     color: var(--white-color);
     font-size: 16px;
     font-weight: 700;
-    line-height: 1em;
+    line-height: 1em !important;
     text-transform: capitalize;
     border: none;
     padding: 17px 46px 17px 20px;
@@ -21,7 +28,7 @@
 }
 
 .nav>li>a.btn-default:hover {
-    background: #111111 !important;
+    background: #A88A5A !important;
 }
 
 .nav>li>a.btn-default:hover:after {
