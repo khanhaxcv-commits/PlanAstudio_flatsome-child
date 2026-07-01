@@ -90,23 +90,11 @@
 body {
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.6em;
+    line-height: 1.5;
     color: var(--text-color);
-}
-
-body,
-p,
-span,
-li,
-a,
-button,
-input,
-textarea {
-    font-family: "Be Vietnam Pro", sans-serif;
-}
-
-p {
-    line-height: 1.5em;
+    font-family: "Be Vietnam Pro", sans-serif !important;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -114,7 +102,6 @@ h2 {
 
     margin: 0;
     font-weight: 700;
-    line-height: 1.1em;
     color: var(--pa-heading) !important;
     font-family: "Playfair Display", serif !important;
 }
@@ -900,7 +887,6 @@ header.main-header .header-sticky.active .navbar {
     line-height: 1.05 !important;
     letter-spacing: -0.02em;
     text-transform: none !important;
-    font-family: "Be Vietnam Pro", sans-serif !important;
 }
 
 /* Label */
@@ -6147,7 +6133,6 @@ sup {
 
     .experience-counter p {
         font-size: 12px;
-        line-height: 1.1em;
     }
 
     .about-us-content-body {
