@@ -2005,35 +2005,6 @@ sup {
     color: #555;
 }
 
-/* Button / read more */
-.blog-post-87854 .button {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    min-height: auto;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent !important;
-    color: #111 !important;
-    box-shadow: none;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.4;
-    letter-spacing: 0;
-    text-transform: none;
-}
-
-.blog-post-87854 .button:after {
-    content: "›";
-    font-size: 20px;
-    line-height: 1;
-    transform: translateY(-1px);
-}
-
-.blog-post-87854 .button:hover {
-    color: #a88452 !important;
-}
 
 /* ================================
    Slider arrows - fixed PC icon
@@ -7481,15 +7452,6 @@ input[type="submit"] {
 
 .blog-post-87854 .from_the_blog_excerpt {
     color: var(--pa-text-muted) !important;
-}
-
-.blog-post-87854 .button {
-    color: var(--pa-heading) !important;
-    background: transparent !important;
-}
-
-.blog-post-87854 .button:hover {
-    color: var(--pa-gold) !important;
 }
 
 .blog-post-87854 .post-date .badge-inner,

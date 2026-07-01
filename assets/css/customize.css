@@ -43,7 +43,7 @@
     height: auto !important;
 }
 
-.post img{
+.post img {
     border-radius: 5px;
 }
 
@@ -55,16 +55,13 @@
 .post h6,
 .post p,
 .post figure .post img {
-    font-family: Manrope !important;
-    color: white !important;
     margin-bottom: 12px;
 
 }
 
-.post h1{
-    margin-top:30px;
+.post h1 {
+    margin-top: 30px;
     font-size: 50px !important;
-    line-height: 40px !important;
 }
 
 .post h2 {
@@ -125,7 +122,6 @@ p.lead {
 .ez-toc-title-container .ez-toc-title {
     color: #000 !important;
     vertical-align: -moz-middle-with-baseline !important;
-    font-family: Manrope !important;
     font-size: 24px !important;
     font-style: normal !important;
     font-weight: 700 !important;
@@ -138,7 +134,6 @@ p.lead {
 
 #ez-toc-container ul li a {
     color: #000 !important;
-    font-family: Manrope !important;
     font-size: 18px !important;
     font-style: normal !important;
     font-weight: 600 !important;
