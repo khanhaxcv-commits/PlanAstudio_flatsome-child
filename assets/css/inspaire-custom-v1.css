@@ -1441,6 +1441,10 @@ header.main-header .header-sticky.active .navbar {
     height: 235px;
 }
 
+.section-1782302265266 .block-title h3 {
+    text-transform: none;
+}
+
 @media (max-width: 1299px) {
     .section-1782302265266 .img-box10 {
         padding: 60px 75px 80px 100px;
@@ -7837,7 +7841,7 @@ hr,
 
 .pa-benefit-row {
     display: grid !important;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     border: 1px solid var(--pa-line);
     border-radius: 18px;
     background:
@@ -7945,8 +7949,7 @@ hr,
     }
 }
 
-/* Mobile */
-@media (max-width: 549px) {
+@media (max-width: 767px) {
     .pa-benefit-section {
         padding: 0px 15px !important;
     }
