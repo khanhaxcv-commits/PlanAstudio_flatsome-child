@@ -1,33 +1,366 @@
-.header,
-.header-wrapper {
-    z-index: unset;
+/* =============================*/
+/*  Header                      */
+/*==============================*/
+
+#header .header-bg-color {
+    background: rgba(17, 17, 17, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 200, 176, 0.12);
 }
 
-.nav>li>a.btn-default {
-    position: relative;
-    display: inline-block;
-    background: #111111;
+#header #logo {
+    margin-right: 0 !important;
+}
+
+#header .nav-right {
+    min-width: 200px !important;
+}
+
+#header .nav-right>li>a.btn-default {
     color: var(--white-color);
     font-size: 16px;
-    font-weight: 700;
-    line-height: 1em;
+    line-height: 1 !important;
     text-transform: capitalize;
-    border: none;
     padding: 17px 46px 17px 20px;
     transition: all 0.5s ease-in-out;
-    overflow: hidden;
-    z-index: 0;
-    letter-spacing: normal
 }
 
-.nav>li>a.btn-default:hover {
-    background: #111111 !important;
+@media screen and (max-width: 849px) {
+    #header .logo {
+        margin: 0 !important;
+    }
 }
 
-.nav>li>a.btn-default:hover:after {
-    content: none !important;
+/* ======================================================================================== /*
+/* Menu Main Header Vì menu có biến thể nhiều nên custom riêng (kể cả responsive của nó)    */
+/* ======================================================================================== */
+
+.header-nav-main,
+.header-nav-main * {
+    box-sizing: border-box;
 }
 
-.nav>li>a.btn-default:after {
-    content: none !important;
+.header-nav-main {
+    justify-content: center !important;
+}
+
+/* Main menu wrapper */
+.header-nav-main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset Flatsome spacing */
+.header-nav-main.nav-spacing-large>li {
+    margin: 0;
+}
+
+/* Level 1 item */
+.header-nav-main>li {
+    position: relative;
+    margin: 0;
+}
+
+/* Level 1 link */
+.header-nav-main>li>a.nav-top-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 18px;
+    color: #F7F2E9;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+/* Level 1 hover and active */
+.header-nav-main>li:hover>a.nav-top-link,
+.header-nav-main>li.current-menu-item>a.nav-top-link,
+.header-nav-main>li.current_page_item>a.nav-top-link,
+.header-nav-main>li.current-menu-ancestor>a.nav-top-link,
+.header-nav-main>li.active>a.nav-top-link {
+    color: #A88A5A !important;
+    /* background: transparent; */
+}
+
+/* Remove Flatsome underline effects if any */
+.header-nav-main>li>a.nav-top-link::before,
+.header-nav-main>li>a.nav-top-link::after {
+    display: none;
+}
+
+/* Top dropdown arrow */
+.header-nav-main>li>a.nav-top-link .icon-angle-down {
+    margin-left: 5px;
+    color: currentColor;
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+/* ==============================
+   DROPDOWN LEVEL 2 - CARD SUBMENU
+   Chỉ custom card submenu
+   ============================== */
+
+/* Main dropdown card */
+.header-nav-main>li>.nav-dropdown,
+.header-nav-main>li>.sub-menu {
+    position: absolute;
+    left: 50% !important;
+    right: auto !important;
+    display: block !important;
+    min-width: 218px;
+    width: 218px;
+    margin: 0;
+    padding: 8px 0 !important;
+    border: 1px solid rgba(168, 138, 90, 0.58) !important;
+    border-radius: 6px;
+    background: #1A1A1A;
+    box-shadow:
+        0 16px 36px rgba(0, 0, 0, 0.40),
+        0 0 20px rgba(168, 138, 90, 0.10);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(8px);
+    transition:
+        opacity 0.18s ease,
+        visibility 0.18s ease,
+        transform 0.18s ease;
+    z-index: 9999;
+    overflow: visible;
+}
+
+/* Show dropdown on hover */
+.header-nav-main>li:hover>.nav-dropdown,
+.header-nav-main>li:hover>.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Triangle border top */
+.header-nav-main>li.has-dropdown>.nav-dropdown::before,
+.header-nav-main>li.has-dropdown>.sub-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    width: 11px;
+    height: 11px;
+    background: #1A1A1A;
+    border-top: 1px solid rgba(168, 138, 90, 0.58);
+    border-left: 1px solid rgba(168, 138, 90, 0.58);
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 3;
+}
+
+/* Glow behind triangle */
+.header-nav-main>li.has-dropdown>.nav-dropdown::after,
+.header-nav-main>li.has-dropdown>.sub-menu::after {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    display: block !important;
+    width: 52px;
+    height: 26px;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(168, 138, 90, 0.40) 0%, rgba(168, 138, 90, 0.14) 38%, transparent 72%);
+    filter: blur(6px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Normal level 2 item */
+.header-nav-main>li>.nav-dropdown>li,
+.header-nav-main>li>.sub-menu>li {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    /* padding: 0 8px; */
+}
+
+/* Level 2 link */
+.header-nav-main>li>.nav-dropdown>li>a,
+.header-nav-main>li>.sub-menu>li>a {
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+    width: 100%;
+    padding: 0 16px;
+    border-bottom: 1px solid rgba(212, 200, 176, 0.14);
+    background: transparent;
+    color: rgba(247, 242, 233, 0.82);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.35;
+    text-transform: none;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+        color 0.18s ease,
+        background-color 0.18s ease,
+        border-color 0.18s ease;
+    margin: 0 !important;
+}
+
+.header-nav-main>li>.nav-dropdown>li>a:hover,
+.header-nav-main>li>.sub-menu>li>a:hover {
+    background-color: #1A1A1A !important;
+}
+
+/* Last child border */
+.header-nav-main>li>.nav-dropdown>li:last-child>a,
+.header-nav-main>li>.sub-menu>li:last-child>a {
+    border-bottom: none;
+}
+
+/* Level 2 hover */
+.header-nav-main>li>.nav-dropdown>li:hover>a,
+.header-nav-main>li>.sub-menu>li:hover>a {
+    background: rgba(168, 138, 90, 0.12);
+    color: #F7F2E9;
+}
+
+/* ==============================
+   DROPDOWN LEVEL 3 FLYOUT
+   Nếu sau này menu có cấp con nữa
+   ============================== */
+
+.header-nav-main>li>.nav-dropdown>li>.nav-dropdown,
+.header-nav-main>li>.sub-menu>li>.sub-menu {
+    position: absolute !important;
+    top: 0;
+    left: 100%;
+    display: block !important;
+    min-width: 218px;
+    width: 218px;
+    margin: 0;
+    padding: 8px 0 !important;
+    border: 1px solid rgba(168, 138, 90, 0.48) !important;
+    border-radius: 6px;
+    background:
+        linear-gradient(180deg, rgba(26, 26, 26, 0.98) 0%, rgba(17, 17, 17, 0.98) 100%);
+    box-shadow:
+        0 16px 36px rgba(0, 0, 0, 0.40),
+        0 0 18px rgba(168, 138, 90, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(8px);
+    transition:
+        opacity 0.18s ease,
+        visibility 0.18s ease,
+        transform 0.18s ease;
+    z-index: 10000;
+    overflow: visible;
+}
+
+.header-nav-main>li>.nav-dropdown>li:hover>.nav-dropdown,
+.header-nav-main>li>.sub-menu>li:hover>.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+/* Level 3 item */
+.header-nav-main>li>.nav-dropdown>li>.nav-dropdown>li,
+.header-nav-main>li>.sub-menu>li>.sub-menu>li {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 8px;
+}
+
+/* Level 3 link */
+.header-nav-main>li>.nav-dropdown>li>.nav-dropdown>li>a,
+.header-nav-main>li>.sub-menu>li>.sub-menu>li>a {
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+    width: 100%;
+    padding: 0 10px;
+    border-bottom: 1px solid rgba(212, 200, 176, 0.12);
+    background: transparent;
+    color: rgba(247, 242, 233, 0.76);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.35;
+    text-transform: none;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+        color 0.18s ease,
+        background-color 0.18s ease,
+        border-color 0.18s ease;
+    margin: 0 !important;
+}
+
+.header-nav-main>li>.nav-dropdown>li>.nav-dropdown>li:last-child>a,
+.header-nav-main>li>.sub-menu>li>.sub-menu>li:last-child>a {
+    border-bottom: none;
+}
+
+.header-nav-main>li>.nav-dropdown>li>.nav-dropdown>li:hover>a,
+.header-nav-main>li>.sub-menu>li>.sub-menu>li:hover>a {
+    background: rgba(168, 138, 90, 0.12);
+    color: #F7F2E9;
+    border-radius: 6px;
+}
+
+/* Dropdown arrow for child menu */
+.header-nav-main>li>.nav-dropdown>li.menu-item-has-children>a,
+.header-nav-main>li>.sub-menu>li.menu-item-has-children>a {
+    justify-content: space-between;
+}
+
+.header-nav-main>li>.nav-dropdown>li.menu-item-has-children>a::after,
+.header-nav-main>li>.sub-menu>li.menu-item-has-children>a::after {
+    content: "›";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    color: rgba(212, 200, 176, 0.88);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+@media (max-width: 1180px) and (min-width: 850px) {
+    .header-nav-main>li>a.nav-top-link {
+        padding: 0 12px;
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 849px) {
+    .header-nav-main {
+        min-height: 44px;
+    }
+
+    .header-nav-main>li>a.nav-top-link {
+        min-height: 44px;
+        padding: 0 12px;
+        font-size: 13px;
+    }
 }

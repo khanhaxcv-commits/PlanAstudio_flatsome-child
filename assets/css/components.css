@@ -1,1 +1,50 @@
-/* button, card, title, badge, CTA dùng lại nhiều trang */
+/* Shared components */
+
+.plana-header-breadcrumb-bar {
+    background: #f4f6fa;
+    border-top: 3px solid #f28c18;
+    padding: 9px 0;
+}
+
+.cvn-single-breadcrumbs {
+    color: #0054a6;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 7px;
+    line-height: 1.35;
+    margin: 0;
+    text-align: center;
+}
+
+.cvn-single-breadcrumbs a {
+    color: #0054a6;
+    text-decoration: none;
+}
+
+.cvn-single-breadcrumbs a:hover {
+    color: #003f7d;
+}
+
+.cvn-single-breadcrumbs span {
+    color: #0054a6;
+}
+
+.cvn-single-breadcrumbs__divider {
+    color: #0054a6;
+    font-weight: 700;
+}
+
+@media (max-width: 549px) {
+    .plana-header-breadcrumb-bar {
+        padding: 8px 0;
+    }
+
+    .cvn-single-breadcrumbs {
+        font-size: 12px;
+        gap: 5px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+}

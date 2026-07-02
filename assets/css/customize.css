@@ -1,15 +1,6 @@
 /* ghi đè class mặc định Flatsome */
 
-@media (max-width: 1024px) {
-    header .nav {
-        flex-flow: nowrap;
-        justify-content: space-between;
-    }
-}
 
-.absolute-footer {
-    display: none;
-}
 
 #post-13062>td.rank_math_seo_details.column-rank_math_seo_details>span:nth-child(3)>span {
     display: none !important;
@@ -43,6 +34,10 @@
     height: auto !important;
 }
 
+.post img {
+    border-radius: 5px;
+}
+
 .post h1,
 .post h2,
 .post h3,
@@ -51,10 +46,13 @@
 .post h6,
 .post p,
 .post figure .post img {
-    font-family: Manrope !important;
-    color: #000 !important;
     margin-bottom: 12px;
 
+}
+
+.post h1 {
+    margin-top: 30px;
+    font-size: 50px !important;
 }
 
 .post h2 {
@@ -115,7 +113,6 @@ p.lead {
 .ez-toc-title-container .ez-toc-title {
     color: #000 !important;
     vertical-align: -moz-middle-with-baseline !important;
-    font-family: Manrope !important;
     font-size: 24px !important;
     font-style: normal !important;
     font-weight: 700 !important;
@@ -128,7 +125,6 @@ p.lead {
 
 #ez-toc-container ul li a {
     color: #000 !important;
-    font-family: Manrope !important;
     font-size: 18px !important;
     font-style: normal !important;
     font-weight: 600 !important;
@@ -302,82 +298,4 @@ input[type=submit].sidebar-form-submit:hover {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-/* ==============================
-   Custom dropdown menu Flatsome
-   Style giống mẫu ảnh 2
-============================== */
-#logo {
-    margin-right: 0 !important;
-}
-
-.nav-right {
-    min-width: 200px !important;
-}
-
-/* Menu cha */
-.header-nav-main {
-    justify-content: center !important;
-}
-
-.header-nav-main>li>a.nav-top-link {
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: none;
-    letter-spacing: 0;
-    padding: 10px 16px;
-}
-
-/* Icon mũi tên */
-.header-nav-main>li>a.nav-top-link i {
-    margin-left: 6px;
-    font-size: 13px;
-    color: #ffffff;
-}
-
-/* Khung dropdown */
-.header-nav-main .nav-dropdown {
-    min-width: 230px;
-    padding: 8px 0;
-    border: none;
-    border-radius: 12px;
-    background: #ffffff;
-    box-shadow: none;
-}
-
-/* Bỏ tam giác nhỏ mặc định nếu có */
-.header-nav-main .nav-dropdown::before,
-.header-nav-main .nav-dropdown::after {
-    display: none !important;
-}
-
-/* Item trong dropdown */
-.header-nav-main .nav-dropdown li {
-    border: none;
-}
-
-/* Link trong dropdown */
-.header-nav-main .nav-dropdown li a {
-    color: #111111;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.4;
-    padding: 9px 22px;
-    text-transform: none;
-    letter-spacing: 0;
-}
-
-/* Hover item */
-.header-nav-main>li>a.nav-top-link:hover {
-    color: var(--pa-text-muted) !important;
-    background-color: transparent;
-}
-
-.header-nav-main .nav-dropdown li a:hover {
-    color: var(--primary-color) !important;
-
-    background-color: transparent;
-    padding-left: 28px !important;
 }

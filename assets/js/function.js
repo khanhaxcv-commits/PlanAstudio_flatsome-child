@@ -18,6 +18,7 @@
    * Add reveal class to elements that have both image-anime and image-reveal classes.
    */
   $(".image-anime.image-reveal").addClass("reveal");
+  $("#header ").addClass("wow fadeInDown");
 
   /**
    * Dọn dẹp class: Chỉ giữ lại class swiper-wrapper và xóa tất cả các class bổ trợ khác
@@ -72,7 +73,7 @@
   });
 
   /* Sticky Header */
-  if ($(".active-sticky-header").length) {
+  if ($("header .header-sticky").length) {
     $window.on("resize", function () {
       setHeaderHeight();
     });
@@ -92,7 +93,7 @@
         "hide",
         fromTop > headerHeight + 100,
       );
-      $("header .header-sticky").toggleClass("active", fromTop > 600);
+      $("header .header-sticky").toggleClass("active", fromTop > headerHeight);
     });
   }
 
