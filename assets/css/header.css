@@ -69,7 +69,6 @@
 /* ======================================================================================== /*
 /* Menu Main Header Vì menu có biến thể nhiều nên custom riêng (kể cả responsive của nó)    */
 /* ======================================================================================== */
-
 .header-nav-main,
 .header-nav-main * {
     box-sizing: border-box;
@@ -126,7 +125,6 @@
 .header-nav-main>li.current-menu-ancestor>a.nav-top-link,
 .header-nav-main>li.active>a.nav-top-link {
     color: #A88A5A !important;
-    /* background: transparent; */
 }
 
 /* Remove Flatsome underline effects if any */
@@ -144,8 +142,7 @@
 }
 
 /* ==============================
-   DROPDOWN LEVEL 2 - CARD SUBMENU
-   Chỉ custom card submenu
+   DROPDOWN LEVEL 1 - CARD SUBMENU
    ============================== */
 
 /* Main dropdown card */
@@ -156,6 +153,8 @@
     display: block !important;
     min-width: 218px;
     width: 218px;
+    height: auto !important;
+    max-height: none !important;
     margin: 0;
     padding: 8px 0 !important;
     border: 1px solid rgba(168, 138, 90, 0.58) !important;
@@ -176,9 +175,11 @@
     overflow: visible;
 }
 
-/* Show dropdown on hover */
-.header-nav-main>li:hover>.nav-dropdown,
-.header-nav-main>li:hover>.sub-menu {
+/* Show dropdown */
+.header-nav-main>li.current-dropdown>.nav-dropdown,
+.header-nav-main>li.current-dropdown>.sub-menu,
+.header-nav-main>li.has-dropdown:hover>.nav-dropdown,
+.header-nav-main>li.has-dropdown:hover>.sub-menu {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -212,7 +213,10 @@
     width: 52px;
     height: 26px;
     transform: translateX(-50%);
-    background: radial-gradient(circle, rgba(168, 138, 90, 0.40) 0%, rgba(168, 138, 90, 0.14) 38%, transparent 72%);
+    background: radial-gradient(circle,
+            rgba(168, 138, 90, 0.40) 0%,
+            rgba(168, 138, 90, 0.14) 38%,
+            transparent 72%);
     filter: blur(6px);
     pointer-events: none;
     z-index: 1;
@@ -225,7 +229,6 @@
     display: block;
     width: 100%;
     margin: 0;
-    /* padding: 0 8px; */
 }
 
 /* Level 2 link */
@@ -272,7 +275,6 @@
 
 /* ==============================
    DROPDOWN LEVEL 3 FLYOUT
-   Nếu sau này menu có cấp con nữa
    ============================== */
 
 .header-nav-main>li>.nav-dropdown>li>.nav-dropdown,
@@ -377,6 +379,9 @@
     line-height: 1;
 }
 
+/* ==============================
+   RESPONSIVE
+   ============================== */
 
 @media (max-width: 1180px) and (min-width: 850px) {
     .header-nav-main>li>a.nav-top-link {
@@ -384,7 +389,6 @@
         font-size: 13px;
     }
 }
-
 
 @media (max-width: 849px) {
     .header-nav-main {
