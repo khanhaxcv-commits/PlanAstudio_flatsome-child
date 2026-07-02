@@ -91,9 +91,7 @@
 .post li,
 .post td,
 .post th {
-    font-family: "Be Vietnam Pro", sans-serif !important;
-    font-size: 17px;
-    line-height: 1.75;
+    font-size: 16px;
 }
 
 .post strong,
@@ -472,7 +470,6 @@ input[type=submit].sidebar-form-submit:hover {
     .post td,
     .post th {
         font-size: 16px;
-        line-height: 1.7;
     }
 
     .plana-single-post-meta {

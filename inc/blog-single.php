@@ -55,13 +55,13 @@ function plana_render_single_post_breadcrumb_bar()
     if (!is_singular('post')) {
         return;
     }
-    ?>
+?>
     <div class="plana-single-breadcrumb-bar">
         <div class="container">
             <?php plana_breadcrumbs(); ?>
         </div>
     </div>
-    <?php
+<?php
 }
 
 function plana_related_posts_shortcode($atts)
@@ -99,7 +99,7 @@ function plana_related_posts_shortcode($atts)
     }
 
     ob_start();
-    ?>
+?>
     <section class="plana-related-posts">
         <?php if (!empty($atts['title'])) : ?>
             <h3 class="plana-related-posts__title">
@@ -127,7 +127,7 @@ function plana_related_posts_shortcode($atts)
 
                         <div class="plana-related-posts__meta">
                             <span>
-                                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                                <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
                                 <time datetime="<?php echo esc_attr(get_the_date('c')); ?>">
                                     <?php echo esc_html(get_the_date('d/m/Y')); ?>
                                 </time>
@@ -138,7 +138,7 @@ function plana_related_posts_shortcode($atts)
             <?php endwhile; ?>
         </div>
     </section>
-    <?php
+<?php
     wp_reset_postdata();
 
     return ob_get_clean();

@@ -27,7 +27,7 @@ $category_title = single_cat_title('', false);
             ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class('plana-blog-card'); ?>>
-                <a class="plana-blog-card__thumb" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr(get_the_title()); ?>">
+                <a class="plana-blog-card__thumb image-anime relative" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr(get_the_title()); ?>">
                     <?php if (has_post_thumbnail()) : ?>
                         <?php the_post_thumbnail('large', array('alt' => esc_attr(get_the_title()))); ?>
                     <?php else : ?>

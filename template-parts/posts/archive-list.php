@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Custom posts archive list.
  *
@@ -15,7 +16,7 @@ if (have_posts()) : ?>
                 : get_stylesheet_directory_uri() . '/assets/images/page-header-bg.jpg';
             ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class('plana-blog-card'); ?>>
-                <a class="plana-blog-card__thumb" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr(get_the_title()); ?>">
+                <a class="plana-blog-card__thumb image-anime relative" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr(get_the_title()); ?>">
                     <img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
                 </a>
 
@@ -39,7 +40,7 @@ if (have_posts()) : ?>
                     <div class="plana-blog-card__footer">
                         <div class="plana-blog-card__meta">
                             <span class="plana-blog-card__meta-item">
-                                <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+                                <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
                                 <time datetime="<?php echo esc_attr(get_the_date('c')); ?>">
                                     <?php echo esc_html(get_the_date('d/m/Y')); ?>
                                 </time>

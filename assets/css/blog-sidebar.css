@@ -282,7 +282,7 @@
 
 .blog-wrapper .post-sidebar .plana-related-posts__meta i {
     color: var(--pa-gold);
-    font-size: 11px;
+    font-size: 14px;
 }
 
 @media (max-width: 549px) {

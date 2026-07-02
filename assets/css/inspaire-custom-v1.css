@@ -3204,7 +3204,7 @@ sup {
 
 /* Dấu quote mờ */
 .our-testimonial-content .swiper-slide::before {
-    content: "â€œ";
+    content: "“";
     position: absolute;
     right: 26px;
     top: 4px;

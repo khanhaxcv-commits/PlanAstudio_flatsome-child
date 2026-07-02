@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Post-entry title override.
  *
@@ -33,7 +34,7 @@ $single_post = is_singular('post');
 
 if ($single_post && get_theme_mod('blog_single_header_meta', 1)) :
     $reading_time = function_exists('plana_get_post_reading_time') ? plana_get_post_reading_time(get_the_ID()) : '';
-    ?>
+?>
     <div class="plana-single-post-meta-row">
         <div class="entry-meta plana-single-post-meta">
             <span class="plana-single-post-meta__item">
@@ -42,7 +43,7 @@ if ($single_post && get_theme_mod('blog_single_header_meta', 1)) :
             </span>
 
             <span class="plana-single-post-meta__item">
-                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
                 <time datetime="<?php echo esc_attr(get_the_date('c')); ?>">
                     <?php echo esc_html(get_the_date('d/m/Y')); ?>
                 </time>
@@ -50,7 +51,7 @@ if ($single_post && get_theme_mod('blog_single_header_meta', 1)) :
 
             <?php if (!empty($reading_time)) : ?>
                 <span class="plana-single-post-meta__item">
-                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
                     <?php echo esc_html($reading_time); ?>
                 </span>
             <?php endif; ?>
