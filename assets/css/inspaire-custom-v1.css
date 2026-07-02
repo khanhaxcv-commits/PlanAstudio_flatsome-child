@@ -188,10 +188,6 @@ textarea::placeholder {
     }
 }
 
-.stack-1782310864077 .section-1782292941925::before,
-.stack-1782310864077 .section-1782292941925::after {
-    content: none;
-}
 
 .image-anime {
     position: relative;
@@ -387,7 +383,7 @@ textarea::placeholder {
     }
 }
 
-.block-title h3 {
+.block-title .block-title__eyebrow p {
     display: inline-block;
     position: relative;
     font-size: 16px;
@@ -397,9 +393,10 @@ textarea::placeholder {
     color: var(--pa-heading-soft) !important;
     padding-left: 35px !important;
     margin-bottom: 20px !important;
+    margin-top: 0 !important;
 }
 
-.block-title h3::before {
+.block-title .block-title__eyebrow p::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -1942,10 +1939,6 @@ sup {
 /************************************/
 /***       Contact trang chủ 	  ***/
 /************************************/
-.section-1782292941925 {
-    position: relative;
-    overflow: hidden;
-}
 
 .section-1782292941925::before,
 .section-1782292941925::after {
@@ -1990,7 +1983,6 @@ sup {
 
 
 .section-1782292941925 .contact-info .col-inner {
-    /* min-height: 430px; */
     padding: 30px 28px !important;
     border: 1px solid rgba(168, 138, 90, 0.48);
     border-radius: 6px;
@@ -2275,7 +2267,7 @@ sup {
     border: 0;
     border-radius: 999px;
     cursor: pointer;
-    background: linear-gradient(135deg, #a7824a 0%, #c9ab72 52%, #8d6e42 100%);
+    background: var(--pa-gold);
     color: #fff;
     font-size: 15px;
     font-weight: 700;
@@ -2314,7 +2306,6 @@ sup {
     color: #f7f2e9;
     font-size: 14px;
 }
-
 
 
 @media (max-width: 849px) {
@@ -3272,7 +3263,7 @@ sup {
 
 /* Dấu quote mờ */
 .our-testimonial-content .swiper-slide::before {
-    content: "“";
+    content: "â€œ";
     position: absolute;
     right: 26px;
     top: 4px;
@@ -5117,7 +5108,7 @@ sup {
         margin-top: 15px;
     }
 
-    .block-title h3 {
+    .block-title .block-title__eyebrow p {
         margin-bottom: 10px !important;
     }
 
@@ -6909,7 +6900,6 @@ sup {
    - Contact và Footer đi theo hệ Dark Elegant mới.
    ========================================================= */
 
-/* Nền tổng */
 html,
 body {
     background: var(--pa-black) !important;
@@ -6977,12 +6967,6 @@ a:hover {
     color: var(--pa-heading-gold) !important;
 }
 
-.block-title p,
-.section-title p,
-.section-title-content p,
-.desc {
-    color: var(--pa-text-muted) !important;
-}
 
 /* Button */
 .btn-default,
@@ -7143,82 +7127,6 @@ input[type="submit"] {
 }
 
 
-
-/* Contact - overwrite theo Dark Elegant, không dùng nền riêng */
-
-.section-1782292941925::before,
-.section-1782292941925::after {
-    border-color: rgba(168, 138, 90, 0.14) !important;
-    opacity: 0.55;
-}
-
-.section-1782292941925 .contact-info .col-inner {
-    border: 1px solid var(--pa-gold-line) !important;
-    background: linear-gradient(180deg,
-            rgba(247, 242, 233, 0.06),
-            rgba(247, 242, 233, 0.025)) !important;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24) !important;
-}
-
-.section-1782292941925 .contact-info .col-inner::before {
-    background:
-        radial-gradient(circle at 4% 3%, rgba(168, 138, 90, 0.14), transparent 24%),
-        linear-gradient(135deg, rgba(212, 200, 176, 0.045), transparent 34%) !important;
-}
-
-.section-1782292941925 .contact-info h2,
-.section-1782292941925 .contact-social h3,
-.section-1782292941925 .contact-main .eyebrow {
-    color: var(--pa-heading-gold) !important;
-}
-
-.section-1782292941925 .contact-main h1 em,
-.section-1782292941925 .contact-main h2 em {
-    color: var(--pa-heading-soft) !important;
-}
-
-.section-1782292941925 .contact-info .info-item {
-    border-bottom-color: var(--pa-line) !important;
-}
-
-.section-1782292941925 .contact-info .info-item h3 {
-    color: var(--pa-heading) !important;
-}
-
-.section-1782292941925 .contact-info .info-item p,
-.section-1782292941925 .contact-main p {
-    color: var(--pa-text-muted) !important;
-}
-
-.section-1782292941925 .contact-info .info-item .icon,
-.section-1782292941925 .contact-social a:hover {
-    background: var(--pa-gold) !important;
-}
-
-.section-1782292941925 .contact-social a {
-    border-color: var(--pa-gold-line) !important;
-    background: var(--pa-card-bg) !important;
-}
-
-.section-1782292941925 .wpcf7 input[type="text"],
-.section-1782292941925 .wpcf7 input[type="tel"],
-.section-1782292941925 .wpcf7 input[type="email"],
-.section-1782292941925 .wpcf7 textarea {
-    border-color: var(--pa-line) !important;
-    background: rgba(247, 242, 233, 0.055) !important;
-    color: var(--pa-heading) !important;
-}
-
-.section-1782292941925 .wpcf7 input:focus,
-.section-1782292941925 .wpcf7 textarea:focus {
-    border-color: var(--pa-gold-line) !important;
-    box-shadow: 0 0 0 4px rgba(168, 138, 90, 0.1) !important;
-}
-
-.section-1782292941925 .wpcf7-submit {
-    background: var(--pa-gold) !important;
-    color: #fff !important;
-}
 
 /************************************/
 /* Footer                         */
