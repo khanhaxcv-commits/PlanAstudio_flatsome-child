@@ -20,6 +20,7 @@
 #header .nav-right>li>a.btn-default {
     color: var(--white-color);
     font-size: 16px;
+    line-height: 1 !important;
     text-transform: capitalize;
     padding: 17px 46px 17px 20px;
     transition: all 0.5s ease-in-out;
