@@ -26,9 +26,16 @@
     transition: all 0.5s ease-in-out;
 }
 
-/* ==============================
-   Menu Main Header
-============================== */
+@media screen and (max-width: 849px) {
+    #header .logo {
+        margin: 0 !important;
+    }
+}
+
+/* ======================================================================================== /*
+/* Menu Main Header Vì menu có biến thể nhiều nên custom riêng (kể cả responsive của nó)    */
+/* ======================================================================================== */
+
 .header-nav-main,
 .header-nav-main * {
     box-sizing: border-box;
