@@ -106,6 +106,9 @@ h4 {
 }
 
 @media only screen and (max-width: 1024px) {
+    body {
+        overflow: hidden;
+    }
 
     h1,
     h2,
@@ -6838,21 +6841,7 @@ sup {
    - Contact và Footer đi theo hệ Dark Elegant mới.
    ========================================================= */
 
-html,
-body {
-    background: var(--pa-black) !important;
-}
 
-body {
-    color: var(--pa-text-main) !important;
-}
-
-#main {
-    background-color: var(--pa-dark-bg) !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    color: var(--pa-text-main) !important;
-}
 
 #main .section:nth-child(3n + 1) {
     background-color: var(--pa-dark-bg) !important;
@@ -6884,10 +6873,6 @@ li,
 .text,
 .text-inner {
     color: var(--pa-text-main) !important;
-}
-
-a {
-    color: inherit;
 }
 
 a:hover {

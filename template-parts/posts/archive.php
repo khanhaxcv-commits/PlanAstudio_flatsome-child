@@ -53,12 +53,12 @@ $category_title = single_cat_title('', false);
                     <div class="plana-blog-card__footer">
                         <div class="plana-blog-card__meta" aria-label="<?php esc_attr_e('Thông tin bài viết', 'flatsome-child'); ?>">
                             <span class="plana-blog-card__meta-item">
-                                <i class="fa-regular fa-user" aria-hidden="true"></i>
+                                <i class="fa-solid fa-user" aria-hidden="true"></i>
                                 <?php echo esc_html($author_name); ?>
                             </span>
 
                             <span class="plana-blog-card__meta-item">
-                                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                <i class="fa-solid fa-clock" aria-hidden="true"></i>
                                 <time datetime="<?php echo esc_attr(get_the_date('c')); ?>">
                                     <?php echo esc_html(get_the_date('d/m/Y')); ?>
                                 </time>
@@ -66,7 +66,7 @@ $category_title = single_cat_title('', false);
 
                             <?php if (!empty($reading_time)) : ?>
                                 <span class="plana-blog-card__meta-item">
-                                    <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
                                     <?php echo esc_html($reading_time); ?>
                                 </span>
                             <?php endif; ?>

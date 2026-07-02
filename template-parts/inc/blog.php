@@ -352,7 +352,7 @@ function plana_related_posts_shortcode($atts)
 
                         <div class="plana-related-posts__meta">
                             <span>
-                                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                <i class="fa-solid fa-clock" aria-hidden="true"></i>
                                 <time datetime="<?php echo esc_attr(get_the_date('c')); ?>">
                                     <?php echo esc_html(get_the_date('d/m/Y')); ?>
                                 </time>
@@ -360,7 +360,7 @@ function plana_related_posts_shortcode($atts)
 
                             <!-- <?php if ('false' !== strtolower((string) $atts['show_reading_time'])) : ?>
                                 <span>
-                                    <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
                                     <?php echo esc_html(plana_get_post_reading_time(get_the_ID())); ?>
                                 </span>
                             <?php endif; ?> -->

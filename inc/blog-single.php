@@ -127,7 +127,7 @@ function plana_related_posts_shortcode($atts)
 
                         <div class="plana-related-posts__meta">
                             <span>
-                                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                <i class="fa-solid fa-clock" aria-hidden="true"></i>
                                 <time datetime="<?php echo esc_attr(get_the_date('c')); ?>">
                                     <?php echo esc_html(get_the_date('d/m/Y')); ?>
                                 </time>

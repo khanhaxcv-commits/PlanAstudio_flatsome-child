@@ -37,12 +37,12 @@ if ($single_post && get_theme_mod('blog_single_header_meta', 1)) :
     <div class="plana-single-post-meta-row">
         <div class="entry-meta plana-single-post-meta">
             <span class="plana-single-post-meta__item">
-                <i class="fa-regular fa-user" aria-hidden="true"></i>
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
                 <?php echo esc_html(get_the_author()); ?>
             </span>
 
             <span class="plana-single-post-meta__item">
-                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
                 <time datetime="<?php echo esc_attr(get_the_date('c')); ?>">
                     <?php echo esc_html(get_the_date('d/m/Y')); ?>
                 </time>
@@ -50,7 +50,7 @@ if ($single_post && get_theme_mod('blog_single_header_meta', 1)) :
 
             <?php if (!empty($reading_time)) : ?>
                 <span class="plana-single-post-meta__item">
-                    <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
                     <?php echo esc_html($reading_time); ?>
                 </span>
             <?php endif; ?>

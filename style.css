@@ -6,79 +6,11 @@ Template: flatsome
 Version: 3.0
 */
 
-/*************** ADD CUSTOM CSS HERE.   ***************/
-/* → khai báo child theme + biến màu + body + layout chung */
-
-
-/* :root {
-    --primary-color: #A88A5A;
-    --secondery-color: #D4C8B0;
-    --text-color: #283132;
-    --accent-color: #7C877F;
-    --white-color: #FFFFFF;
-    --divider-color: #EAF0EC;
-    --dark-divider-color: #FFFFFF1A;
-    --error-color: rgb(230, 87, 87);
-    --font-display: "Hanken Grotesk", sans-serif;
-} */
-
-body {
-    padding: 0;
-    margin: 0;
-    /* font-family: var(--font-display); */
-    /* background: var(--background-light); */
-    line-height: 1.5;
-}
-
-@media (max-width: 1024px) {
-    body {
-        overflow: hidden;
-    }
-}
 
 #main,
 #wrapper {
-    background-color: #0D0D0A !important;
+    background-color: var(--pa-dark-bg) !important;
 }
-
-/* <--- Bố cục chính */
-/* .section {
-    padding: 20px 0px !important;
-}
-
-.section .col-inner {
-    height: 100%;
-}
-    
-.section .row {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-@media (min-width: 640px) {
-    .section {
-        padding: 40px 0px !important;
-    }
-
-    .section .row {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .section {
-        padding: 80px 0px !important;
-    }
-
-    .section .row {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-} */
-
 
 .row-grid {
     display: grid !important;

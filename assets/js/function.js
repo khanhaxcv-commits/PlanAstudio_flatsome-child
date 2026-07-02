@@ -18,6 +18,7 @@
    * Add reveal class to elements that have both image-anime and image-reveal classes.
    */
   $(".image-anime.image-reveal").addClass("reveal");
+  $(".post .entry-image").addClass("image-anime");
   $("#header ").addClass("wow fadeInDown");
 
   /**
