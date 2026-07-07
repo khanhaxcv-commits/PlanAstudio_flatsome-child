@@ -199,6 +199,37 @@
       },
     });
   }
+  /* procedure-swiper Slider JS */
+  if ($(".procedure-swiper").length) {
+    const procedureSwiper = new Swiper(".procedure-swiper.swiper", {
+      allowTouchMove: false,
+      slideToClickedSlide: false,
+      slidesPerView: "auto",
+      loop: true,
+      navigation: {
+        nextEl: ".procedure-button-next",
+        prevEl: ".procedure-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          centeredSlides: false,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: "auto",
+          centeredSlides: false,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: "auto",
+          centeredSlides: false,
+          spaceBetween: 26,
+        },
+      },
+    });
+  }
 
   /**
    * Skill Bar
