@@ -1,14 +1,14 @@
 /* Shared components */
 
 .plana-header-breadcrumb-bar {
-    background: var(--pa-dark-bg-2);
-    border-top: 3px solid var(--pa-gold);
-    border-bottom: 1px solid var(--pa-line);
+    background: var(--section-bg);
+    border-top: 3px solid var(--primary);
+    border-bottom: 1px solid var(--border-ui);
     padding: 9px 0;
 }
 
 .cvn-single-breadcrumbs {
-    color: var(--pa-gold);
+    color: var(--primary);
     display: flex;
     flex-wrap: wrap;
     font-size: 14px;
@@ -20,21 +20,21 @@
 }
 
 .cvn-single-breadcrumbs a {
-    color: var(--pa-gold);
+    color: var(--primary);
     text-decoration: none;
     transition: color 180ms ease;
 }
 
 .cvn-single-breadcrumbs a:hover {
-    color: var(--pa-beige);
+    color: var(--accent);
 }
 
 .cvn-single-breadcrumbs span {
-    color: var(--pa-gold);
+    color: var(--primary);
 }
 
 .cvn-single-breadcrumbs__divider {
-    color: var(--pa-gold);
+    color: var(--primary);
     font-weight: 700;
     opacity: 0.7;
 }

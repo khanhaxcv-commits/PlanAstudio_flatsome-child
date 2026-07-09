@@ -1,40 +1,41 @@
 /* Merged CSS: blog-archive(2).css + blog-category(2).css */
+/* Synced to new global token system */
 /* Duplicate selectors were merged. When the same property differed, blog-category(2).css was used as the final value. */
 
 body.category {
-    background: var(--pa-black);
+    background: var(--page-bg);
     overflow: visible;
 }
 
 body.category .blog-wrapper {
-    background: var(--pa-black);
-    color: var(--pa-text-main);
+    background: var(--page-bg);
+    color: var(--text-main);
     min-height: 100vh;
     padding: 48px 0 72px;
 }
 
 body.category .archive-page-header .page-title,
 body.category .archive-page-header h1 {
-    color: var(--pa-heading);
+    color: var(--text-heading);
 }
 
 body.category .archive-page-header .taxonomy-description {
-    color: var(--pa-text-muted);
+    color: var(--text-sub);
 }
 
 body.category .post-sidebar {
-    color: var(--pa-text-muted);
+    color: var(--text-sub);
 }
 
 body.category .post-sidebar a {
-    color: var(--pa-text-main);
+    color: var(--text-main);
 }
 
 .plana-category-hero {
-    background-color: var(--pa-dark-bg-2);
+    background-color: var(--bg-soft);
     background-position: center;
     background-size: cover;
-    color: var(--pa-white);
+    color: var(--on-dark-text);
     min-height: 550px;
     overflow: hidden;
     position: relative;
@@ -62,7 +63,7 @@ body.category .post-sidebar a {
 }
 
 .plana-category-hero .cvn-single-breadcrumbs {
-    color: var(--pa-gold);
+    color: var(--primary);
     font-size: 16px;
     justify-content: flex-start;
     margin-bottom: 28px;
@@ -72,15 +73,15 @@ body.category .post-sidebar a {
 .plana-category-hero .cvn-single-breadcrumbs a,
 .plana-category-hero .cvn-single-breadcrumbs span,
 .plana-category-hero .cvn-single-breadcrumbs__divider {
-    color: var(--pa-gold);
+    color: var(--primary);
 }
 
 .plana-category-hero .cvn-single-breadcrumbs a:hover {
-    color: var(--pa-beige);
+    color: var(--accent);
 }
 
 .plana-category-hero__title {
-    color: var(--pa-heading);
+    color: var(--text-heading);
     font-family: "Playfair Display", serif;
     font-size: clamp(42px, 6vw, 72px);
     font-weight: 600;
@@ -90,7 +91,7 @@ body.category .post-sidebar a {
 }
 
 .plana-category-hero__description {
-    color: var(--pa-text-main);
+    color: var(--text-main);
     font-size: 18px;
     line-height: 1.7;
     margin-top: 24px;
@@ -102,7 +103,7 @@ body.category .post-sidebar a {
 }
 
 .plana-blog-card__category {
-    color: var(--pa-gold);
+    color: var(--primary);
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0;
@@ -118,9 +119,9 @@ body.category .post-sidebar a {
 }
 
 .plana-blog-card {
-    background: radial-gradient(circle at 78% 18%, rgba(168, 138, 90, 0.08), transparent 34%),
-        linear-gradient(135deg, var(--pa-dark-bg-2) 0%, var(--pa-black) 100%);
-    border: 1px solid var(--pa-card-border);
+    background: radial-gradient(circle at 78% 18%, rgba(var(--primary-rgb), 0.08), transparent 34%),
+        linear-gradient(135deg, var(--bg-soft) 0%, var(--page-bg) 100%);
+    border: 1px solid var(--border-ui);
     border-radius: 8px;
     display: grid;
     gap: 0;
@@ -132,13 +133,13 @@ body.category .post-sidebar a {
 }
 
 .plana-blog-card:hover {
-    background: radial-gradient(circle at 78% 18%, rgba(168, 138, 90, 0.12), transparent 34%),
-        linear-gradient(135deg, var(--pa-dark-bg-1) 0%, var(--pa-dark-bg-2) 100%);
-    border-color: var(--pa-card-border-hover);
+    background: radial-gradient(circle at 78% 18%, rgba(var(--primary-rgb), 0.12), transparent 34%),
+        linear-gradient(135deg, var(--bg-light) 0%, var(--bg-soft) 100%);
+    border-color: var(--border-ui-strong);
 }
 
 .plana-blog-card__thumb {
-    background: var(--pa-dark-bg-1);
+    background: var(--bg-light);
     display: block;
     height: 100%;
     overflow: hidden;
@@ -187,11 +188,11 @@ h2.plana-blog-card__title a {
 }
 
 .plana-blog-card__read-more:hover {
-    color: var(--pa-beige);
+    color: var(--accent);
 }
 
 .plana-blog-card__excerpt {
-    color: var(--pa-text-muted);
+    color: var(--text-sub);
     display: -webkit-box;
     font-size: 15px;
     -webkit-line-clamp: 3;
@@ -210,7 +211,7 @@ h2.plana-blog-card__title a {
 
 .plana-blog-card__meta {
     align-items: center;
-    color: var(--pa-text-soft);
+    color: var(--text-soft-ui);
     display: flex;
     flex-wrap: wrap;
     font-size: 15px;
@@ -225,13 +226,13 @@ h2.plana-blog-card__title a {
 }
 
 .plana-blog-card__meta-item i {
-    color: var(--pa-gold);
+    color: var(--primary);
     font-size: 13px;
 }
 
 .plana-blog-card__read-more {
     align-items: center;
-    color: var(--pa-gold);
+    color: var(--primary);
     display: inline-flex;
     flex: 0 0 auto;
     font-size: 13px;
@@ -260,11 +261,11 @@ h2.plana-blog-card__title a {
 .nav-pagination>li>a,
 .nav-pagination>li>span {
     align-items: center;
-    background: var(--pa-black);
-    border: 1px solid var(--pa-gold-line);
+    background: var(--page-bg);
+    border: 1px solid var(--accent-border);
     border-radius: 7px;
-    box-shadow: inset 0 0 0 1px rgba(247, 242, 233, 0.03);
-    color: var(--pa-heading-soft);
+    box-shadow: inset 0 0 0 1px rgba(var(--text-rgb), 0.03);
+    color: var(--accent);
     display: inline-flex;
     font-size: 16px;
     font-weight: 700;
@@ -278,10 +279,10 @@ h2.plana-blog-card__title a {
 
 .nav-pagination>li>.current,
 .nav-pagination>li>a:hover {
-    background: var(--pa-gold);
-    border-color: var(--pa-gold);
-    box-shadow: 0 0 18px rgba(168, 138, 90, 0.2);
-    color: var(--pa-black) !important;
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 18px rgba(var(--primary-rgb), 0.2);
+    color: var(--primary-on) !important;
 }
 
 .plana-blog-pagination .nav-links {
@@ -294,10 +295,10 @@ h2.plana-blog-card__title a {
 
 .plana-blog-pagination .page-numbers {
     align-items: center;
-    background: var(--pa-dark-bg-2);
-    border: 1px solid var(--pa-card-border);
+    background: var(--bg-soft);
+    border: 1px solid var(--border-ui);
     border-radius: 6px;
-    color: var(--pa-text-main);
+    color: var(--text-main);
     display: inline-flex;
     min-height: 38px;
     min-width: 38px;
@@ -308,16 +309,16 @@ h2.plana-blog-card__title a {
 
 .plana-blog-pagination .page-numbers.current,
 .plana-blog-pagination .page-numbers:hover {
-    background: var(--pa-gold);
-    border-color: var(--pa-gold);
-    color: var(--pa-black);
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--primary-on);
 }
 
 .plana-blog-empty {
-    background: var(--pa-card-bg);
-    border: 1px solid var(--pa-card-border);
+    background: var(--surface-bg);
+    border: 1px solid var(--border-ui);
     border-radius: 8px;
-    color: var(--pa-text-muted);
+    color: var(--text-sub);
     padding: 28px;
     text-align: center;
 }
@@ -327,15 +328,15 @@ h2.plana-blog-card__title a {
 }
 
 .plana-blog-card__category:hover {
-    color: var(--pa-beige);
+    color: var(--accent);
 }
 
 h2.plana-blog-card__title a:hover {
-    color: var(--pa-gold) !important;
+    color: var(--primary) !important;
 }
 
 .plana-blog-card__meta-separator {
-    color: var(--pa-text-soft);
+    color: var(--text-soft-ui);
     line-height: 1;
 }
 
