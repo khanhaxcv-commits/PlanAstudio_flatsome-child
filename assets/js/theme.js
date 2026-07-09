@@ -50,9 +50,9 @@
     $(".post .entry-image").addClass("image-anime");
     $("#header").addClass("wow fadeInDown");
 
-    $(".stack.swiper-wrapper").attr("class", "swiper-wrapper");
-    $(".stack.img-box10").attr("class", "img-box10");
-    $(".stack").removeClass("stack stack-row justify-start items-stretch");
+    $(".stack").removeClass(
+      "stack stack-row justify-start items-stretch stack-col",
+    );
   }
 
   /**
@@ -225,7 +225,7 @@
 
     $(".testimonial-slider.swiper")
       .find(".swiper-wrapper")
-      .attr("data-cursor-text", "Drag");
+      .attr("data-cursor-text", "");
 
     $(".testimonial-slider.swiper .icon-box-1781348601568")
       .find(".icon-inner")

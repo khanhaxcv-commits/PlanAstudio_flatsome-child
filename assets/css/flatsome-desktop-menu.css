@@ -121,7 +121,7 @@
     border-radius: 0 0 var(--radius-md) var(--radius-md);
     background: var(--bg-soft);
     box-shadow:
-        0 16px 36px rgba(0, 0, 0, 0.40),
+        0 16px 36px rgba(var(--black-rgb), 0.40),
         0 0 20px rgba(var(--accent-rgb), 0.10);
     opacity: 0;
     visibility: hidden;

@@ -262,7 +262,7 @@ p.lead {
     width: 100%;
     padding: 28px 20px 24px;
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(168, 138, 90, 0.22) 0%, rgba(247, 242, 233, 0.055) 100%);
+    background: linear-gradient(180deg, rgba(var(--primary-500-rgb), 0.22) 0%, rgba(247, 242, 233, 0.055) 100%);
     border: 1px solid rgba(var(--primary-rgb), 0.32);
     box-shadow: var(--shadow-ui-card);
     text-align: center;

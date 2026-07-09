@@ -337,7 +337,7 @@
  body.single-post .comment-form textarea:focus {
      background: var(--section-bg);
      border-color: var(--border-ui-strong);
-     box-shadow: 0 0 0 3px rgba(168, 138, 90, 0.14);
+     box-shadow: 0 0 0 3px rgba(var(--primary-500-rgb), 0.14);
  }
 
  body.single-post .comment-form .form-submit {
