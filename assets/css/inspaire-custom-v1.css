@@ -4142,7 +4142,7 @@ sup {
 .faq-accordion .accordion-item .accordion-button::after,
 .faq-accordion .accordion-item .accordion-button.collapsed::after {
     content: "\2b";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 7 Pro";
     position: absolute;
     font-size: 18px;
     font-weight: 900;

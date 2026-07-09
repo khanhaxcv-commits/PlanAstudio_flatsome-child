@@ -158,7 +158,7 @@
 
 .blog-wrapper .post-sidebar .widget_categories li a::after {
     content: "\f105";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 7 Pro";
     font-weight: 900;
     color: var(--primary);
     font-size: 14px;
