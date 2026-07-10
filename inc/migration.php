@@ -2,6 +2,8 @@
 
 /**
  * All-in-One WP Migration exclusions.
+ *
+ * Exclude development files from export package.
  */
 
 if (!defined('ABSPATH')) {
@@ -9,7 +11,6 @@ if (!defined('ABSPATH')) {
 }
 
 add_filter('ai1wm_exclude_content_from_export', function ($exclude_filters) {
-
     $theme_dir_name = basename(get_stylesheet_directory());
 
     $exclude_filters[] = '.git';

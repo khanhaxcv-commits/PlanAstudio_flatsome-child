@@ -1,25 +1,17 @@
 <?php
 
 /**
- * Cleanup
+ * Disable WordPress auto paragraph.
  *
- * Reusable cleanup settings for WordPress projects.
+ * Use this file only for projects that fully control HTML output.
  */
 
 if (!defined('ABSPATH')) {
     exit;
 }
 
-/**
- * Disable Contact Form 7 auto paragraph.
- */
-add_filter('wpcf7_autop_or_not', '__return_false');
-
-/**
- * Disable WordPress auto paragraph.
- */
 add_action('init', function () {
     remove_filter('the_content', 'wpautop');
     remove_filter('the_excerpt', 'wpautop');
     remove_filter('comment_text', 'wpautop');
-});
+}, 20);

@@ -1,7 +1,8 @@
 <?php
 
 $theme_includes = array(
-    'inc/cleanup.php',
+    'inc/cleanup/contact-form-7.php',
+    'inc/cleanup/disable-wpautop.php',
     'inc/fonts.php',
 
     'inc/enqueue-theme-styles.php',
